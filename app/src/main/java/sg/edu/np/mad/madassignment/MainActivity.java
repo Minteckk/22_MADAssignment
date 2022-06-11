@@ -37,6 +37,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent studentIntent = new Intent(MainActivity.this, StudentLogin.class);
                 startActivity(studentIntent);
             }
-        });
+        });//
     }
 }
