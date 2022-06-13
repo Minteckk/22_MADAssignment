@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MADAssignment">
         <activity
+            android:name=".LecturerMain"
+            android:exported="false" />
+        <activity
             android:name=".upload_student_name"
             android:exported="false" />
         <activity

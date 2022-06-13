@@ -11,10 +11,13 @@ import androidx.annotation.NonNull;
 import java.util.ArrayList;
 
 public class SQLAdapter extends SQLiteOpenHelper {
-
+    // create a table called Students
     public static final String TABLE_STUDENTS = "Students";
+    // define a auto increment ID
     public static final String COLUMN_ID = "Id";
+    // define column name
     public static final String COLUMN_NAME = "Name";
+    // define column for student ID
     public static final String COLUMN_STUDENT_ID = "Student ID";
 
 
@@ -22,9 +25,10 @@ public class SQLAdapter extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        // sql command to create the table with ID and Name and StudentID
         String CREATE = "CREATE TABLE Students " + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "Name TEXT," + "StudentID TEXT)";
-
+        // execute the command
         db.execSQL(CREATE);
 
     }
@@ -34,28 +38,40 @@ public class SQLAdapter extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_STUDENTS);
         onCreate(db);
     }
-
+    // method to add new student to database
     public void addNewStudent(students student) {
+        // calls uploadStudent method
         ContentValues values = uploadStudent(student);
+        // get Writable database
         SQLiteDatabase db = this.getWritableDatabase();
+        // insert into Students table
         db.insert(TABLE_STUDENTS, null,values);
+        // close the database connection
         db.close();
 
     }
 
     @NonNull
+    // method to upload student to database
     private ContentValues uploadStudent(students student)
     {
         ContentValues values = new ContentValues();
+        // put student name into students table
         values.put(COLUMN_NAME, student.getName());
+        // put student id into students table
         values.put(COLUMN_STUDENT_ID, student.getStudentID());
+        // return the value
         return values;
     }
 
+    // method to retrieve students from database
     public ArrayList<students> getStudents()
     {
+        // initialize the arraylist
         ArrayList<students> studentList = new ArrayList<>();
+        // sql statements to select from students table
         String query = "SELECT * FROM " + TABLE_STUDENTS;
+        // get writable database
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
 
