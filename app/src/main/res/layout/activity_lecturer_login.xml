@@ -32,49 +32,29 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/namelabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="100dp"
-                android:text="Username:"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
             <EditText
                 android:id="@+id/lecUsername"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
+                android:layout_width="310dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="32dp"
                 android:ems="10"
+                android:hint="username"
                 android:inputType="textPersonName"
-                app:layout_constraintStart_toEndOf="@+id/namelabel"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <EditText
                 android:id="@+id/lecPW"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
+                android:layout_width="318dp"
+                android:layout_height="63dp"
+                android:layout_marginStart="4dp"
                 android:layout_marginTop="32dp"
                 android:ems="10"
+                android:hint="Password"
                 android:inputType="textPassword"
-                app:layout_constraintStart_toEndOf="@+id/pw_label"
-                app:layout_constraintTop_toBottomOf="@+id/lecUsername" />
-
-            <TextView
-                android:id="@+id/pw_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="56dp"
-                android:text="Password:"
-                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/namelabel" />
+                app:layout_constraintTop_toBottomOf="@+id/lecUsername" />
 
             <Button
                 android:id="@+id/lecLogin"

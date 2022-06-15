@@ -78,7 +78,7 @@ public class SQLAdapter extends SQLiteOpenHelper {
         while(cursor.moveToNext())
         {
             students student = new students();
-            student.StudentID = cursor.getInt(2);
+            student.StudentID = cursor.getString(2);
             student.Name = cursor.getString(1);
             studentList.add(student);
         }
