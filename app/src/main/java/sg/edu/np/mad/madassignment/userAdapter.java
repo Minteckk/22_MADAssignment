@@ -35,7 +35,7 @@ public class userAdapter extends RecyclerView.Adapter<studentViewHolder> {
         String namevar = data.get(position).Name;
         holder.studentName.setText(namevar);
 
-        int idvar = data.get(position).StudentID;
+        String idvar = data.get(position).StudentID;
         holder.studentID.setText(""+idvar);
     }
     public int getItemCount()

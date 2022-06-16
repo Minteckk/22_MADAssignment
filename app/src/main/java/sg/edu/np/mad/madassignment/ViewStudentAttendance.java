@@ -59,7 +59,7 @@ public class ViewStudentAttendance extends AppCompatActivity{
         {
             students s = new students();
 
-            s.StudentID = idList.get(randomInt(idList.size()-1));
+            s.StudentID = String.valueOf(idList.get(randomInt(idList.size()-1)));
             s.Name = nameList.get(randomInt(nameList.size()-1));
 
             studentList.add(s);
