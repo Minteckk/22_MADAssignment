@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ViewAllStudents">
+
+    <Button
+        android:id="@+id/P01"
+        android:layout_width="64dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="P01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/P02"
+        android:layout_width="64dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="P02"
+        app:layout_constraintStart_toEndOf="@+id/P01"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/P03"
+        android:layout_width="64dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="P03"
+        app:layout_constraintStart_toEndOf="@+id/P02"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/P04"
+        android:layout_width="64dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="P04"
+        app:layout_constraintStart_toEndOf="@+id/P03"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/P05"
+        android:layout_width="64dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="P05"
+        app:layout_constraintStart_toEndOf="@+id/P04"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/Frame"
+        android:layout_width="409dp"
+        android:layout_height="640dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/P04">
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

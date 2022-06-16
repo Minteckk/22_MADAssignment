@@ -38,5 +38,17 @@ public class LecturerMain extends AppCompatActivity {
                 startActivity(uploadIntent);
             }
         });
+
+        // find the id of the view student image
+        ImageView viewStudent = findViewById(R.id.studentView);
+        // set the onClick listener for the image
+        viewStudent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // goes to the view student page
+                Intent viewIntent = new Intent(LecturerMain.this, ViewAllStudents.class);
+                startActivity(viewIntent);
+            }
+        });
     }
 }
