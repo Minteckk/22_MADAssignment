@@ -54,7 +54,7 @@ public class StudentP02 extends Fragment {
         studentList = initialiseData();
         recyclerView = view.findViewById(R.id.viewAllStudents);
         //set adapter
-        viewAllStudentAdapter aAdapter = new viewAllStudentAdapter(studentList);
+        viewAllStudentAdapter aAdapter = new viewAllStudentAdapter(studentList,getContext());
 
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(view.getContext());
         recyclerView.setLayoutManager(mLayoutManager);
@@ -77,13 +77,13 @@ public class StudentP02 extends Fragment {
     public ArrayList<students> initialiseData()
     {
         ArrayList<String> nameList = new ArrayList<String>();
-        ArrayList<Integer> idList = new ArrayList<Integer>();
+        ArrayList<String> idList = new ArrayList<String>();
 
-        //creating 20 items for recyclerview
-        for (int i = 0; i < 20; i++)
+        //creating 25 items for recyclerview
+        for (int i = 0; i < 25; i++)
         {
-            nameList.add("Name"+randomInt(10000));
-            idList.add(randomInt(100));
+            nameList.add("Name: "+randomInt(10000));
+            idList.add("Student ID: "+randomInt(10229999));
         }
 
         int i = 1;

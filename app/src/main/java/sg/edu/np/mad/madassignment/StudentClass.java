@@ -2,6 +2,8 @@ package sg.edu.np.mad.madassignment;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -11,7 +13,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
+import java.util.Random;
 
 
 public class StudentClass extends Fragment {
@@ -30,7 +40,7 @@ public class StudentClass extends Fragment {
     public static StudentClass newInstance(String P01frag, String P02frag) {
         StudentClass fragment = new StudentClass();
         Bundle args = new Bundle();
-        
+
         args.putString(ARG_PARAM1, P01frag);
         args.putString(ARG_PARAM2, P02frag);
         fragment.setArguments(args);
@@ -50,12 +60,13 @@ public class StudentClass extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
-         View view = inflater.inflate(R.layout.fragment_student_class, container, false);
+        View view = inflater.inflate(R.layout.fragment_student_class, container, false);
         studentList = initialiseData();
         recyclerView = view.findViewById(R.id.viewAllStudents);
         //set adapter
-        viewAllStudentAdapter aAdapter = new viewAllStudentAdapter(studentList);
+        viewAllStudentAdapter aAdapter = new viewAllStudentAdapter(studentList,getContext());
 
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(view.getContext());
         recyclerView.setLayoutManager(mLayoutManager);
@@ -77,19 +88,31 @@ public class StudentClass extends Fragment {
 
     public ArrayList<students> initialiseData()
     {
+        //ArrayList<students> studentList = new ArrayList<students>();
         ArrayList<String> nameList = new ArrayList<String>();
         ArrayList<Integer> idList = new ArrayList<Integer>();
 
-        //creating 20 items for recyclerview
-        for (int i = 0; i < 20; i++)
-        {
-            nameList.add("Name"+randomInt(10000));
-            idList.add(randomInt(100));
+        //creating 25 items for recyclerview
+        SQLAdapter db = new SQLAdapter(getActivity());
+
+        ArrayList<students> studentList = db.getStudents();
+        if(studentList.size()==0) {
+            for (int a = 0; a < 25; a++) {
+                Random random = new Random();
+                int num1 = randomInt(10000);
+                int num2 = random.nextInt(10229999);
+
+                idList.add(randomInt(100));
+                students NewStudent = new students("Name: "+num1,"StudentID: "+num2);
+                studentList.add(NewStudent);
+            }
+            for(int b = 0; b < studentList.size(); b++) {
+                db.addNewStudent(studentList.get(b));
+            }
         }
 
         int i = 1;
 
-        ArrayList<students> studentList = new ArrayList<students>();
         for ( String name : nameList)
         {
             students s = new students();
@@ -110,4 +133,5 @@ public class StudentClass extends Fragment {
 
         return studentList;
     }
+
 }
