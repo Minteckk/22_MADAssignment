@@ -18,10 +18,10 @@ public class SQLAdapter extends SQLiteOpenHelper {
     // define column name
     public static final String COLUMN_NAME = "Name";
     // define column for student ID
-    public static final String COLUMN_STUDENT_ID = "Student ID";
+    public static final String COLUMN_STUDENT_ID = "StudentID";
 
 
-    public SQLAdapter(Context context) { super(context, "students.db", null, 1);}
+    public SQLAdapter(Context context) { super(context, "students.db", null, 5);}
 
     @Override
     public void onCreate(SQLiteDatabase db) {
