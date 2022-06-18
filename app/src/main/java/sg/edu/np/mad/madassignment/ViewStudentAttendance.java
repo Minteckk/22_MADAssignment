@@ -1,6 +1,7 @@
 package sg.edu.np.mad.madassignment;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -19,6 +20,7 @@ public class ViewStudentAttendance extends AppCompatActivity{
         setContentView(R.layout.activity_view_student_attendance);
 
         studentList = initialiseData();
+
         RecyclerView recyclerView = findViewById(R.id.viewStudentAttendance);
 
         //set adapter
@@ -28,6 +30,27 @@ public class ViewStudentAttendance extends AppCompatActivity{
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
+
+        //making the checkbox interactable
+        mAdapter.setOnItemClickListener(new userAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+
+                students s = studentList.get(position);
+                ImageView img = (ImageView)findViewById(R.id.imageView2);
+                /*
+                if (s.AttendanceStatus == false)
+                {
+                    img.setImageResource(android.R.drawable.checkbox_on_background);
+                    s.AttendanceStatus = true;
+                }
+                else
+                {
+                    img.setImageResource(android.R.drawable.checkbox_off_background);
+                    s.AttendanceStatus = false;
+                }*/
+            }
+        });
     }
 
     //Generate random int value from 0 to given number

@@ -9,12 +9,12 @@ import androidx.recyclerview.widget.RecyclerView;
 public class StudentAttendance extends RecyclerView.ViewHolder {
     TextView studentName;
     TextView studentID;
-    ImageView attendanceCheck;
+    ImageView attendanceStatus;
 
     public StudentAttendance(View itemView, userAdapter.OnItemClickListener mListener) {
         super(itemView);
         studentName = itemView.findViewById(R.id.textView10);
         studentID = itemView.findViewById(R.id.textView9);
-        attendanceCheck = itemView.findViewById(R.id.imageView2);
+        attendanceStatus = itemView.findViewById(R.id.imageView2);
     }
 }
