@@ -22,7 +22,6 @@ public class ViewAllStudentAttendance extends AppCompatActivity {
            @Override
            public void onClick(View view) {
                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-               //StudentClass fragment1 = StudentClass.newInstance("P01","P02");
                StudentAttendanceP01 fragment1 = StudentAttendanceP01.newInstance("P01","P02");
                ft.replace(R.id.Frame, fragment1);
                ft.commit();

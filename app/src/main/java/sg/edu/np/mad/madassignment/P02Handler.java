@@ -31,7 +31,7 @@ public class P02Handler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         // sql command to create the table with ID and Name and StudentID
         String CREATE = "CREATE TABLE P02 " + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "Name TEXT," + "StudentID TEXT," + "AttendanceStatus)";
+                "Name TEXT," + "StudentID TEXT," + "AttendanceStatus BOOLEAN)";
         // execute the command
         db.execSQL(CREATE);
     }
@@ -63,6 +63,8 @@ public class P02Handler extends SQLiteOpenHelper {
         values.put(COLUMN_NAME, student.getName());
         // put student id into students table
         values.put(COLUMN_STUDENT_ID, student.getStudentID());
+        // put student attendance status into students table
+        values.put(COLUMN_ATTENDANCE_STATUS, student.getAttendanceStatus());
         // return the value
         return values;
     }
@@ -81,6 +83,7 @@ public class P02Handler extends SQLiteOpenHelper {
         while(cursor.moveToNext())
         {
             students student = new students();
+            student.AttendanceStatus = cursor.getExtras().getBoolean("3",false);
             student.StudentID = cursor.getString(2);
             student.Name = cursor.getString(1);
             studentList.add(student);

@@ -2,8 +2,6 @@ package sg.edu.np.mad.madassignment;
 
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -99,7 +97,7 @@ public class StudentClass extends Fragment {
         ArrayList<Integer> idList = new ArrayList<Integer>();
 
         // initialize db file and get the Activity
-        SQLAdapter db = new SQLAdapter(getActivity());
+        P01Handler db = new P01Handler(getActivity());
         // set the studentList to get students from the db file
         ArrayList<students> studentList = db.getStudents();
         if(studentList.size()==0) {
