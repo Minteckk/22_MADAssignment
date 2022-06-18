@@ -109,10 +109,19 @@ public class StudentClass extends Fragment {
                 Random random = new Random();
                 int num1 = randomInt(10000);
                 int num2 = random.nextInt(10229999);
-
+                int num3 = random.nextInt(1);
+                Boolean check;
+                if (num3 ==1)
+                {
+                    check = true;
+                }
+                else
+                {
+                    check = false;
+                }
                 idList.add(randomInt(100));
                 // new students object
-                students NewStudent = new students("Name: "+num1,"StudentID: "+num2);
+                students NewStudent = new students("Name: "+num1,"StudentID: "+num2,check);
                 // add the object to the list
                 studentList.add(NewStudent);
             }
