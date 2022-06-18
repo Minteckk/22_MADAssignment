@@ -1,9 +1,13 @@
 package sg.edu.np.mad.madassignment;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -75,10 +79,71 @@ public class StudentAttendanceP01 extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         // set adapter
         recyclerView.setAdapter(aAdapter);
+
+        //making the checkbox interactable
+        aAdapter.setOnItemClickListener(new studentAttendanceAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+
+                students s = studentList.get(position);
+
+                //creatingAlert(s);
+            }
+        });
+
         // return the view
         return view;
     }
 
+    /*
+    public void creatingAlert(students s)
+    {
+        //Creating the alert
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("Confirmation");
+
+        if (s.AttendanceStatus == false)
+        {
+            builder.setMessage("Mark " + s.Name + "as Present?");
+        }
+        else
+        {
+            builder.setMessage("Mark " + s.Name + "as Absent?");
+        }
+
+        builder.setCancelable(true);
+        builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener()
+        {
+            public void onClick(DialogInterface dialog, int id)
+            {
+
+                if (s.AttendanceStatus == false)
+                {
+                    img.setImageResource(android.R.drawable.checkbox_on_background);
+                    Toast.makeText(getApplicationContext(),"Student Present", Toast.LENGTH_SHORT).show();
+                    s.AttendanceStatus = true;
+
+                }
+                else
+                {
+                    img.setImageResource(android.R.drawable.checkbox_off_background);
+                    Toast.makeText(getApplicationContext(),"Student Absent", Toast.LENGTH_SHORT).show();
+                    s.AttendanceStatus = false;
+                }
+            }
+        });
+        builder.setNegativeButton("CLOSE", new DialogInterface.OnClickListener()
+        {
+            public void onClick(DialogInterface dialog, int id)
+            {
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+*/
     //Generate random int value from 0 to given number
     public int randomInt(int ceiling)
     {
@@ -93,9 +158,10 @@ public class StudentAttendanceP01 extends Fragment {
     {
         ArrayList<String> nameList = new ArrayList<String>();
         ArrayList<Integer> idList = new ArrayList<Integer>();
+        ArrayList<Boolean> attendanceList = new ArrayList<Boolean>();
 
         // initialize db file and get the Activity
-        SQLAdapter db = new SQLAdapter(getActivity());
+        P01Handler db = new P01Handler(getActivity());
         // set the studentList to get students from the db file
         ArrayList<students> studentList = db.getStudents();
         if(studentList.size()==0) {
@@ -105,7 +171,7 @@ public class StudentAttendanceP01 extends Fragment {
                 Random random = new Random();
                 int num1 = randomInt(10000);
                 int num2 = random.nextInt(10229999);
-                int num3 = random.nextInt(1);
+                int num3 = randomInt(1);
                 Boolean check;
                 if (num3 ==1)
                 {
@@ -136,6 +202,7 @@ public class StudentAttendanceP01 extends Fragment {
             // get the nameList and idList size.
             s.StudentID = String.valueOf(idList.get(randomInt(idList.size()-1)));
             s.Name = nameList.get(randomInt(nameList.size()-1));
+            s.AttendanceStatus = attendanceList.get(randomInt(nameList.size()-1));
             // add the value to studentList
             studentList.add(s);
             i = i + 1;

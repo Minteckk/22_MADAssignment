@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
 
-public class SQLAdapter extends SQLiteOpenHelper {
+public class P01Handler extends SQLiteOpenHelper {
     // create a table called Students
     public static final String TABLE_STUDENTS = "Students";
     // define a auto increment ID
@@ -23,13 +23,13 @@ public class SQLAdapter extends SQLiteOpenHelper {
     public static final String COLUMN_ATTENDANCE_STATUS = "AttendanceStatus";
 
 
-    public SQLAdapter(Context context) { super(context, "students.db", null, 6);}
+    public P01Handler(Context context) { super(context, "students.db", null, 6);}
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         // sql command to create the table with ID and Name and StudentID
         String CREATE = "CREATE TABLE Students " + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "Name TEXT," + "StudentID TEXT,"  + "AttendanceStatus)";
+                "Name TEXT," + "StudentID TEXT,"  + "AttendanceStatus BOOLEAN)";
         // execute the command
         db.execSQL(CREATE);
 
@@ -62,6 +62,8 @@ public class SQLAdapter extends SQLiteOpenHelper {
         values.put(COLUMN_NAME, student.getName());
         // put student id into students table
         values.put(COLUMN_STUDENT_ID, student.getStudentID());
+        // put student attendance status into students table
+        values.put(COLUMN_ATTENDANCE_STATUS, student.getAttendanceStatus());
         // return the value
         return values;
     }
@@ -80,6 +82,7 @@ public class SQLAdapter extends SQLiteOpenHelper {
         while(cursor.moveToNext())
         {
             students student = new students();
+            student.AttendanceStatus = cursor.getExtras().getBoolean("3",false);
             student.StudentID = cursor.getString(2);
             student.Name = cursor.getString(1);
             studentList.add(student);

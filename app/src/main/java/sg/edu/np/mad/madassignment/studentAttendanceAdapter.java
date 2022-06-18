@@ -43,13 +43,13 @@ public class studentAttendanceAdapter extends RecyclerView.Adapter<studentAttend
         holder.studentID.setText(idvar);
 
         Boolean attendancevar = data.get(position).AttendanceStatus;
-        if (attendancevar == false)
+        if (attendancevar == true)
         {
-            holder.attendanceCheck.setImageResource(android.R.drawable.checkbox_off_background);
+            holder.attendanceCheck.setImageResource(android.R.drawable.checkbox_on_background);
         }
         else
         {
-            holder.attendanceCheck.setImageResource(android.R.drawable.checkbox_on_background);
+            holder.attendanceCheck.setImageResource(android.R.drawable.checkbox_off_background);
         }
     }
     public int getItemCount()
