@@ -6,12 +6,12 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-public class studentViewHolder extends RecyclerView.ViewHolder{
+public class studentAttendanceViewHolder extends RecyclerView.ViewHolder{
     TextView studentName;
     TextView studentID;
     ImageView attendanceCheck;
 
-    public studentViewHolder(View itemView, userAdapter.OnItemClickListener listener) {
+    public studentAttendanceViewHolder(View itemView, studentAttendanceAdapter.OnItemClickListener listener) {
         super(itemView);
         studentName = itemView.findViewById(R.id.textView10);
         studentID = itemView.findViewById(R.id.textView9);

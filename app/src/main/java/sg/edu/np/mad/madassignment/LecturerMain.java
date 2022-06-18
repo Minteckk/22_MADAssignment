@@ -34,7 +34,7 @@ public class LecturerMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // goes to the view student attendance page
-                Intent uploadIntent = new Intent(LecturerMain.this, ViewStudentAttendance.class);
+                Intent uploadIntent = new Intent(LecturerMain.this, ViewAllStudentAttendance.class);
                 startActivity(uploadIntent);
             }
         });

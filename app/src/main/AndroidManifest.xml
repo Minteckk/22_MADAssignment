@@ -18,6 +18,9 @@
             android:name=".ViewAllStudents"
             android:exported="false" />
         <activity
+            android:name=".ViewAllStudentAttendance"
+            android:exported="false" />
+        <activity
             android:name=".LecturerMain"
             android:exported="false" />
         <activity
@@ -39,7 +42,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ViewStudentAttendance"
+            android:name=".OldViewStudentAttendance"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

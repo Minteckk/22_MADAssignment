@@ -11,7 +11,7 @@ public class StudentAttendance extends RecyclerView.ViewHolder {
     TextView studentID;
     ImageView attendanceStatus;
 
-    public StudentAttendance(View itemView, userAdapter.OnItemClickListener mListener) {
+    public StudentAttendance(View itemView) {
         super(itemView);
         studentName = itemView.findViewById(R.id.textView10);
         studentID = itemView.findViewById(R.id.textView9);

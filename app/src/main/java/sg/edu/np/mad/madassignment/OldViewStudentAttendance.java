@@ -1,11 +1,6 @@
 package sg.edu.np.mad.madassignment;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -14,9 +9,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class ViewStudentAttendance extends AppCompatActivity{
+public class OldViewStudentAttendance extends AppCompatActivity{
     public ArrayList<students> studentList;
 
+    /*
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -28,7 +24,7 @@ public class ViewStudentAttendance extends AppCompatActivity{
         RecyclerView recyclerView = findViewById(R.id.viewStudentAttendance);
 
         //set adapter
-        userAdapter mAdapter = new userAdapter(studentList);
+        studentAttendanceAdapter mAdapter = new studentAttendanceAdapter(studentList);
 
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(mLayoutManager);
@@ -36,7 +32,7 @@ public class ViewStudentAttendance extends AppCompatActivity{
         recyclerView.setAdapter(mAdapter);
 
         //making the checkbox interactable
-        mAdapter.setOnItemClickListener(new userAdapter.OnItemClickListener() {
+        mAdapter.setOnItemClickListener(new studentAttendanceAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
 

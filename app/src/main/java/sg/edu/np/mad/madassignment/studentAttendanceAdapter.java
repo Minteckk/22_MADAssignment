@@ -1,19 +1,24 @@
 package sg.edu.np.mad.madassignment;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class userAdapter extends RecyclerView.Adapter<studentViewHolder> {
+
+public class studentAttendanceAdapter extends RecyclerView.Adapter<studentAttendanceViewHolder> {
     ArrayList<students> data;
+    Context context;
     private OnItemClickListener mListener;
+
+    public studentAttendanceAdapter(ArrayList<students> input, Context context) {
+        this.data = input;
+        this.context = context;
+    }
 
     public interface OnItemClickListener
     {
@@ -23,23 +28,19 @@ public class userAdapter extends RecyclerView.Adapter<studentViewHolder> {
         mListener = listener;
     }
 
-    public userAdapter(ArrayList<students> input) {
-        data = input;
-    }
-
-    public studentViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public studentAttendanceViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_student_attendance, parent, false);
 
-        return new studentViewHolder(item, mListener);
+        return new studentAttendanceViewHolder(item, mListener);
     }
 
     //to set each student in the recyclerview
-    public void onBindViewHolder(studentViewHolder holder, int position) {
+    public void onBindViewHolder(studentAttendanceViewHolder holder, int position) {
         String namevar = data.get(position).Name;
-        holder.studentName.setText("Name: "+namevar);
+        holder.studentName.setText(namevar);
 
         String idvar = data.get(position).StudentID;
-        holder.studentID.setText("StudentID: "+idvar);
+        holder.studentID.setText(idvar);
         /*
         Boolean attendancevar = data.get(position).AttendanceStatus;
         if (AttendanceStatus == false)
