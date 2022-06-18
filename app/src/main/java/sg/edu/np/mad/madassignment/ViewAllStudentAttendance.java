@@ -33,7 +33,7 @@ public class ViewAllStudentAttendance extends AppCompatActivity {
            @Override
            public void onClick(View view) {
                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-               StudentP02 fragment1 = StudentP02.newInstance("P02","P03");
+               StudentAttendanceP02 fragment1 = StudentAttendanceP02.newInstance("P02","P03");
                ft.replace(R.id.Frame, fragment1);
                ft.commit();
            }
@@ -43,7 +43,7 @@ public class ViewAllStudentAttendance extends AppCompatActivity {
            @Override
            public void onClick(View view) {
                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-               StudentP03 fragment1 = StudentP03.newInstance("P03", "P03");
+               StudentAttendanceP03 fragment1 = StudentAttendanceP03.newInstance("P03", "P03");
                ft.replace(R.id.Frame, fragment1);
                ft.commit();
            }
@@ -53,7 +53,7 @@ public class ViewAllStudentAttendance extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                StudentP04 fragment1 = StudentP04.newInstance("P04", "P05");
+                StudentAttendanceP04 fragment1 = StudentAttendanceP04.newInstance("P04", "P05");
                 ft.replace(R.id.Frame, fragment1);
                 ft.commit();
             }
@@ -63,7 +63,7 @@ public class ViewAllStudentAttendance extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                StudentP05 fragment1 = StudentP05.newInstance("P05", "P06");
+                StudentAttendanceP05 fragment1 = StudentAttendanceP05.newInstance("P05", "P06");
                 ft.replace(R.id.Frame, fragment1);
                 ft.commit();
             }
