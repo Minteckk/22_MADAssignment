@@ -20,15 +20,18 @@ public class P03Handler extends SQLiteOpenHelper {
     public static final String COLUMN_NAME = "Name";
     // define column for student ID
     public static final String COLUMN_STUDENT_ID = "StudentID";
+    // define column for AttendanceStatus
+    public static final String COLUMN_ATTENDANCE_STATUS = "AttendanceStatus";
+
     public P03Handler(@Nullable Context context) {
-        super(context, "P03.db", null, 1);
+        super(context, "P03.db", null, 2);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         // sql command to create the table with ID and Name and StudentID
         String CREATE = "CREATE TABLE P03 " + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "Name TEXT," + "StudentID TEXT)";
+                "Name TEXT," + "StudentID TEXT," + "AttendanceStatus)";
         // execute the command
         db.execSQL(CREATE);
     }
