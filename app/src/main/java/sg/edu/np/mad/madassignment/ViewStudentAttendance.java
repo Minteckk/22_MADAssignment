@@ -1,7 +1,11 @@
 package sg.edu.np.mad.madassignment;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -37,18 +41,7 @@ public class ViewStudentAttendance extends AppCompatActivity{
             public void onItemClick(int position) {
 
                 students s = studentList.get(position);
-                ImageView img = (ImageView)findViewById(R.id.imageView2);
-                /*
-                if (s.AttendanceStatus == false)
-                {
-                    img.setImageResource(android.R.drawable.checkbox_on_background);
-                    s.AttendanceStatus = true;
-                }
-                else
-                {
-                    img.setImageResource(android.R.drawable.checkbox_off_background);
-                    s.AttendanceStatus = false;
-                }*/
+                //creatingAlert(s);
             }
         });
     }
@@ -98,5 +91,56 @@ public class ViewStudentAttendance extends AppCompatActivity{
 
         return studentList;
     }
+
+    /*
+    public void creatingAlert(students s)
+    {
+        //Creating the alert
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("Confirmation");
+
+        if (s.AttendanceStatus == false)
+        {
+            builder.setMessage("Mark " + s.Name + "as Present?");
+        }
+        else
+        {
+            builder.setMessage("Mark " + s.Name + "as Absent?");
+        }
+
+        builder.setCancelable(true);
+        builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener()
+        {
+            public void onClick(DialogInterface dialog, int id)
+            {
+                ImageView img = (ImageView)findViewById(R.id.imageView2);
+
+                if (s.AttendanceStatus == false)
+                {
+                    img.setImageResource(android.R.drawable.checkbox_on_background);
+                    Toast.makeText(getApplicationContext(),"Student Present", Toast.LENGTH_SHORT).show();
+                    s.AttendanceStatus = true;
+
+                }
+                else
+                {
+                    img.setImageResource(android.R.drawable.checkbox_off_background);
+                    Toast.makeText(getApplicationContext(),"Student Absent", Toast.LENGTH_SHORT).show();
+                    s.AttendanceStatus = false;
+                }
+            }
+        });
+        builder.setNegativeButton("CLOSE", new DialogInterface.OnClickListener()
+        {
+            public void onClick(DialogInterface dialog, int id)
+            {
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+     */
 
 }
