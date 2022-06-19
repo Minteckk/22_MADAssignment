@@ -1,8 +1,10 @@
 package sg.edu.np.mad.madassignment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -16,6 +18,15 @@ public class ViewAllStudentAttendance extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_all_students);
+
+        ImageView iv = findViewById(R.id.view_all_students_back);
+        iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(ViewAllStudentAttendance.this, LecturerMain.class);
+                startActivity(i);
+            }
+        });
 
        Button P01Class = findViewById(R.id.P01);
        P01Class.setOnClickListener(new View.OnClickListener() {
