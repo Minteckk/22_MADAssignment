@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +23,7 @@ public class StudentP02 extends Fragment {
     private RecyclerView recyclerView;
     // initialize student arrayList
     public ArrayList<students> studentList;
+    viewAllStudentAdapter adapter;
     // initialize
     private String P02;
     private String P03;
@@ -65,17 +65,30 @@ public class StudentP02 extends Fragment {
         studentList = initialiseData();
         // find the id of the recyclerview
         recyclerView = view.findViewById(R.id.viewAllStudents);
-        //initialise adapter
-        viewAllStudentAdapter aAdapter = new viewAllStudentAdapter(studentList,getContext());
+
         // initialise layout manager with context.
-        LinearLayoutManager mLayoutManager = new LinearLayoutManager(view.getContext());
+        LinearLayoutManager mLayoutManager = new LinearLayoutManager(getContext());
+
+        //initialise adapter
+        adapter = new viewAllStudentAdapter(studentList,getContext());
         // set the layout manager for recyclerview
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         // set adapter
-        recyclerView.setAdapter(aAdapter);
+        recyclerView.setAdapter(adapter);
+
         // return the view
         return view;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
     }
 
     //Generate random int value from 0 to given number
