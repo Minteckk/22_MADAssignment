@@ -53,6 +53,8 @@ public class ProvideFeedback extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(ProvideFeedback.this, StudentProfile.class);
+                i.putExtra("name", name);
+                i.putExtra("studentID", StudentID);
                 startActivity(i);
             }
         });
