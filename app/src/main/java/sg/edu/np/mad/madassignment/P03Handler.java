@@ -24,7 +24,7 @@ public class P03Handler extends SQLiteOpenHelper {
     public static final String COLUMN_ATTENDANCE_STATUS = "AttendanceStatus";
 
     public P03Handler(@Nullable Context context) {
-        super(context, "P03.db", null, 2);
+        super(context, "P03.db", null, 3);
     }
 
     @Override
