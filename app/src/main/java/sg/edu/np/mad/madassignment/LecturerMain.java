@@ -3,6 +3,7 @@ package sg.edu.np.mad.madassignment;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -61,6 +62,17 @@ public class LecturerMain extends AppCompatActivity {
                 startActivity(viewIntent);
             }
 
+        });
+
+        // find the id of the generate passcode image
+        ImageView generatePasscode = findViewById(R.id.passcodeImg);
+        generatePasscode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // goes to generate passcode page
+                Intent generateIntent = new Intent(LecturerMain.this, generatePassCode.class);
+                startActivity(generateIntent);
+            }
         });
     }
 }
