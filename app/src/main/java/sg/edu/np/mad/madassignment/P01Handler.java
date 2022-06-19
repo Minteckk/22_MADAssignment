@@ -23,7 +23,7 @@ public class P01Handler extends SQLiteOpenHelper {
     public static final String COLUMN_ATTENDANCE_STATUS = "AttendanceStatus";
 
 
-    public P01Handler(Context context) { super(context, "students.db", null, 6);}
+    public P01Handler(Context context) { super(context, "students.db", null, 7);}
 
     @Override
     public void onCreate(SQLiteDatabase db) {
