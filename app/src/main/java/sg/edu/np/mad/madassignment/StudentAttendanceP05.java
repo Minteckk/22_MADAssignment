@@ -1,9 +1,12 @@
 package sg.edu.np.mad.madassignment;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -74,6 +77,57 @@ public class StudentAttendanceP05 extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         // set adapter
         recyclerView.setAdapter(aAdapter);
+        //making the checkbox interactable
+        aAdapter.setOnItemClickListener(new studentAttendanceAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                students s = studentList.get(position);
+
+                //Creating the alert
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+
+                builder.setTitle("Confirmation");
+
+                if (s.AttendanceStatus == false)
+                {
+                    builder.setMessage("Mark " + s.Name + " as Present?");
+                }
+                else
+                {
+                    builder.setMessage("Mark " + s.Name + " as Absent?");
+                }
+
+                builder.setCancelable(true);
+                builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener()
+                {
+                    public void onClick(DialogInterface dialog, int id)
+                    {
+                        if (s.AttendanceStatus == false)
+                        {
+                            Toast.makeText(getContext(),"Student Present", Toast.LENGTH_SHORT).show();
+                            s.AttendanceStatus = true;
+                            s.setAttendanceStatus(true);
+                            aAdapter.notifyItemChanged(position);
+                        }
+                        else
+                        {
+                            Toast.makeText(getContext(),"Student Absent", Toast.LENGTH_SHORT).show();
+                            s.AttendanceStatus = false;
+                            aAdapter.notifyItemChanged(position);
+                        }
+                    }
+                });
+                builder.setNegativeButton("CLOSE", new DialogInterface.OnClickListener()
+                {
+                    public void onClick(DialogInterface dialog, int id)
+                    {
+                    }
+                });
+
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+        });
         // return the view
         return view;
     }
