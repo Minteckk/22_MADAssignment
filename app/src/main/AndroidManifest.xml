@@ -11,14 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MADAssignment">
         <activity
+            android:name=".StudentProfile"
+            android:exported="false" />
+        <activity
+            android:name=".ProvideFeedback"
+            android:exported="false" />
+        <activity
             android:name=".StudentTakeAttendance"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".StudentMain"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".ClassViewHolder"
             android:exported="false"
