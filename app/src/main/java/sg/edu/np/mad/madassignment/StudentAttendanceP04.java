@@ -104,14 +104,13 @@ public class StudentAttendanceP04 extends Fragment {
                         if (s.AttendanceStatus == false)
                         {
                             Toast.makeText(getContext(),"Student Present", Toast.LENGTH_SHORT).show();
-                            s.AttendanceStatus = true;
                             s.setAttendanceStatus(true);
                             aAdapter.notifyItemChanged(position);
                         }
                         else
                         {
                             Toast.makeText(getContext(),"Student Absent", Toast.LENGTH_SHORT).show();
-                            s.AttendanceStatus = false;
+                            s.setAttendanceStatus(false);
                             aAdapter.notifyItemChanged(position);
                         }
                     }
