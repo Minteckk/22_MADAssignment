@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +31,15 @@ public class StudentProfile extends AppCompatActivity {
         id.setText(StudentID);
         // find the id for the feedback button
         Button feedbackBtn = findViewById(R.id.ProvideFeedback);
+        // set Onclick listener for back image view
+        ImageView iv = findViewById(R.id.student_profile_back);
+        iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(StudentProfile.this, ViewAllStudents.class);
+                startActivity(i);
+            }
+        });
         // set OnClick listener for the feedback button
         feedbackBtn.setOnClickListener(new View.OnClickListener() {
             @Override

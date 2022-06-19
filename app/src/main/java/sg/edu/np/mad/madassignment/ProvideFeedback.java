@@ -52,7 +52,7 @@ public class ProvideFeedback extends AppCompatActivity {
         iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(ProvideFeedback.this, LecturerMain.class);
+                Intent i = new Intent(ProvideFeedback.this, StudentProfile.class);
                 startActivity(i);
             }
         });

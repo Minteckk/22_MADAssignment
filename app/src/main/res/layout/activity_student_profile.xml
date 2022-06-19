@@ -8,6 +8,16 @@
     tools:context=".StudentProfile">
 
     <ImageView
+        android:id="@+id/student_profile_back"
+        android:layout_width="80dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backbutton" />
+
+    <ImageView
         android:id="@+id/imageView8"
         android:layout_width="120dp"
         android:layout_height="115dp"
