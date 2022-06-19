@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -48,6 +49,17 @@ public class upload_student_name extends AppCompatActivity {
         studentInfo = new students();
         // find the id of the upload button
         uploadStudent =  findViewById(R.id.upload_student);
+
+        // set Onclick listener for back image view
+        ImageView iv = findViewById(R.id.upload_student_name_back);
+        iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(upload_student_name.this, LecturerMain.class);
+                startActivity(i);
+            }
+        });
+
         // set on click event listener for the upload button
         uploadStudent.setOnClickListener(new View.OnClickListener() {
             @Override

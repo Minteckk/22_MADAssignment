@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,6 +47,15 @@ public class ProvideFeedback extends AppCompatActivity {
         feedbackInput = findViewById(R.id.feedbackInput);
         // find the id for submit feedback button
         Button submitBtn = findViewById(R.id.SubmitFeedback);
+        // set Onclick listener for back image view
+        ImageView iv = findViewById(R.id.provide_feedback_back);
+        iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(ProvideFeedback.this, LecturerMain.class);
+                startActivity(i);
+            }
+        });
         // set the OnclickListener for the submit feedback button
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
