@@ -18,6 +18,7 @@ public class LecturerMain extends AppCompatActivity {
 
         // find the id of the upload student to database img
         ImageView uploadStudentToDB = findViewById(R.id.db_student);
+
        // set the onClick listener for the imageview
         uploadStudentToDB.setOnClickListener(new View.OnClickListener() {
             @Override

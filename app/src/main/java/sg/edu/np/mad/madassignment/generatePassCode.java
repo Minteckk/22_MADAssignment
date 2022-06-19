@@ -17,12 +17,16 @@ public class generatePassCode extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_generate_pass_code);
+
         // find the id for the back button
         ImageView generate_back = findViewById(R.id.gen_back);
+
         // find the id for passcode textview
         TextView pc_passcode = findViewById(R.id.generated_pc);
+
         // find the id for generate passcode button
         Button generatePC = findViewById(R.id.generatePCbtn);
+
         // set the OnClickListener event listener for the passcode button
         generatePC.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +37,7 @@ public class generatePassCode extends AppCompatActivity {
                 pc_passcode.setText(generateRandomPassCode(length));
             }
         });
+
         // set the OnClickListener event listener for back button
         generate_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +49,7 @@ public class generatePassCode extends AppCompatActivity {
             }
         });
     }
+
     // method to generate random pass code
     public String generateRandomPassCode(int length) {
         // a list of random characters to be used for the passcode
@@ -61,4 +67,5 @@ public class generatePassCode extends AppCompatActivity {
         // return the result in string
         return stringBuilder.toString();
     }
+
 }

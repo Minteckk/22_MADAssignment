@@ -13,14 +13,19 @@ import java.util.ArrayList;
 public class P01Handler extends SQLiteOpenHelper {
     // create a table called Students
     public static final String TABLE_STUDENTS = "Students";
+
     // define a auto increment ID
     public static final String COLUMN_ID = "Id";
+
     // define column name
     public static final String COLUMN_NAME = "Name";
+
     // define column for student ID
     public static final String COLUMN_STUDENT_ID = "StudentID";
+
     // define column for AttendanceStatus
     public static final String COLUMN_ATTENDANCE_STATUS = "AttendanceStatus";
+
 
 
     public P01Handler(Context context) { super(context, "students.db", null, 7);}

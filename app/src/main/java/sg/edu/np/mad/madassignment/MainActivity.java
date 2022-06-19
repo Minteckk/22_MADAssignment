@@ -16,13 +16,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         // for database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference studentsRef = database.getReference("Students");
         DatabaseReference studentMod = studentsRef.child("MAD");
         DatabaseReference studentsRef2 = database.getReference("MAD");
+
         // find the lecturer login button id
         Button lecturer_login = findViewById(R.id.lecturerlogin);
+
         // set the onClick listener for lecturer log in button
         lecturer_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,8 +35,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(lecturerIntent);
             }
         });
+
         // find the student login button id
         Button student_login = findViewById(R.id.Studentlogin);
+
         // set the onClick listen for student log in button
         student_login.setOnClickListener(new View.OnClickListener() {
             @Override

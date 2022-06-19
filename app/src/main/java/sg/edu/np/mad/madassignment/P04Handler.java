@@ -14,12 +14,16 @@ import java.util.ArrayList;
 public class P04Handler extends SQLiteOpenHelper {
     // create a table called P04
     public static final String TABLE_P04 = "P04";
+
     // define a auto increment ID
     public static final String COLUMN_ID = "Id";
+
     // define column name
     public static final String COLUMN_NAME = "Name";
+
     // define column for student ID
     public static final String COLUMN_STUDENT_ID = "StudentID";
+
     // define column for AttendanceStatus
     public static final String COLUMN_ATTENDANCE_STATUS = "AttendanceStatus";
     public P04Handler(@Nullable Context context) {

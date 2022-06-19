@@ -26,6 +26,7 @@ public class ProvideFeedback extends AppCompatActivity {
     // variable for feedback multi-line text
     private EditText feedbackInput;
     String feedback;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +48,8 @@ public class ProvideFeedback extends AppCompatActivity {
         feedbackInput = findViewById(R.id.feedbackInput);
         // find the id for submit feedback button
         Button submitBtn = findViewById(R.id.SubmitFeedback);
+
+
         // set Onclick listener for back image view
         ImageView iv = findViewById(R.id.provide_feedback_back);
         iv.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +61,8 @@ public class ProvideFeedback extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+
         // set the OnclickListener for the submit feedback button
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override

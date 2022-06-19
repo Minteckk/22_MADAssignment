@@ -12,12 +12,16 @@ public class lecturerAccount {
     }
 
     public lecturerAccount(){};
+
     // method to set User name
     public void setUsername(String username) {this.Username = username;}
+
     // method to get User name
     public String getUsername(String username) {return this.Username;}
+
     // method to set Password
     public void setPassword(String password) {this.Password = password;}
+
     // method to get password
     public String getPassword(String password) {return this.Password;}
 }
