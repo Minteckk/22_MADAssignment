@@ -17,7 +17,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-    <TextView
+            <ImageView
+                android:id="@+id/student_main_back"
+                android:layout_width="88dp"
+                android:layout_height="70dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/backbutton" />
+
+            <TextView
         android:id="@+id/studenttitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
