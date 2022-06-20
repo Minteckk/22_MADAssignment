@@ -74,6 +74,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/student_acode" />
+
+            <ImageView
+                android:id="@+id/student_take_attendance_back"
+                android:layout_width="88dp"
+                android:layout_height="70dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/backbutton" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

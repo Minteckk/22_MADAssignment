@@ -22,6 +22,15 @@ public class StudentTakeAttendance extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_take_attendance);
 
+        // set Onclick listener for back image view
+        ImageView iv = findViewById(R.id.student_take_attendance_back);
+        iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(StudentTakeAttendance.this, StudentMain.class);
+                startActivity(i);
+            }
+        });
     }
 
 
