@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MADAssignment">
         <activity
+            android:name=".LecturerRegister"
+            android:exported="false" />
+        <activity
+            android:name=".register"
+            android:exported="false" />
+        <activity
             android:name=".generatePassCode"
             android:exported="false" />
         <activity
