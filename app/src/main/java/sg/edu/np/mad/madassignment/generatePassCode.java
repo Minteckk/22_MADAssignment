@@ -37,10 +37,6 @@ public class generatePassCode extends AppCompatActivity {
                 int length = 6;
                 // set the textview to the length of the passcode specified.
                 pc_passcode.setText(generateRandomPassCode(length));
-                SharedPreferences codeSharedPref = getSharedPreferences("passcode",MODE_PRIVATE);
-                SharedPreferences.Editor editor = codeSharedPref.edit();
-                editor.putString("code",code);
-                editor.apply();
             }
         });
 
