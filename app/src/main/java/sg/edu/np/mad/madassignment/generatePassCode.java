@@ -3,6 +3,7 @@ package sg.edu.np.mad.madassignment;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class generatePassCode extends AppCompatActivity {
-
+    int length;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,10 +32,15 @@ public class generatePassCode extends AppCompatActivity {
         generatePC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String code = pc_passcode.getText().toString();
                 // set the passcode to 6
                 int length = 6;
                 // set the textview to the length of the passcode specified.
                 pc_passcode.setText(generateRandomPassCode(length));
+                SharedPreferences codeSharedPref = getSharedPreferences("passcode",MODE_PRIVATE);
+                SharedPreferences.Editor editor = codeSharedPref.edit();
+                editor.putString("code",code);
+                editor.apply();
             }
         });
 

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class LecturerMain extends AppCompatActivity {
 
@@ -15,6 +16,11 @@ public class LecturerMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lecturer_main);
+
+        TextView username = findViewById(R.id.lec_username);
+        Intent i = getIntent();
+        String lecUsername = i.getStringExtra("Username");
+        username.setText(lecUsername);
 
         // find the id of the upload student to database img
         ImageView uploadStudentToDB = findViewById(R.id.db_student);
