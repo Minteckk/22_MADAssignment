@@ -3,6 +3,7 @@ package sg.edu.np.mad.madassignment;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,12 +26,12 @@ public class StudentTakeAttendance extends AppCompatActivity {
 
 
     public void compare(View view) {
-
-        String l_passcode = ((TextView) findViewById(R.id.generated_pc)).getText().toString();
+        SharedPreferences sharedPreferences = getSharedPreferences("passcode",MODE_PRIVATE);
+        String value = sharedPreferences.getString("code","");
         String s_passcode = ((EditText) findViewById(R.id.student_acode)).getText().toString();
         P01Handler db = new P01Handler(this);
 
-        if (s_passcode.equals(l_passcode)) {
+        if (s_passcode.equals(value)) {
             boolean i = true;
             students s = new students();
 
