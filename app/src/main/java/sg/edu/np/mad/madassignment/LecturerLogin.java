@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LecturerLogin extends AppCompatActivity {
 
@@ -30,16 +32,39 @@ public class LecturerLogin extends AppCompatActivity {
         });
 
         EditText getLecUsername = findViewById(R.id.lecUsername);
+        EditText getLecPassWord = findViewById(R.id.lecPW);
+
 
         // set Onclick listener for login button
         login_lec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String lecUsername = getLecUsername.getText().toString();
-                // goes to Lecturer Main page after the login page is clicked.
-                Intent mainIntent = new Intent(LecturerLogin.this, LecturerMain.class);
-                mainIntent.putExtra("Username",lecUsername);
-                startActivity(mainIntent);
+                String lecPassword =  getLecPassWord.getText().toString();
+                if(lecUsername.length()==0) {
+                    getLecUsername.requestFocus();
+                    getLecUsername.setError("Please enter your username");
+                    //if(lecUsername.contains);
+                    //{
+                        //Toast.makeText(LecturerLogin.this, "Only alphabets are allowed", Toast.LENGTH_SHORT).show();
+                    //}
+                }
+                if (lecPassword.length()==0)
+                {
+                    getLecPassWord.requestFocus();
+                    getLecPassWord.setError("Please enter your password");
+                }
+                else if(lecPassword.length() < 6) {
+                    getLecPassWord.setError("Your password must be more than 6 characters");
+                }
+
+                else {
+                    Toast.makeText(LecturerLogin.this, "Login successful!", Toast.LENGTH_SHORT).show();
+                    // goes to Lecturer Main page after the login page is clicked.
+                    Intent mainIntent = new Intent(LecturerLogin.this, LecturerMain.class);
+                    mainIntent.putExtra("Username",lecUsername);
+                    startActivity(mainIntent);
+                }
             }
         });
 
