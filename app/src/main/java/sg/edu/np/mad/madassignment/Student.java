@@ -1,28 +1,26 @@
 package sg.edu.np.mad.madassignment;
 
-//Start of Student Class
-
 public class Student {
-    private int _id;
+    private int _studentId;
     private String _name;
     private String _password;
     public Student() { }
 
-    public Student(int id, String name, String password) {
-        this._id = id;
+    public Student(int studentId, String name, String password) {
+        this._studentId = studentId;
         this._name = name;
         this._password = password;
     }
-    public Student(int id, String password) {
-        this._id = id;
+    public Student(int studentId, String password) {
+        this._studentId = studentId;
         this._password = password;
     }
 
-    public void setId(int id) {
-        this._id = id;
+    public void setStudentId(int studentId) {
+        this._studentId = studentId;
     }
     public int getId() {
-        return this._id;
+        return this._studentId;
     }
 
     public void setName(String name) {
@@ -39,4 +37,4 @@ public class Student {
         return this._password;
     }
 }
-//End of Student Class
+

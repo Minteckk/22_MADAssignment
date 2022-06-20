@@ -37,6 +37,10 @@ public class AccountDBHandler extends SQLiteOpenHelper {
     public static final String COLUMN_CLASSID = "classId";
     // public static final String COULNM_STUDENTID = "studentId";
 
+    public static final String TABLE_ATTENDANCE = "attendance";
+    // public static final String COLUMN_STUDENTID = "studentId";
+    public static final String COLUMN_DATE = "date";
+    public static final String COLUMN_FEEDBACK = "feedback";
 
     public AccountDBHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version)
     {
@@ -51,7 +55,7 @@ public class AccountDBHandler extends SQLiteOpenHelper {
                 + "("
                 + COLUMN_STUDENTID + " INT PRIMARY KEY,"
                 + COLUMN_STUDENTNAME + " VARCHAR(50),"
-                + COLUMN_PASSWORD + " VARCHAR(50),"
+                + COLUMN_PASSWORD + " VARCHAR(50) NOT NULL,"
                 + "CONSTRAINT CK_" + COLUMN_STUDENTID + " CHECK(" + COLUMN_STUDENTID + " >= 10000000 AND " + COLUMN_STUDENTID + " <= 10999999)"
                 + ")";
         db.execSQL(CREATE_STUDENT_TABLE);
@@ -84,12 +88,22 @@ public class AccountDBHandler extends SQLiteOpenHelper {
                 + "("
                 + COLUMN_COURSEID + " VARCHAR(5) NOT NULL,"
                 + COLUMN_CLASSID + " INT NOT NULL,"
-                + COLUMN_STUDENTID + " VARCHAR(50) UNIQUE NOT NULL,"
+                + COLUMN_STUDENTID + " INT UNIQUE NOT NULL,"
                 + "CONSTRAINT PK_" + TABLE_CLASS + " PRIMARY KEY(" + COLUMN_COURSEID + ", " + COLUMN_CLASSID + "),"
                 + "CONSTRAINT FK_" + TABLE_CLASS + "_" + COLUMN_COURSEID + " FOREIGN KEY (" + COLUMN_COURSEID + ") REFERENCES " + TABLE_COURSE + "(" + COLUMN_COURSEID + "),"
                 + "CONSTRAINT FK_" + TABLE_CLASS + "_" + COLUMN_STUDENTID + " FOREIGN KEY (" + COLUMN_STUDENTID + ") REFERENCES " + TABLE_STUDENT + "(" + COLUMN_STUDENTID + ")"
                 + ")";
-        db.execSQL(CREATE_SCHOOL_TABLE);
+        db.execSQL(CREATE_CLASS_TABLE);
+
+        String CREATE_ATTENDANCE_TABLE = "CREATE TABLE " + TABLE_ATTENDANCE
+                + "("
+                + COLUMN_STUDENTID + " INT NOT NULL,"
+                + COLUMN_DATE + " DATE NOT NULL,"
+                + COLUMN_FEEDBACK + " VARCHAR(1500),"
+                + "CONSTRAINT PK_" + TABLE_ATTENDANCE + " PRIMARY KEY(" + COLUMN_STUDENTID + ", " + COLUMN_DATE + "),"
+                + "CONSTRAINT FK_" + TABLE_ATTENDANCE + "_" + COLUMN_STUDENTID + " FOREIGN KEY (" + COLUMN_STUDENTID + ") REFERENCES " + TABLE_STUDENT + "(" + COLUMN_STUDENTID + ")"
+                + ")";
+        db.execSQL(CREATE_ATTENDANCE_TABLE);
     }
 
     @Override
@@ -97,6 +111,51 @@ public class AccountDBHandler extends SQLiteOpenHelper {
     {
         //Insert or Delete Data
     }
+
+
+    public boolean checkAttendance(int studentId, String ddMMyyyy) {
+        String query = "SELECT * FROM " + TABLE_ATTENDANCE
+                + " WHERE " + COLUMN_STUDENTID + " = " + studentId
+                + " AND " + COLUMN_DATE + " = " + "\"" + ddMMyyyy + "\"";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+
+        if (cursor.moveToFirst()){
+            return true;
+        }
+        return false;
+    }
+
+    public void updateAttendance(int studentId, String ddMMyyyy, boolean status){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        if (checkAttendance(studentId, ddMMyyyy)){
+            if (!status){
+                String DELETE_ATTENDANCE_TUPLE = "DELETE FROM " + TABLE_ATTENDANCE
+                        + " WHERE " + COLUMN_STUDENTID + " = " + studentId
+                        + " AND " + COLUMN_DATE + " = " + "\"" + ddMMyyyy + "\"";
+                db.execSQL(DELETE_ATTENDANCE_TUPLE);
+            }
+        }
+        else {
+            if (status) {
+                String INSERT_ATTENDANCE_TUPLE = "INSERT INTO " + TABLE_ATTENDANCE
+                        + " VALUES (" + studentId + ", " + ddMMyyyy + ", NULL)";
+                db.execSQL(INSERT_ATTENDANCE_TUPLE);
+            }
+        }
+    }
+
+    public void giveFeedback(int studentId, String ddMMyyyy, String feedback){
+        if (checkAttendance(studentId, ddMMyyyy)){
+            String UPDATE_ATTENDANCE_FEEDBACK = "UPDATE " + TABLE_ATTENDANCE
+                    + " SET " + COLUMN_FEEDBACK  + " = " + "\"" + feedback + "\""
+                    + " WHERE " + COLUMN_STUDENTID + " = " + studentId
+                    + " AND " + COLUMN_DATE + " = " + "\"" + ddMMyyyy + "\"";
+        }
+    }
+
 
     public void addStudent(Student student) {
         ContentValues values = new ContentValues();
@@ -177,23 +236,73 @@ public class AccountDBHandler extends SQLiteOpenHelper {
     }
 
     public List<Student> getStudentListOfClass(String courseId, int classId){
-        String query = "SELECT " + COLUMN_STUDENTID + " FROM " + TABLE_CLASS + " WHERE " + COLUMN_COURSEID + " = " + "\"" + courseId + "\"" + " AND " + COLUMN_CLASSID + " = " + classId;
+        String query = "SELECT " + COLUMN_STUDENTID + " FROM " + TABLE_CLASS
+                + " WHERE " + COLUMN_COURSEID + " = " + "\"" + courseId + "\""
+                + " AND " + COLUMN_CLASSID + " = " + classId;
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
-        List<Student> classList = null;
+        List<Student> studentList = null;
 
         if (cursor.moveToFirst()) {
             do {
-                classList.add(findStudent(Integer.parseInt(cursor.getString(0))));
+                studentList.add(findStudent(Integer.parseInt(cursor.getString(0))));
             } while (cursor.moveToNext());
 
-            return classList;
+            return studentList;
         }
 
         return null;
     }
 
+    public List<CourseClass> getClassListOfCourse(String courseId){
+        String query = "SELECT " + COLUMN_COURSEID + ", " + COLUMN_CLASSID + " FROM " + TABLE_CLASS
+                + " WHERE " + COLUMN_COURSEID + " = " + "\"" + courseId + "\"";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        List<CourseClass> classList = null;
+
+        if (cursor.moveToFirst()) {
+            do {
+                classList.add(new CourseClass(cursor.getString(0), Integer.parseInt(cursor.getString(1))));
+            } while (cursor.moveToNext());
+        }
+            return classList;
+    }
+
+    public List<Course> getCourseListOfSchool(String schoolId) {
+        String query = "SELECT " + "*" + " FROM " + TABLE_COURSE
+                + " WHERE " + COLUMN_SCHOOLID + " = " + "\"" + schoolId + "\"";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        List<Course> courseList = null;
+
+        if (cursor.moveToFirst()) {
+            do {
+                courseList.add(new Course(cursor.getString(0), cursor.getString(1), cursor.getString(2)));
+            } while (cursor.moveToNext());
+        }
+        return courseList;
+    }
+
+    public List<School> getSchoolList(){
+        String query = "SELECT " + "*" + " FROM " + TABLE_SCHOOL;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        List<School> schoolList = null;
+
+        if (cursor.moveToFirst()) {
+            do {
+                schoolList.add(new School(cursor.getString(0), Integer.parseInt(cursor.getString(1))));
+            } while (cursor.moveToNext());
+        }
+        return schoolList;
+    }
+
+    /*
     public String getCourseNameByCourseId(String courseId){
         String query = "SELECT " + COLUMN_COURSENAME + " FROM " + TABLE_COURSE + " WHERE " + COLUMN_COURSEID + " = " + courseId;
 
@@ -232,7 +341,7 @@ public class AccountDBHandler extends SQLiteOpenHelper {
 
         return null;
     }
-
+}
     /*
     public String getSchoolNameByCourseId(String courseId){
         String query = "SELECT " + COLUMN_SCHOOLID + " FROM " + TABLE_COURSE + " WHERE " + COLUMN_COURSEID + " = " + "\"" + courseId + "\"";

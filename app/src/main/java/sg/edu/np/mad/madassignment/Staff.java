@@ -1,26 +1,26 @@
 package sg.edu.np.mad.madassignment;
 
 public class Staff {
-    private int _id;
+    private int _staffId;
     private String _name;
     private String _password;
     public Staff() { }
 
-    public Staff(int id, String name, String password) {
-        this._id = id;
+    public Staff(int staffId, String name, String password) {
+        this._staffId = staffId;
         this._name = name;
         this._password = password;
     }
-    public Staff(int id, String password) {
-        this._id = id;
+    public Staff(int staffId, String password) {
+        this._staffId = staffId;
         this._password = password;
     }
 
-    public void setId(int id) {
-        this._id = id;
+    public void setId(int staffId) {
+        this._staffId = staffId;
     }
     public int getId() {
-        return this._id;
+        return this._staffId;
     }
 
     public void setName(String name) {
