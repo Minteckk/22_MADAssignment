@@ -29,10 +29,14 @@ public class StudentTakeAttendance extends AppCompatActivity {
         String value = ((EditText) findViewById(R.id.student_aid)).getText().toString();
         int s_id=Integer.parseInt(value);
         String date = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
+        P01Handler db = new P01Handler(this);
 
         if (s_passcode.equals(l_passcode)) {
             boolean i = true;
-            AccountDBHandler.updateAttendance(s_id, date, i);
+            students s = new students();
+
+            s.AttendanceStatus = false;
+            db.addNewStudent(s);
         } else {
 
         }
