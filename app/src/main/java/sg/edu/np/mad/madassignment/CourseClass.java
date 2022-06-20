@@ -11,24 +11,21 @@ public class CourseClass {
         this._classId = classId;
     }
 
-    public void setId(int id) {
-        this._id = id;
+    public void setCourseId(String courseId) {
+        this._courseId = courseId;
     }
-    public int getId() {
-        return this._id;
-    }
-
-    public void setName(String name) {
-        this._name = name;
-    }
-    public String getName() {
-        return this._name;
+    public String getCourseId() {
+        return this._courseId;
     }
 
-    public void setSchoolId(String schoolId) {
-        this._schoolId = schoolId;
+    public void setClassId(int classId) {
+        this._classId = classId;
     }
-    public String getSchoolId() {
-        return this._schoolId;
+    public int getClassId() {
+        return this._classId;
+    }
+
+    public String getClassName() {
+        return _courseId + _classId;
     }
 }

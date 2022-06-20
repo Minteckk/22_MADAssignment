@@ -156,6 +156,28 @@ public class AccountDBHandler extends SQLiteOpenHelper {
         }
     }
 
+    public void updateStudentPassword(int studentId, String oldPassword, String newPassword){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        if (checkStudentPassword(studentId, oldPassword)) {
+            String UPDATE_STUDENT_PASSWORD = "UPDATE " + TABLE_STUDENT
+                    + " SET " + COLUMN_PASSWORD + " = " + "\"" + newPassword + "\""
+                    + " WHERE " + COLUMN_STUDENTID + " = " + studentId;
+            db.execSQL(UPDATE_STUDENT_PASSWORD);
+        }
+    }
+
+    public void updateStaffPassword(int staffId, String oldPassword, String newPassword){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        if (checkStaffPassword(staffId, oldPassword)) {
+            String UPDATE_STAFF_PASSWORD = "UPDATE " + TABLE_STAFF
+                    + " SET " + COLUMN_PASSWORD + " = " + "\"" + newPassword + "\""
+                    + " WHERE " + COLUMN_STAFFID + " = " + staffId;
+            db.execSQL(UPDATE_STAFF_PASSWORD);
+        }
+    }
+
 
     public void addStudent(Student student) {
         ContentValues values = new ContentValues();
@@ -187,7 +209,7 @@ public class AccountDBHandler extends SQLiteOpenHelper {
         Student student = new Student();
 
         if (cursor.moveToFirst()) {
-            student.setId(Integer.parseInt(cursor.getString(0)));
+            student.setStudentId(Integer.parseInt(cursor.getString(0)));
             student.setName(cursor.getString(1));
             student.setPassword(cursor.getString(2));
             cursor.close();
@@ -296,7 +318,7 @@ public class AccountDBHandler extends SQLiteOpenHelper {
 
         if (cursor.moveToFirst()) {
             do {
-                schoolList.add(new School(cursor.getString(0), Integer.parseInt(cursor.getString(1))));
+                schoolList.add(new School(cursor.getString(0), cursor.getString(1)));
             } while (cursor.moveToNext());
         }
         return schoolList;
