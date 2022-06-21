@@ -224,6 +224,31 @@ public class AccountDBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
+    // method to retrieve students from database
+    public ArrayList<Student> getStudents()
+    {
+        // initialize the arraylist
+        ArrayList<Student> studentList = new ArrayList<>();
+        // sql statements to select from students table
+        String query = "SELECT * FROM " + TABLE_STUDENT;
+        // get writable database
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+
+        if(cursor.moveToFirst()) {
+            student = new Student();
+            student.setStudentId(Integer.parseInt(cursor.getString(0)));
+            student.setName(cursor.getString(1));
+            student.setPassword(cursor.getString(2));
+            cursor.close();
+        }
+        else {
+            student = null;
+        }
+        db.close();
+        return studentList;
+    }
+
     public void addStaff(Staff staff) {
         ContentValues values = new ContentValues();
         values.put(COLUMN_STAFFID, staff.getId());
