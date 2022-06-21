@@ -16,7 +16,7 @@
         app:srcCompat="@drawable/backbutton" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/student_view_feedback_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -25,4 +25,14 @@
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/student_view_feedback_back" />
+
+    <TextView
+        android:id="@+id/student_view_feedback_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="17dp"
+        android:text="Goodjob for today performance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/student_view_feedback_title" />
 </androidx.constraintlayout.widget.ConstraintLayout>
