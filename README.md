@@ -105,6 +105,9 @@ complete generate passcode for attendance feature
 </ul>
 <p>Lu Junxi</p>
 <ul>
+    <li>
+        Designed storyboard
+    </li>
   <li>
     Designed App Logo
   </li>
