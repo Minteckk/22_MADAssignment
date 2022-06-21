@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -76,6 +77,32 @@ public class StudentAttendanceP03 extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         // set adapter
         recyclerView.setAdapter(aAdapter);
+        Button resetAttendance = view.findViewById(R.id.resetAttendance3);
+        resetAttendance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setTitle("Reset Attendance?");
+                builder.setCancelable(false);
+                builder.setMessage("Reset all your students attendance?");
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        students s = new students();
+                        s.setAttendanceStatus(false);
+                        Toast.makeText(getContext(),"Attendance has resetted",Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+        });
         //making the checkbox interactable
         aAdapter.setOnItemClickListener(new studentAttendanceAdapter.OnItemClickListener() {
             @Override
@@ -152,27 +179,56 @@ public class StudentAttendanceP03 extends Fragment {
         //creating 25 items for recyclerview
         if(studentList.size()==0)
         {
-            for (int i = 0; i < 25; i++)
-            {
-                // initialize random
-                Random random = new Random();
-                int num1 = randomInt(10000);
-                int num2 = random.nextInt(10229999);
-                int num3 = random.nextInt(1);
-                Boolean check;
-                if (num3 ==1)
-                {
-                    check = true;
-                }
-                else
-                {
-                    check = false;
-                }
-                // new students object
-                students NewStudent = new students("Name: "+num1,"StudentID: "+num2,check);
-                // add the object to the list
-                studentList.add(NewStudent);
-            }
+            students NewStudent = new students("Soh Yi Jie Jeff", "10222326", true);
+            studentList.add(NewStudent);
+            students NewStudent2 = new students("Chua Ming Feng", "10227861", true);
+            studentList.add(NewStudent2);
+            students NewStudent3 = new students("Thu Ya Swe", "10222373", true);
+            studentList.add(NewStudent3);
+            students NewStudent4 = new students("Simon Kwek", "10228098",true);
+            studentList.add(NewStudent4);
+            students NewStudent5 = new students ("Tan Wen Yu", "10203894", true);
+            studentList.add(NewStudent5);
+            students NewStudent6 =  new students("Tang Ee Ann","10222484",true);
+            studentList.add(NewStudent6);
+            students NewStudent7 = new students("Mah Chen Han","10219290",true);
+            studentList.add(NewStudent7);
+            students NewStudent8 = new students("Sim Yuan Yee","10223621",true);
+            studentList.add(NewStudent8);
+            students NewStudent9 = new students("Leon Toh", "10223268", true);
+            studentList.add(NewStudent9);
+            students NewStudent10 = new students("Ali", "10223410", true);
+            studentList.add(NewStudent10);
+            students NewStudent11 = new students("Lim Junquan Ryan", "10192609", true);
+            studentList.add(NewStudent11);
+            students NewStudent12 = new students("Zi Yi Ng", "10222211",true);
+            studentList.add(NewStudent12);
+            students NewStudent13 = new students("Paul Chuan","10222819", true);
+            studentList.add(NewStudent13);
+            students NewStudent14 = new students("Lukman","10219568", true);
+            studentList.add(NewStudent14);
+            students NewStudent15 =  new students("Lee Zhen Quan", "10228054", true);
+            studentList.add(NewStudent15);
+            students NewStudent16 = new students("Logan", "10227699", true);
+            studentList.add(NewStudent16);
+            students NewStudent17 = new students("Chua Jie Ren","10222145",true);
+            studentList.add(NewStudent17);
+            students NewStudent18 = new students("Chua Guo Heng", "10223608",true);
+            studentList.add(NewStudent18);
+            students NewStudent19 = new students("Chua Jie Yi Addison", "10222525", true);
+            studentList.add(NewStudent19);
+            students NewStudent20 = new students("Liew Zheng Zhang", "10222254", true);
+            studentList.add(NewStudent20);
+            students NewStudent21 = new students("Tan Wei Jun", "10204421", true);
+            studentList.add(NewStudent21);
+            students NewStudent22 = new students("Aloysius Chin","10223380",true);
+            studentList.add(NewStudent22);
+            students NewStudent23 =  new students("Justin Chan", "10227943", true);
+            studentList.add(NewStudent23);
+            students NewStudent24 = new students("Queenie Ng", "10222173", true);
+            studentList.add(NewStudent24);
+            students NewStudent25 = new students("Low Hong Wei", "10203927", true);
+            studentList.add(NewStudent25);
             // update the student to database.
             for(int b = 0; b < studentList.size(); b++) {
                 db.addNewStudent(studentList.get(b));

@@ -27,7 +27,7 @@
         <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/test3/app/src/main/res/layout/activity_student_login.xml" value="0.1" />
         <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/test3/app/src/main/res/layout/activity_student_main.xml" value="0.1" />
         <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/test3/app/src/main/res/layout/activity_student_profile.xml" value="0.1" />
-        <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/test3/app/src/main/res/layout/activity_student_take_attendance.xml" value="0.2109704641350211" />
+        <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/test3/app/src/main/res/layout/activity_student_take_attendance.xml" value="0.1" />
         <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/test3/app/src/main/res/layout/activity_student_view_feedback.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/test3/app/src/main/res/layout/activity_upload_student_name.xml" value="0.1" />
         <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/test3/app/src/main/res/layout/activity_view_all_students.xml" value="0.16666666666666666" />
@@ -37,11 +37,20 @@
         <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/test3/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2235" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_class_view_holder.xml" value="0.22282608695652173" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_lecturer_login.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_course_view_holder.xml" value="0.2223731884057971" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_courses.xml" value="0.25" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_generate_pass_code.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_lecturer_login.xml" value="0.25" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_lecturer_main.xml" value="0.25" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_lecturer_register.xml" value="0.22282608695652173" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_provide_feedback.xml" value="0.25" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_register.xml" value="0.22282608695652173" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_student_attendance.xml" value="0.2223731884057971" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_student_login.xml" value="0.25" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_student_main.xml" value="0.12183383991894631" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_student_profile.xml" value="0.22282608695652173" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_student_take_attendance.xml" value="0.264" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_upload_student_name.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_view_all_students.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_view_student_attendance.xml" value="0.2223731884057971" />

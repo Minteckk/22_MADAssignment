@@ -30,10 +30,24 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/viewAllStudents"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="750dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/resetAttendance"
+                android:layout_width="206dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="Reset Attendance"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toEndOf="@+id/textView12"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

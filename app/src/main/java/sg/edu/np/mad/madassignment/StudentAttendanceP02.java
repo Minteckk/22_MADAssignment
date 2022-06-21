@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -77,6 +78,33 @@ public class StudentAttendanceP02 extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         // set adapter
         recyclerView.setAdapter(aAdapter);
+
+        Button resetAttendance = view.findViewById(R.id.resetAttendance2);
+        resetAttendance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setTitle("Reset Attendance?");
+                builder.setCancelable(false);
+                builder.setMessage("Reset all your students attendance?");
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        students s = new students();
+                        s.setAttendanceStatus(false);
+                        Toast.makeText(getContext(),"Attendance has resetted",Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+        });
 
         //making the checkbox interactable
         aAdapter.setOnItemClickListener(new studentAttendanceAdapter.OnItemClickListener() {

@@ -94,6 +94,7 @@ public class StudentAttendanceP01 extends Fragment {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         students s = new students();
                         s.setAttendanceStatus(false);
+                        Toast.makeText(getContext(),"Attendance has resetted",Toast.LENGTH_SHORT).show();
                     }
                 });
                 builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
