@@ -8,11 +8,13 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class AccountDBHandler extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 1;
+    Student student;
+    private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "accountDB.db";
 
     public static final String TABLE_STUDENT = "student";
@@ -391,7 +393,7 @@ public class AccountDBHandler extends SQLiteOpenHelper {
         return schoolList;
     }
 
-    /*
+
     public String getCourseNameByCourseId(String courseId){
         String query = "SELECT " + COLUMN_COURSENAME + " FROM " + TABLE_COURSE + " WHERE " + COLUMN_COURSEID + " = " + courseId;
 
@@ -490,6 +492,6 @@ public class AccountDBHandler extends SQLiteOpenHelper {
     public List<String> getClassListBy
 
      */
-}
+
 //End of Data Handler
 
