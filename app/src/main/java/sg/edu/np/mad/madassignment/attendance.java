@@ -1,8 +1,11 @@
 package sg.edu.np.mad.madassignment;
 
+import java.util.ArrayList;
+
 public class attendance {
 String studentId;
 String feedback;
+ArrayList<attendance>feedbackList;
 
     public attendance(String studentId, String feedback) {
         this.studentId = studentId;
@@ -26,12 +29,13 @@ String feedback;
             return i;
         }
         else {
-            return feedback;
+            return this.feedback;
         }
     }
 
-
-    public void setFeedback(String feedback) {
+    public ArrayList<attendance> setFeedback(String feedback, String studentId) {
         this.feedback = feedback;
+        this.studentId = studentId;
+        return feedbackList;
     }
 }

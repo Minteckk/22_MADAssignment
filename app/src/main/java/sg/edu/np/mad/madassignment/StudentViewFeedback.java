@@ -17,7 +17,7 @@ public class StudentViewFeedback extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_view_feedback);
 
-
+        getFeedback();
 
 
         // set Onclick listener for back image view
@@ -31,14 +31,12 @@ public class StudentViewFeedback extends AppCompatActivity {
         });
     }
 
-    public String getFeedback() {
-        String feedback = attendance.getFeedback();
+    public void getFeedback() {
+        attendance feedback = new attendance();
+        String SFB = feedback.getFeedback();
         TextView fb = findViewById(R.id.student_view_feedback_feedback);
-        fb.setText(feedback);
+        fb.setText(SFB);
 
     }
-
-
-
 
 }

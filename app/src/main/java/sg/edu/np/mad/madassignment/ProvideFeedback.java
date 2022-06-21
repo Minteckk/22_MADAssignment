@@ -20,12 +20,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+
 public class ProvideFeedback extends AppCompatActivity {
     // global variable for submit button
     private Button submitBtn;
     // variable for feedback multi-line text
     private EditText feedbackInput;
     String feedback;
+    ArrayList<attendance>feedbackList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +38,7 @@ public class ProvideFeedback extends AppCompatActivity {
         Intent i = getIntent();
         // receiving the intent
         String name = i.getStringExtra("name");
-        String StudentID = i.getStringExtra("studentID");
+        int StudentID = i.getIntExtra("studentID",1);
         // find the textview for studentName
         TextView studentName = findViewById(R.id.feedbackStudentName);
         // set the textview text as Student name
@@ -43,7 +46,7 @@ public class ProvideFeedback extends AppCompatActivity {
         // find the textview for studentID
         TextView studentID = findViewById(R.id.feedbackStudentID);
         // set the textview for studentID
-        studentID.setText(StudentID);
+        studentID.setText(String.valueOf(StudentID));
         // find the id for feedback input field
         feedbackInput = findViewById(R.id.feedbackInput);
         // find the id for submit feedback button
@@ -62,7 +65,6 @@ public class ProvideFeedback extends AppCompatActivity {
             }
         });
 
-
         // set the OnclickListener for the submit feedback button
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,5 +82,11 @@ public class ProvideFeedback extends AppCompatActivity {
                 }
             }
         });
+        AccountDBHandler db = new AccountDBHandler(this,null,null,1);
+        attendance feedback = new attendance();
+        String id = String.valueOf(StudentID);
+        String Studentfeedback = feedbackInput.getText().toString();
+        ArrayList<attendance> feedbackList = feedback.setFeedback(id, Studentfeedback);
+
     }
 }
