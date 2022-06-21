@@ -86,6 +86,7 @@ public class ProvideFeedback extends AppCompatActivity {
         attendance feedback = new attendance();
         String id = String.valueOf(StudentID);
         String Studentfeedback = feedbackInput.getText().toString();
+        attendance Newfeedback = new attendance(id,Studentfeedback);
         ArrayList<attendance> feedbackList = feedback.setFeedback(id, Studentfeedback);
 
     }
