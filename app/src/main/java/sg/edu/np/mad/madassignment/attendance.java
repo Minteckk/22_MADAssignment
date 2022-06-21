@@ -21,8 +21,15 @@ String feedback;
     }
 
     public String getFeedback() {
-        return feedback;
+        if (feedback.isEmpty() == true) {
+            String i = "No feedback given.";
+            return i;
+        }
+        else {
+            return feedback;
+        }
     }
+
 
     public void setFeedback(String feedback) {
         this.feedback = feedback;
