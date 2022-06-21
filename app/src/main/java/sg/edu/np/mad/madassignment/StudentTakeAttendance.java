@@ -31,6 +31,8 @@ public class StudentTakeAttendance extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+
     }
 
 
@@ -39,8 +41,10 @@ public class StudentTakeAttendance extends AppCompatActivity {
         String value = sharedPreferences.getString("code","");
         String s_passcode = ((EditText) findViewById(R.id.student_acode)).getText().toString();
         P01Handler db = new P01Handler(this);
-
-        if (s_passcode.equals(value)) {
+        if (s_passcode.isEmpty() == true) {
+            Toast.makeText(getApplicationContext(),"Invalid passcode entered",Toast.LENGTH_SHORT).show();
+        }
+        else if (s_passcode.equals(value)) {
             boolean i = true;
             students s = new students();
 
