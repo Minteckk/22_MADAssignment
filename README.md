@@ -126,18 +126,15 @@ complete AccountDBHandler
 
 <p>Hanisah Binte Musrin</p>
 <ul>
-  <li>
-    complete view student attendance feature (ViewStudentAttendance.java)
-  </li>
   <li>complete LecturerMain.java</li>
+  <li>complete view student attendance feature (ViewAllStudentAttendance.java)</li>
   <li>complete StudentAttendanceAdapter.java</li>
-  <li>complete studentAttendanceViewHolder.java</li>
-  <li>complete view student attendance feature (ViewStudentAttendance.java)</li>.
   <li>StudentAttendanceP01-P05 fragments </li>
-  <li> complete layout page for view student attendance (view_all_student_attendance, student_attendance) </li>
+  <li>complete studentAttendanceViewHolder.java</li>
+  <li>complete layout page for view student attendance (view_all_student_attendance, student_attendance) </li>
   <li>complete layout page for lecturer main </li>
   <li>complete layout page for student attendance fragments</li>
-  </ul>
+ </ul>
   
  <p> Relevant Appendices </p>
  <p> Storyboard: </p>
