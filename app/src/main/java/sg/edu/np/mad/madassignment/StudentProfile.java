@@ -20,7 +20,7 @@ public class StudentProfile extends AppCompatActivity {
         Intent i = getIntent();
         // receiving the intent
         String name = i.getStringExtra("name");
-        String StudentID = i.getStringExtra("studentID");
+        int StudentID = i.getIntExtra("studentID",1);
         // find the textview
         TextView n = findViewById(R.id.textView18);
         // set the textview text as StudentName
@@ -28,7 +28,7 @@ public class StudentProfile extends AppCompatActivity {
         // find the textview
         TextView id = findViewById(R.id.textView19);
         // set the textview text as StudentID
-        id.setText(StudentID);
+        id.setText(String.valueOf(StudentID));
         // find the id for the feedback button
         Button feedbackBtn = findViewById(R.id.ProvideFeedback);
         // set Onclick listener for back image view

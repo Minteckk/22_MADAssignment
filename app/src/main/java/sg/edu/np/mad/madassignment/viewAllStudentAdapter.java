@@ -12,17 +12,15 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.firebase.ui.database.FirebaseRecyclerOptions;
-
 import java.util.ArrayList;
 
 public class viewAllStudentAdapter extends RecyclerView.Adapter<ClassViewHolder> {
     // initialize arraylist
-    ArrayList<students> data;
+    ArrayList<Student> data;
     // get context
     Context context;
 
-    public viewAllStudentAdapter(ArrayList<students> input, Context context) {
+    public viewAllStudentAdapter(ArrayList<Student> input, Context context) {
         this.data = input;
         this.context = context;
     }
@@ -43,13 +41,13 @@ public class viewAllStudentAdapter extends RecyclerView.Adapter<ClassViewHolder>
     @Override
     public void onBindViewHolder(ClassViewHolder holder, int position) {
         // get the position of the name
-        String name = data.get(position).Name;
+        String name = data.get(position)._name;
         // set the name
         holder.sName.setText(name);
         // get the position of the studentID
-        String studentID = data.get(position).StudentID;
+        int studentID = data.get(position)._studentId;
         // set the studentID
-        holder.sID.setText(studentID);
+        holder.sID.setText(String.valueOf(studentID));
         // set OnclickListener for imageView studentProfile
         holder.profile.setOnClickListener(new View.OnClickListener() {
             @Override

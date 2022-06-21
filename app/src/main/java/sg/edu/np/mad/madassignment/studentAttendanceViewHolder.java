@@ -22,7 +22,7 @@ public class studentAttendanceViewHolder extends RecyclerView.ViewHolder{
             public void onClick(View view) {
                 if (listener != null)
                 {
-                    int position = getAdapterPosition();
+                    int position = getBindingAdapterPosition();
                     if (position != RecyclerView.NO_POSITION)
                     {
                         listener.onItemClick(position);

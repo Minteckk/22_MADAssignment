@@ -36,7 +36,7 @@ public class ViewAllStudents extends AppCompatActivity {
            @Override
            public void onClick(View view) {
                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-               StudentClass fragment1 = StudentClass.newInstance("P01","P02");
+               StudentP01 fragment1 = StudentP01.newInstance("P01","P02");
                ft.replace(R.id.Frame, fragment1);
                ft.commit();
            }
@@ -76,7 +76,7 @@ public class ViewAllStudents extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                StudentP05 fragment1 = StudentP05.newInstance("P05", "P06");
+                StudentP05 fragment1 = StudentP05.newInstance("Group5", "P05");
                 ft.replace(R.id.Frame, fragment1);
                 ft.commit();
             }
