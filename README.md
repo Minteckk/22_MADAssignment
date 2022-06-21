@@ -1,5 +1,38 @@
 # NPAF - Ngee Ann Poly Attendace Taking and Feedback
-<p> Description of the App: </p>
+
+<p>Team Member Name and Student ID </p>
+<p> Ho Min Teck S10228079 </p>
+<p> Lu Junxi    S10219098 </p>
+<p> Lee Wei Jun Nicholas S10222425 </p>
+<p> Hanisah Binte Musrin S10226112</p>
+
+
+<p> Description of the App: 
+
+    Created for NGEE ANN POLYTECHNIC lecturers and students.
+    
+    Attendance taking always takes a long time and it wastes tons of paper each day! Be able to take attendance and receieve feedback easily on NPAF! Created for both students and lecturers! 
+    
+    Key features for students:
+    Take attendance after submitting the passcode given by their lecturer and their stuentid
+    View feedbacks given by lecturers each day
+    
+    Key features for lecturers:
+    Upload students to database
+    View student's attendance seperated into their various classes
+    Provide feedback to students based on their daily performance
+    Generate passcode for students for students to clock in their attendance
+    Reset students attendance for students to clock in their attendance the next day.
+    
+    
+    
+    We love feedback! Please email us at S10219098@connect.np.edu.com if you have any feedback :)
+
+    If you enjoy the app, please leave us a review — it means a lot!
+    
+    *An assignment for partial fulfilment of the coursework of Mobile Applications Development AY2022/23 in Ngee Ann Polytechnic*
+    
+</p>
 <br>
 <p>Contributions of each member:</p> 
 <p>Ho Min Teck</p>
@@ -76,22 +109,19 @@ complete generate passcode for attendance feature
     Designed App Logo
   </li>
   <li>
-   Designed App Trailer
-  </li>
-  <li>
-    Design Banner
-  </li>
-  <li>
-    Pictures
+    Design App pictures
   </li>
   <li>
     App Description
   </li>
+    <li>
+        Readme.md
+    </li>
   <li>
-    complete take attendance feature
+    completed student taking attendance feature
   </li>
   <li>
-   read feedback feature
+   completed student view feedback feature
   </li>
   <br>
   <p>
@@ -121,7 +151,6 @@ complete AccountDBHandler
   <li>Staff.java class</li>
   <li>Student class</li>
   <li>StudentClass.java</li>
-  <li></li>
   </ul>
 
 <p>Hanisah Binte Musrin</p>
@@ -137,14 +166,9 @@ complete AccountDBHandler
  </ul>
   
  <p> Relevant Appendices </p>
- <p> Storyboard: </p>
- <p>  </p>
+ <p> Storyboard: https://xd.adobe.com/view/2242ba5e-4a4b-4eb4-a96e-c24a5e94054f-7711/ </p>
 
-<p>Team Member Name and Student ID </p>
-<p> Ho Min Teck S10228079 </p>
-<p> Lu Junxi    S10219098 </p>
-<p> Lee Wei Jun Nicholas S10222425 </p>
-<p> Hanisah Binte Musrin S10226112</p>
+
 
 
 
