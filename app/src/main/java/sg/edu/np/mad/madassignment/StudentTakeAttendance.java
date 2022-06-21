@@ -39,8 +39,6 @@ public class StudentTakeAttendance extends AppCompatActivity {
     public void compare(View view) {
         SharedPreferences sharedPreferences = getSharedPreferences("passcode",MODE_PRIVATE);
         String value = sharedPreferences.getString("code","");
-        TextView student_test = (TextView)findViewById(R.id.student_test);
-        student_test.setText(value);
         String s_passcode = ((EditText) findViewById(R.id.student_acode)).getText().toString();
         P01Handler db = new P01Handler(this);
         if (s_passcode.isEmpty() == true) {
