@@ -1,36 +1,24 @@
 package sg.edu.np.mad.madassignment;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LecturerLogin extends AppCompatActivity {
-
-    TextView accessView;
-    EditText usernameBox;
-    EditText passwordBox;
-
-    Button login_lec;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lecturer_login);
-
-        accessView = (TextView) findViewById(R.id.lecAccess);
-        usernameBox = (EditText) findViewById(R.id.lecUsername);
-        passwordBox = (EditText) findViewById(R.id.lecPW);
-
-
         // find the id for login button
-        login_lec = findViewById(R.id.lecLogin);
-
+        Button login_lec = findViewById(R.id.lecLogin);
         // set Onclick listener for back image view
         ImageView iv = findViewById(R.id.lecturer_login_back);
         iv.setOnClickListener(new View.OnClickListener() {
@@ -41,22 +29,41 @@ public class LecturerLogin extends AppCompatActivity {
             }
         });
 
-    }
+        EditText getLecUsername = findViewById(R.id.lecUsername);
+        EditText getLecPassWord = findViewById(R.id.lecPW);
+        TextView LecRegNow = findViewById(R.id.LecRegNow);
+        LecRegNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent registerIntent = new Intent(LecturerLogin.this, LecturerRegister.class);
+                startActivity(registerIntent);
+            }
+        });
 
-    public void staffLogin(View view){
-
-        AccountDBHandler dbHandler = new AccountDBHandler(this, null, null, 1);
-        int staffId = Integer.parseInt(usernameBox.getText().toString());
-        String password = passwordBox.getText().toString();
-        usernameBox.setText("");
-        passwordBox.setText("");
-
-        if (dbHandler.checkStaffPassword(staffId, password)){
+        // set Onclick listener for login button
+        login_lec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String lecUsername = getLecUsername.getText().toString();
+                // goes to Lecturer Main page after the login page is clicked.
+                String lecPassword = getLecPassWord.getText().toString();
+                if (lecUsername.length() == 0) {
+                    getLecUsername.requestFocus();
+                    getLecUsername.setError("Please enter your username");
+                }
+                if (lecPassword.length() == 0) {
+                    getLecPassWord.requestFocus();
+                    getLecPassWord.setError("Please enter your password");
+                } else if (lecPassword.length() < 6) {
+                    getLecPassWord.setError("Your password must be more than 6 characters");
+                } else {
+                    Toast.makeText(LecturerLogin.this, "Login successful!", Toast.LENGTH_SHORT).show();
+                    // goes to Lecturer Main page after the login page is clicked.
                     Intent mainIntent = new Intent(LecturerLogin.this, LecturerMain.class);
+                    mainIntent.putExtra("Username", lecUsername);
                     startActivity(mainIntent);
-        }
-        else{
-            accessView.setText("Invalid Username or Password!");
-        }
+                }
+            }
+        });
     }
-}
+    }
