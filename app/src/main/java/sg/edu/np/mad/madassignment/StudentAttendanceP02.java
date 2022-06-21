@@ -154,27 +154,57 @@ public class StudentAttendanceP02 extends Fragment {
 
         //creating 25 items for recyclerview
         if(studentList.size()==0) {
-            for (int i = 0; i < 25; i++)
-            {
-                // initialize random
-                Random random = new Random();
-                int num1 = randomInt(10000);
-                int num2 = random.nextInt(10229999);
-                int num3 = random.nextInt(1);
-                Boolean check;
-                if (num3 ==1)
-                {
-                    check = true;
-                }
-                else
-                {
-                    check = false;
-                }
-                // new students object
-                students NewStudent = new students("Name: "+num1,"StudentID: "+num2,check);
-                // add the object to the list
-                studentList.add(NewStudent);
-            }
+            students NewStudent = new students("Lu Junxi" , "10219098", true);
+            studentList.add(NewStudent);
+            students NewStudent2 = new students("Lee Wei Jun Nicholas", "10222425", true);
+            studentList.add(NewStudent2);
+            students NewStudent3 = new students("Ho Min Teck", "10228079", true);
+            studentList.add(NewStudent3);
+            students NewStudent4 = new students("Hanisah Binte Musrin", "10226112",true);
+            students NewStudent5 = new students ("Koh En Yang", "10222282", true);
+            studentList.add(NewStudent5);
+            students NewStudent6 =  new students("Tan Jun Wei Gareth","10223079",true);
+            studentList.add(NewStudent6);
+            students NewStudent7 = new students("Nuralfian","10228111",true);
+            studentList.add(NewStudent7);
+            students NewStudent8 = new students("Isabelle Pak Yi Shan","10222456",true);
+            studentList.add(NewStudent8);
+            students NewStudent9 = new students("Tan Hui Xin", "10223047", true);
+            studentList.add(NewStudent9);
+            students NewStudent10 = new students("Elliot Ng", "10222410", true);
+            studentList.add(NewStudent10);
+            students NewStudent11 = new students("Ming Ze Ang", "10203953", true);
+            studentList.add(NewStudent11);
+            students NewStudent12 = new students("Yong Zong Han Ryan", "10219317",true);
+            studentList.add(NewStudent12);
+            students NewStudent13 = new students("Ong Yu Chen","10223650", true);
+            studentList.add(NewStudent13);
+            students NewStudent14 = new students("Kuan Yan Yong","10222954", true);
+            studentList.add(NewStudent14);
+            students NewStudent15 =  new students("Goh Shan Lun", "10222855", true);
+            studentList.add(NewStudent15);
+            students NewStudent16 = new students("Ng Ray Zin", "10222457", true);
+            studentList.add(NewStudent16);
+            students NewStudent17 = new students("Lye Wei Kang","10221838",true);
+            studentList.add(NewStudent17);
+            students NewStudent18 = new students("Leo Yun Tao", "10219150",true);
+            studentList.add(NewStudent18);
+            students NewStudent19 = new students("Tan Zhi Yuan", "10222641", true);
+            studentList.add(NewStudent19);
+            students NewStudent20 = new students("Shuqri Bin Shaifuddin", "10227932", true);
+            studentList.add(NewStudent20);
+            students NewStudent21 = new students("Yee Jia Chen", "10219344", true);
+            studentList.add(NewStudent21);
+            students NewStudent22 = new students("Tan Jin Daat","10222867",true);
+            studentList.add(NewStudent22);
+            students NewStudent23 =  new students("Wan Rong Joshua Wong", "10222829", true);
+            studentList.add(NewStudent23);
+            students NewStudent24 = new students("Wei Lun Ong", "10222794", true);
+            studentList.add(NewStudent24);
+            students NewStudent25 = new students("Lai Wai Hang", "10219615", true);
+            studentList.add(NewStudent25);
+            students NewStudent26 = new students("Koh Jun Hao Griffin", "10223376", true);
+            studentList.add(NewStudent26);
             // update the student to database.
             for(int b = 0; b < studentList.size(); b++) {
                 db.addNewStudent(studentList.get(b));

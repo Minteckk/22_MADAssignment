@@ -28,7 +28,7 @@ public class P01Handler extends SQLiteOpenHelper {
 
 
 
-    public P01Handler(Context context) { super(context, "students.db", null, 7);}
+    public P01Handler(Context context) { super(context, "students.db", null, 11);}
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -77,7 +77,7 @@ public class P01Handler extends SQLiteOpenHelper {
     public ArrayList<students> getStudents()
     {
         // initialize the arraylist
-        ArrayList<students> studentList = new ArrayList<>();
+        ArrayList<students> studentaList = new ArrayList<>();
         // sql statements to select from students table
         String query = "SELECT * FROM " + TABLE_STUDENTS;
         // get writable database
@@ -90,9 +90,9 @@ public class P01Handler extends SQLiteOpenHelper {
             student.AttendanceStatus = cursor.getExtras().getBoolean("3",false);
             student.StudentID = cursor.getString(2);
             student.Name = cursor.getString(1);
-            studentList.add(student);
+            studentaList.add(student);
         }
-        return studentList;
+        return studentaList;
     }
 
 }
