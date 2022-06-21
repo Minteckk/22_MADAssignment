@@ -15,6 +15,8 @@ public class StudentMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_main);
 
+
+
         // set Onclick listener for back image view
         ImageView iv = findViewById(R.id.student_main_back);
         iv.setOnClickListener(new View.OnClickListener() {
