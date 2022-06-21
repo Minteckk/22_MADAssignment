@@ -32,13 +32,17 @@ public class generatePassCode extends AppCompatActivity {
         generatePC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String code = pc_passcode.getText().toString();
+
+
+
                 // set the passcode to 6
                 int length = 6;
                 // set the textview to the length of the passcode specified.
                 pc_passcode.setText(generateRandomPassCode(length));
+                String code = pc_passcode.getText().toString();
                 SharedPreferences codeSharedPref = getSharedPreferences("passcode",MODE_PRIVATE);
                 SharedPreferences.Editor editor = codeSharedPref.edit();
+
                 editor.putString("code",code);
                 editor.apply();
             }
