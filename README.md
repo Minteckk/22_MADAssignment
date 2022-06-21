@@ -166,7 +166,9 @@ complete AccountDBHandler
  </ul>
   
  <p> Relevant Appendices </p>
- <p> Storyboard: https://xd.adobe.com/view/2242ba5e-4a4b-4eb4-a96e-c24a5e94054f-7711/ </p>
+ <p> Storyboard: https://xd.adobe.com/view/2242ba5e-4a4b-4eb4-a96e-c24a5e94054f-7711/
+     Storyboard showcase view: https://xd.adobe.com/view/2242ba5e-4a4b-4eb4-a96e-c24a5e94054f-7711/?fullscreen
+</p>
 
 
 
