@@ -1,9 +1,9 @@
 package sg.edu.np.mad.madassignment;
 
 public class Student {
-    private int _studentId;
-    private String _name;
-    private String _password;
+    int _studentId;
+    String _name;
+    String _password;
     public Student() { }
 
     public Student(int studentId, String name, String password) {
