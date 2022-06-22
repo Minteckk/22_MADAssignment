@@ -3,12 +3,14 @@ package sg.edu.np.mad.madassignment;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LecturerLogin extends AppCompatActivity {
 
@@ -31,32 +33,29 @@ public class LecturerLogin extends AppCompatActivity {
         // find the id for login button
         login_lec = findViewById(R.id.lecLogin);
 
-        // set Onclick listener for back image view
-        ImageView iv = findViewById(R.id.lecturer_login_back);
-        iv.setOnClickListener(new View.OnClickListener() {
+        // set Onclick listener for login button
+        login_lec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(LecturerLogin.this, MainActivity.class);
-                startActivity(i);
-            }
-        });
+                AccountDBHandler dbHandler = new AccountDBHandler(LecturerLogin.this, null, null, 1);
+                String staffIdString = usernameBox.getText().toString();
+                String password = passwordBox.getText().toString();
+                int staffId = -1;
+                if (!staffIdString.equals("")) {
+                    staffId = Integer.parseInt(staffIdString);
+                    passwordBox.setText("");
+                    usernameBox.setText("");
+                    //Toast.makeText(LecturerLogin.this, "Invalid Username", Toast.LENGTH_SHORT).show();
+                }
 
-    }
-
-    public void staffLogin(View view){
-
-        AccountDBHandler dbHandler = new AccountDBHandler(this, null, null, 1);
-        int staffId = Integer.parseInt(usernameBox.getText().toString());
-        String password = passwordBox.getText().toString();
-        usernameBox.setText("");
-        passwordBox.setText("");
-
-        if (dbHandler.checkStaffPassword(staffId, password)){
+                if (dbHandler.checkStaffPassword(staffId, password)){
                     Intent mainIntent = new Intent(LecturerLogin.this, LecturerMain.class);
                     startActivity(mainIntent);
-        }
-        else{
-            accessView.setText("Invalid Username or Password!");
-        }
+                }
+                else{
+                    Toast.makeText(LecturerLogin.this, "Invalid Username or Password", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 }
