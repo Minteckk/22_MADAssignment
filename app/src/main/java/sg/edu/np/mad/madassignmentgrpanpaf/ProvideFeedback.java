@@ -25,23 +25,32 @@ public class ProvideFeedback extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_provide_feedback);
+
         // get the intent from Student Profile
         Intent i = getIntent();
+
         // receiving the intent
         String name = i.getStringExtra("name");
         int StudentID = i.getIntExtra("studentID",1);
+
         // find the textview for studentName
         TextView studentName = findViewById(R.id.feedbackStudentName);
+
         // set the textview text as Student name
         studentName.setText(name);
+
         // find the textview for studentID
         TextView studentID = findViewById(R.id.feedbackStudentID);
+
         // set the textview for studentID
         studentID.setText(String.valueOf(StudentID));
+
         // find the id for feedback input field
         feedbackInput = findViewById(R.id.feedbackInput);
+
         // find the id for submit feedback button
         Button submitBtn = findViewById(R.id.SubmitFeedback);
+
 
 
         // set Onclick listener for back image view
