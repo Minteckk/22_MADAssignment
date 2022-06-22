@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class StudentLogin extends AppCompatActivity {
 
@@ -44,6 +45,7 @@ public class StudentLogin extends AppCompatActivity {
                 }
                 else {
                     Intent intent = new Intent(StudentLogin.this, StudentMain.class);
+                    Toast.makeText(StudentLogin.this, "Login successful!", Toast.LENGTH_SHORT).show();
                     startActivity(intent);
                 }
             }

@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -30,6 +31,11 @@ public class upload_student_name extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_student_name);
+        TextView lecname = findViewById(R.id.loginusername);
+        Intent i = getIntent();
+        String lecUsername = i.getStringExtra("Username");
+        lecname.setText(lecUsername);
+
         // find the id of the name input and student id input field.
         nameInput = findViewById(R.id.studentName);
         idInput = findViewById(R.id.studentID);
@@ -56,6 +62,7 @@ public class upload_student_name extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(upload_student_name.this, LecturerMain.class);
+                i.putExtra("Username", lecUsername);
                 startActivity(i);
             }
         });

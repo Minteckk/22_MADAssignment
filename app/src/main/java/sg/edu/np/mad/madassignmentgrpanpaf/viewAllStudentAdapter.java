@@ -16,11 +16,11 @@ import java.util.ArrayList;
 
 public class viewAllStudentAdapter extends RecyclerView.Adapter<ClassViewHolder> {
     // initialize arraylist
-    ArrayList<Student> data;
+    ArrayList<students> data;
     // get context
     Context context;
 
-    public viewAllStudentAdapter(ArrayList<Student> input, Context context) {
+    public viewAllStudentAdapter(ArrayList<students> input, Context context) {
         this.data = input;
         this.context = context;
     }
@@ -41,13 +41,13 @@ public class viewAllStudentAdapter extends RecyclerView.Adapter<ClassViewHolder>
     @Override
     public void onBindViewHolder(ClassViewHolder holder, int position) {
         // get the position of the name
-        String name = data.get(position)._name;
+        String name = data.get(position).Name;
         // set the name
         holder.sName.setText(name);
         // get the position of the studentID
-        int studentID = data.get(position)._studentId;
+        String studentID = data.get(position).StudentID;
         // set the studentID
-        holder.sID.setText(String.valueOf(studentID));
+        holder.sID.setText(studentID);
         // set OnclickListener for imageView studentProfile
         holder.profile.setOnClickListener(new View.OnClickListener() {
             @Override

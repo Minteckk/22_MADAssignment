@@ -21,7 +21,7 @@ public class StudentP02 extends Fragment {
     // initialize recyclerview variable
     private RecyclerView recyclerView;
     // initialize student arrayList
-    public ArrayList<Student> studentList;
+    public ArrayList<students> studentList;
     viewAllStudentAdapter adapter;
     // initialize
     private String P02;
@@ -100,74 +100,74 @@ public class StudentP02 extends Fragment {
         return random_int;
     }
 
-    public ArrayList<Student> initialiseData()
+    public ArrayList<students> initialiseData()
     {
         ArrayList<String> nameList = new ArrayList<String>();
         ArrayList<String> idList = new ArrayList<String>();
 
         // initialize db file and get the Activity
-        AccountDBHandler db = new AccountDBHandler(getActivity(),null,null,2);
+        P02Handler db = new P02Handler(getActivity());
         // set the studentList to get students from the db file
-        ArrayList<Student> studentList = db.getStudents();
+        ArrayList<students> studentList = db.getStudents();
 
         //creating 26 items for recyclerview
         if(studentList.size()==0) {
-            Student NewStudent = new Student(10219098 , "Lu Junxi", "encrypted");
+            students NewStudent = new students("Lu Junxi" , "10219098", true);
             studentList.add(NewStudent);
-            Student NewStudent2 = new Student(10222425, "Lee Wei Jun Nicholas", "encrypted");
+            students NewStudent2 = new students("Lee Wei Jun Nicholas", "10222425", true);
             studentList.add(NewStudent2);
-            Student NewStudent3 = new Student(10228079, "Ho Min Teck", "encrypted");
+            students NewStudent3 = new students("Ho Min Teck", "10228079", true);
             studentList.add(NewStudent3);
-            Student NewStudent4 = new Student(10226112, "Hanisah Binte Musrin","encrypted");
+            students NewStudent4 = new students("Hanisah Binte Musrin", "10226112",true);
             studentList.add(NewStudent4);
-            Student NewStudent5 = new Student (10222282, "Koh En Yang", "encrypted");
+            students NewStudent5 = new students ("Koh En Yang", "10222282", true);
             studentList.add(NewStudent5);
-            Student NewStudent6 =  new Student(10223079,"Tan Jun Wei Gareth","encrypted");
+            students NewStudent6 =  new students("Tan Jun Wei Gareth","10223079",true);
             studentList.add(NewStudent6);
-            Student NewStudent7 = new Student(10228111,"Nuralfian","encrypted");
+            students NewStudent7 = new students("Nuralfian","10228111",true);
             studentList.add(NewStudent7);
-            Student NewStudent8 = new Student(10222456,"Isabelle Pak Yi Shan","encrypted");
+            students NewStudent8 = new students("Isabelle Pak Yi Shan","10222456",true);
             studentList.add(NewStudent8);
-            Student NewStudent9 = new Student(10223047, "Tan Hui Xin", "encrypted");
+            students NewStudent9 = new students("Tan Hui Xin", "10223047", true);
             studentList.add(NewStudent9);
-            Student NewStudent10 = new Student(10222410, "Elliot Ng", "encrypted");
+            students NewStudent10 = new students("Elliot Ng", "10222410", true);
             studentList.add(NewStudent10);
-            Student NewStudent11 = new Student(10203953, "Ming Ze Ang", "encrypted");
+            students NewStudent11 = new students("Ming Ze Ang", "10203953", true);
             studentList.add(NewStudent11);
-            Student NewStudent12 = new Student(10219317, "Yong Zong Han Ryan","encrypted");
+            students NewStudent12 = new students("Yong Zong Han Ryan", "10219317",true);
             studentList.add(NewStudent12);
-            Student NewStudent13 = new Student(10223650,"Ong Yu Chen", "encrypted");
+            students NewStudent13 = new students("Ong Yu Chen","10223650", true);
             studentList.add(NewStudent13);
-            Student NewStudent14 = new Student(10222954,"Kuan Yan Yong", "encrypted");
+            students NewStudent14 = new students("Kuan Yan Yong","10222954", true);
             studentList.add(NewStudent14);
-            Student NewStudent15 =  new Student(10222855, "Goh Shan Lun", "encrypted");
+            students NewStudent15 =  new students("Goh Shan Lun", "10222855", true);
             studentList.add(NewStudent15);
-            Student NewStudent16 = new Student(10222457, "Ng Ray Zin", "encrypted");
+            students NewStudent16 = new students("Ng Ray Zin", "10222457", true);
             studentList.add(NewStudent16);
-            Student NewStudent17 = new Student(10221838,"Lye Wei Kang","encrypted");
+            students NewStudent17 = new students("Lye Wei Kang","10221838",true);
             studentList.add(NewStudent17);
-            Student NewStudent18 = new Student(10219150, "Leo Yun Tao","encrypted");
+            students NewStudent18 = new students("Leo Yun Tao","10219150" ,true);
             studentList.add(NewStudent18);
-            Student NewStudent19 = new Student(10222641, "Tan Zhi Yuan", "encrypted");
+            students NewStudent19 = new students("Tan Zhi Yuan", "10222641", true);
             studentList.add(NewStudent19);
-            Student NewStudent20 = new Student(10227932, "Shuqri Bin Shaifuddin", "encrypted");
+            students NewStudent20 = new students("Shuqri Bin Shaifuddin", "10227932", true);
             studentList.add(NewStudent20);
-            Student NewStudent21 = new Student(10219344, "Yee Jia Chen", "encrypted");
+            students NewStudent21 = new students("Yee Jia Chen", "10219344", true);
             studentList.add(NewStudent21);
-            Student NewStudent22 = new Student(10222867,"Tan Jin Daat","encrypted");
+            students NewStudent22 = new students("Tan Jin Daat","10222867",true);
             studentList.add(NewStudent22);
-            Student NewStudent23 =  new Student(10222829, "Wan Rong Joshua Wong", "encrypted");
+            students NewStudent23 =  new students("Wan Rong Joshua Wong", "10222829", true);
             studentList.add(NewStudent23);
-            Student NewStudent24 = new Student(10222794, "Wei Lun Ong", "encrypted");
+            students NewStudent24 = new students("Wei Lun Ong", "10222794", true);
             studentList.add(NewStudent24);
-            Student NewStudent25 = new Student(10219615, "Lai Wai Hang", "encrypted");
+            students NewStudent25 = new students("Lai Wai Hang", "10219615", true);
             studentList.add(NewStudent25);
-            Student NewStudent26 = new Student(10223376, "Koh Jun Hao Griffin", "encrypted");
+            students NewStudent26 = new students("Koh Jun Hao Griffin", "10223376", true);
             studentList.add(NewStudent26);
 
             // update the student to database.
             for(int b = 0; b < studentList.size(); b++) {
-                db.addStudent(studentList.get(b));
+                db.addNewStudent(studentList.get(b));
             }
         }
 
@@ -177,10 +177,10 @@ public class StudentP02 extends Fragment {
         for ( String name : nameList)
         {
             // initialize student
-            Student s = new Student();
+            students s = new students();
             // get the nameList and idList size.
-            s._studentId = Integer.valueOf(idList.get(randomInt(idList.size()-1)));
-            s._name = nameList.get(randomInt(nameList.size()-1));
+            s.Name = String.valueOf(idList.get(randomInt(idList.size()-1)));
+            s.StudentID = nameList.get(randomInt(nameList.size()-1));
             // add the value to studentList
             studentList.add(s);
             i = i + 1;
@@ -189,8 +189,8 @@ public class StudentP02 extends Fragment {
         //to check if students data has initialized properly
         for ( Object student : studentList)
         {
-            Student s = (Student) student;
-            System.out.println(s._name);
+            students s = (students) student;
+            System.out.println(s.Name);
         }
 
         // return studentList
