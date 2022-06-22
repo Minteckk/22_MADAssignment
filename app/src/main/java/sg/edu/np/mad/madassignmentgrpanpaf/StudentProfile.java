@@ -19,7 +19,7 @@ public class StudentProfile extends AppCompatActivity {
         Intent i = getIntent();
         // receiving the intent
         String name = i.getStringExtra("name");
-        int StudentID = i.getIntExtra("studentID",1);
+        String StudentID = i.getStringExtra("studentID");
         // find the textview
         TextView n = findViewById(R.id.textView18);
         // set the textview text as StudentName

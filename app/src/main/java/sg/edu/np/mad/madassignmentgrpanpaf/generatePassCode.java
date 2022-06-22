@@ -19,6 +19,11 @@ public class generatePassCode extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_generate_pass_code);
 
+        TextView lecname = findViewById(R.id.spName);
+        Intent i = getIntent();
+        String lecUsername = i.getStringExtra("Username");
+        lecname.setText(lecUsername);
+
         // find the id for the back button
         ImageView generate_back = findViewById(R.id.gen_back);
 
@@ -54,6 +59,7 @@ public class generatePassCode extends AppCompatActivity {
             public void onClick(View view) {
                 // intent to go back to the lecturer's main page.
                 Intent i = new Intent(generatePassCode.this, LecturerMain.class);
+                i.putExtra("Username", lecUsername);
                 // start the intent activity
                 startActivity(i);
             }
