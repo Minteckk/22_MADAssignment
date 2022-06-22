@@ -26,7 +26,7 @@
     
     
     
-    We love feedback! Please email us at S10219098@connect.np.edu.com if you have any feedback :)
+    We love feedback! Please email us at S10219098@connect.np.edu.sg if you have any feedback :)
 
     If you enjoy the app, please leave us a review — it means a lot!
     
@@ -102,6 +102,7 @@ complete generate passcode for attendance feature
   <li>
   complete View all students feature and viewAllStudentAdapter
   </li>
+  <li>Reset Attendance</li>
 </ul>
 <p>Lu Junxi</p>
 <ul>
@@ -154,6 +155,8 @@ complete AccountDBHandler
   <li>Staff.java class</li>
   <li>Student class</li>
   <li>StudentClass.java</li>
+  <li>LecturerLogin.java</li>
+  <li>StudentLogin.java</li>
   </ul>
 
 <p>Hanisah Binte Musrin</p>
@@ -169,8 +172,8 @@ complete AccountDBHandler
  </ul>
   
  <p> Relevant Appendices </p>
- <p> Storyboard: https://xd.adobe.com/view/2242ba5e-4a4b-4eb4-a96e-c24a5e94054f-7711/
-     Storyboard showcase view: https://xd.adobe.com/view/2242ba5e-4a4b-4eb4-a96e-c24a5e94054f-7711/?fullscreen
+ <p> Storyboard: https://xd.adobe.com/view/2242ba5e-4a4b-4eb4-a96e-c24a5e94054f-7711/</p>
+ <p>    Storyboard showcase view: https://xd.adobe.com/view/2242ba5e-4a4b-4eb4-a96e-c24a5e94054f-7711/?fullscreen
 </p>
 
 
