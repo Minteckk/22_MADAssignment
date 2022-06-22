@@ -63,11 +63,6 @@ public class AccountDBHandler extends SQLiteOpenHelper {
                 + ")";
         db.execSQL(CREATE_STUDENT_TABLE);
 
-        for (int i = 10000000; i < 10000500; i++){
-            Student s = new Student(i,"Name " + i, "password");
-            this.addStudent(s);
-        }
-
         String CREATE_STAFF_TABLE = "CREATE TABLE " + TABLE_STAFF
                 + "("
                 + COLUMN_STAFFID + " INT PRIMARY KEY,"
@@ -76,21 +71,12 @@ public class AccountDBHandler extends SQLiteOpenHelper {
                 + ")";
         db.execSQL(CREATE_STAFF_TABLE);
 
-        for (int i = 20000000; i < 20000100; i++){
-            Staff s = new Staff(i,"Name " + i, "pass123");
-            this.addStaff(s);
-        }
-
         String CREATE_SCHOOL_TABLE = "CREATE TABLE " + TABLE_SCHOOL
                 + "("
                 + COLUMN_SCHOOLID + " VARCHAR(5) PRIMARY KEY,"
                 + COLUMN_SCHOOLNAME + " VARCHAR(50) NOT NULL"
                 + ")";
         db.execSQL(CREATE_SCHOOL_TABLE);
-        ;
-        School school = new School("ICT","School of InfoComm Technology");
-        this.addSchool(school);
-
 
         String CREATE_COURSE_TABLE = "CREATE TABLE " + TABLE_COURSE
                 + "("
@@ -100,11 +86,6 @@ public class AccountDBHandler extends SQLiteOpenHelper {
                 + "CONSTRAINT FK_" + TABLE_COURSE + "_" + COLUMN_SCHOOLID + " FOREIGN KEY (" + COLUMN_SCHOOLID + ") REFERENCES " + TABLE_SCHOOL + "(" + COLUMN_SCHOOLID + ")"
                 + ")";
         db.execSQL(CREATE_COURSE_TABLE);
-        this.addCourse(new Course("IT","ICT","Information Technology"));
-        this.addCourse(new Course("CSF","ICT","Cybersecurity & Digital Forensics"));
-        this.addCourse(new Course("DS","ICT","Data Science"));
-        this.addCourse(new Course("CICTP", "ICT","Common ICT Programme"));
-        this.addCourse(new Course("IM","ICT","Immersive Media"));
 
         String CREATE_CLASS_TABLE = "CREATE TABLE " + TABLE_CLASS
                 + "("
@@ -116,13 +97,6 @@ public class AccountDBHandler extends SQLiteOpenHelper {
                 + "CONSTRAINT FK_" + TABLE_CLASS + "_" + COLUMN_STUDENTID + " FOREIGN KEY (" + COLUMN_STUDENTID + ") REFERENCES " + TABLE_STUDENT + "(" + COLUMN_STUDENTID + ")"
                 + ")";
         db.execSQL(CREATE_CLASS_TABLE);
-        List<String> schId = Arrays.asList("IT","CSF","DS","CICTP","IM");
-        for (String id : schId) {
-            for(int i = 1; i <= 5; i++) {
-                for (int j = (i - 1) * 20 + 10000000; j < i * 20 + 10000000; j++ )
-                this.addClass(new CourseClass(id, i),j);
-            }
-        }
 
         String CREATE_ATTENDANCE_TABLE = "CREATE TABLE " + TABLE_ATTENDANCE
                 + "("
@@ -133,6 +107,8 @@ public class AccountDBHandler extends SQLiteOpenHelper {
                 + "CONSTRAINT FK_" + TABLE_ATTENDANCE + "_" + COLUMN_STUDENTID + " FOREIGN KEY (" + COLUMN_STUDENTID + ") REFERENCES " + TABLE_STUDENT + "(" + COLUMN_STUDENTID + ")"
                 + ")";
         db.execSQL(CREATE_ATTENDANCE_TABLE);
+
+        this.initializeData();
     }
 
     @Override
@@ -141,6 +117,55 @@ public class AccountDBHandler extends SQLiteOpenHelper {
         //Insert or Delete Data
     }
 
+    public void initializeData(){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        for (int i = 10000000; i < 10000500; i++){
+            Student s = new Student(i,"Name " + i, "password");
+            //this.addStudent(s);
+            ContentValues values = new ContentValues();
+            values.put(COLUMN_STUDENTID, s.getId());
+            values.put(COLUMN_STUDENTNAME, s.getName());
+            values.put(COLUMN_PASSWORD, s.getPassword());
+            db.insert(TABLE_STUDENT, null, values);
+        }
+
+        db = this.getWritableDatabase();
+        for (int i = 20000000; i < 20000100; i++){
+            Staff s = new Staff(i,"Name " + i, "pass123");
+            //this.addStaff(s);
+            ContentValues values = new ContentValues();
+            values.put(COLUMN_STAFFID, s.getId());
+            values.put(COLUMN_STAFFNAME, s.getName());
+            values.put(COLUMN_PASSWORD, s.getPassword());
+            db.insert(TABLE_STAFF, null, values);
+        }
+
+        School school = new School("ICT","School of InfoComm Technology");
+        this.addSchool(school);
+
+        this.addCourse(new Course("IT","ICT","Information Technology"));
+        this.addCourse(new Course("CSF","ICT","Cybersecurity & Digital Forensics"));
+        this.addCourse(new Course("DS","ICT","Data Science"));
+        this.addCourse(new Course("CICTP", "ICT","Common ICT Programme"));
+        this.addCourse(new Course("IM","ICT","Immersive Media"));
+        db = this.getWritableDatabase();
+        List<String> schId = Arrays.asList("IT","CSF","DS","CICTP","IM");
+        for (String id : schId) {
+            for(int i = 1; i <= 5; i++) {
+                for (int j = (i - 1) * 20 + 10000000; j < i * 20 + 10000000; j++ ){
+                    CourseClass courseClass = new CourseClass(id, i);
+                    ContentValues values = new ContentValues();
+                    values.put(COLUMN_COURSEID, courseClass.getCourseId());
+                    values.put(COLUMN_CLASSID, courseClass.getClassId());
+                    values.put(COLUMN_STUDENTID, j);
+
+                    db.insert(TABLE_CLASS, null, values);
+                }
+            }
+        }
+        db.close();
+    }
 
     public boolean checkAttendance(int studentId, String ddMMyyyy) {
         String query = "SELECT * FROM " + TABLE_ATTENDANCE
