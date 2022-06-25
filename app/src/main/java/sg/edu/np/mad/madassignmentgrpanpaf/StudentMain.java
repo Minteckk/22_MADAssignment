@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,13 +17,16 @@ public class StudentMain extends AppCompatActivity {
         setContentView(R.layout.activity_student_main);
 
 
-
-        // set Onclick listener for back image view
-        ImageView iv = findViewById(R.id.student_main_back);
-        iv.setOnClickListener(new View.OnClickListener() {
+        // set the onClick listener for the logout button
+        Button btn = findViewById(R.id.button_logout2);
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(StudentMain.this, MainActivity.class);
+                // Close all activities
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                // Add a new flag to start new activity
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);
             }
         });

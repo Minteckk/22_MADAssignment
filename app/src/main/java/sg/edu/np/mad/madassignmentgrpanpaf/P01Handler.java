@@ -28,7 +28,7 @@ public class P01Handler extends SQLiteOpenHelper {
 
 
 
-    public P01Handler(Context context) { super(context, "students.db", null, 11);}
+    public P01Handler(Context context) { super(context, "students.db", null, 12);}
 
     @Override
     public void onCreate(SQLiteDatabase db) {

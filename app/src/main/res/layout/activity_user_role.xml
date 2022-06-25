@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".StudentMain">
+    android:layout_height="match_parent"
+    tools:context=".UserRole">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -18,110 +18,98 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/studenttitle"
+                android:id="@+id/textView31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="64dp"
-                android:layout_marginEnd="24dp"
-                android:text="Welcome student"
-                android:textColor="@color/design_default_color_background"
-                android:textSize="24sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="8dp"
+                android:text="What is your role?"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/button_logout2"
-                android:layout_width="112dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="8dp"
-                android:text="Logout"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.971"
+            <ImageView
+                android:id="@+id/student_login_back2"
+                android:layout_width="88dp"
+                android:layout_height="70dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/backbutton" />
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
+                android:id="@+id/cardView2"
                 android:layout_width="0dp"
-                android:layout_height="170dp"
+                android:layout_height="139dp"
                 android:layout_marginStart="64dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="64dp"
                 app:cardCornerRadius="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/studenttitle">
+                app:layout_constraintTop_toBottomOf="@+id/textView31">
 
                 <ImageView
-                    android:id="@+id/student_aimage"
+                    android:id="@+id/student_role"
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginRight="20dp"
-                    app:srcCompat="@drawable/student_attendance" />
+                    app:srcCompat="@drawable/student_1_" />
 
                 <TextView
-                    android:id="@+id/student_atext"
+                    android:id="@+id/textView32"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center_horizontal"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="30dp"
-                    android:text="Take attendance"
-                    android:textColor="@color/black"
-                    android:textSize="24sp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Student"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
-
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="170dp"
+                android:layout_height="139dp"
                 android:layout_marginStart="64dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="64dp"
                 app:cardCornerRadius="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView" >
+                app:layout_constraintTop_toBottomOf="@+id/cardView2">
 
                 <ImageView
-                    android:id="@+id/student_fimage"
+                    android:id="@+id/teacherRole"
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
                     android:layout_marginStart="8dp"
-
-                    android:layout_marginLeft="18dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginRight="18dp"
-
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/student_feedback" />
+                    app:srcCompat="@drawable/teacher" />
 
                 <TextView
-                    android:id="@+id/student_ftext"
+                    android:id="@+id/textView33"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center_horizontal"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="35dp"
-                    android:text="Read feedback"
-                    android:textColor="@color/black"
-                    android:textSize="24sp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Teacher"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

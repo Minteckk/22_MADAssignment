@@ -23,7 +23,7 @@ public class LecturerLogin extends AppCompatActivity {
         iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(LecturerLogin.this, MainActivity.class);
+                Intent i = new Intent(LecturerLogin.this, UserRole.class);
                 startActivity(i);
             }
         });

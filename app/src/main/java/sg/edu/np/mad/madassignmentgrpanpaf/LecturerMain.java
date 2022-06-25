@@ -59,7 +59,7 @@ public class LecturerMain extends AppCompatActivity {
                 uploadIntent.putExtra("Username",value);
                 startActivity(uploadIntent);
             }
-        });
+       });
 
         // set the onClick listener for the logout button
         Button btn = findViewById(R.id.button_logout);
@@ -90,7 +90,7 @@ public class LecturerMain extends AppCompatActivity {
         });
 
         // find the id of the generate passcode image
-        ImageView generatePasscode = findViewById(R.id.passcodeImg);
+        ImageView generatePasscode = findViewById(R.id.Passcodeimg);
         generatePasscode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

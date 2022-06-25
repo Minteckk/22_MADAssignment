@@ -11,54 +11,56 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MADAssignment">
         <activity
-            android:name="sg.edu.np.mad.madassignmentgrpanpaf.StudentViewFeedback"
-            android:exported="true">
-        </activity>
-        <activity
-            android:name="sg.edu.np.mad.madassignmentgrpanpaf.LecturerRegister"
+            android:name=".UserRole"
             android:exported="false" />
         <activity
-            android:name="sg.edu.np.mad.madassignmentgrpanpaf.register"
+            android:name=".StudentViewFeedback"
+            android:exported="true"></activity>
+        <activity
+            android:name=".LecturerRegister"
             android:exported="false" />
         <activity
-            android:name="sg.edu.np.mad.madassignmentgrpanpaf.generatePassCode"
+            android:name=".register"
             android:exported="false" />
         <activity
-            android:name="sg.edu.np.mad.madassignmentgrpanpaf.StudentProfile"
+            android:name=".generatePassCode"
             android:exported="false" />
         <activity
-            android:name="sg.edu.np.mad.madassignmentgrpanpaf.ProvideFeedback"
+            android:name=".StudentProfile"
             android:exported="false" />
         <activity
-            android:name="sg.edu.np.mad.madassignmentgrpanpaf.StudentTakeAttendance"
+            android:name=".ProvideFeedback"
+            android:exported="false" />
+        <activity
+            android:name=".StudentTakeAttendance"
             android:exported="true" />
         <activity
-            android:name="sg.edu.np.mad.madassignmentgrpanpaf.StudentMain"
+            android:name=".StudentMain"
             android:exported="true" />
         <activity
-            android:name="sg.edu.np.mad.madassignmentgrpanpaf.ClassViewHolder"
+            android:name=".ClassViewHolder"
             android:exported="false"
             tools:ignore="Instantiatable" />
         <activity
-            android:name="sg.edu.np.mad.madassignmentgrpanpaf.ViewAllStudents"
+            android:name=".ViewAllStudents"
             android:exported="false" />
         <activity
-            android:name="sg.edu.np.mad.madassignmentgrpanpaf.ViewAllStudentAttendance"
+            android:name=".ViewAllStudentAttendance"
             android:exported="false" />
         <activity
-            android:name="sg.edu.np.mad.madassignmentgrpanpaf.LecturerMain"
+            android:name=".LecturerMain"
             android:exported="false" />
         <activity
-            android:name="sg.edu.np.mad.madassignmentgrpanpaf.upload_student_name"
+            android:name=".upload_student_name"
             android:exported="false" />
         <activity
-            android:name="sg.edu.np.mad.madassignmentgrpanpaf.StudentLogin"
+            android:name=".StudentLogin"
             android:exported="false" />
         <activity
-            android:name="sg.edu.np.mad.madassignmentgrpanpaf.LecturerLogin"
+            android:name=".LecturerLogin"
             android:exported="false" />
         <activity
-            android:name="sg.edu.np.mad.madassignmentgrpanpaf.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
