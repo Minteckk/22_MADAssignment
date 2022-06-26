@@ -38,8 +38,6 @@ public class generatePassCode extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
-
                 // set the passcode to 6
                 int length = 6;
                 // set the textview to the length of the passcode specified.

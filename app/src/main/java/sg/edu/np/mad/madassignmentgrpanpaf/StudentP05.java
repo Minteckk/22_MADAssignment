@@ -102,6 +102,7 @@ public class StudentP05 extends Fragment {
 
     public ArrayList<students> initialiseData()
     {
+        // initialize
         ArrayList<String> nameList = new ArrayList<String>();
         ArrayList<String> idList = new ArrayList<String>();
 
@@ -112,62 +113,111 @@ public class StudentP05 extends Fragment {
 
         //creating 26 items for recyclerview
         if(studentList.size()==0) {
+            // new students object
             students NewStudent = new students("Tan Kwan Wei" , "10222479", true);
+            // add the object to the list
             studentList.add(NewStudent);
+            // new students object
             students NewStudent2 = new students("Emily Lim", "10227383", true);
+            // add the object to the list
             studentList.add(NewStudent2);
+            // new students object
             students NewStudent3 = new students("Fredor Low", "10223565", true);
+            // add the object to the list
             studentList.add(NewStudent3);
+            // new students object
             students NewStudent4 = new students("Felicia Chua", "10223353",true);
+            // add the object to the list
             studentList.add(NewStudent4);
+            // new students object
             students NewStudent5 = new students ("Fong Jia Yuan", "10227731", true);
+            // add the object to the list
             studentList.add(NewStudent5);
+            // new students object
             students NewStudent6 =  new students("Xavier Teo","10203441",true);
+            // add the object to the list
             studentList.add(NewStudent6);
+            // new students object
             students NewStudent7 = new students("Adam Aqif","10219423",true);
+            // add the object to the list
             studentList.add(NewStudent7);
+            // new students object
             students NewStudent8 = new students("Ang Siong Xavier Chan","10223292",true);
+            // add the object to the list
             studentList.add(NewStudent8);
+            // new students object
             students NewStudent9 = new students("Mok Qing Ling", "10227446", true);
+            // add the object to the list
             studentList.add(NewStudent9);
+            // new students object
             students NewStudent10 = new students("Yu Bai Lim", "10223127", true);
+            // add the object to the list
             studentList.add(NewStudent10);
+            // new students object
             students NewStudent11 = new students("Jing Jie Gan", "10222232", true);
+            // add the object to the list
             studentList.add(NewStudent11);
+            // new students object
             students NewStudent12 = new students("Chong Xin Le", "10221973",true);
+            // add the object to the list
             studentList.add(NewStudent12);
+            // new students object
             students NewStudent13 = new students("Zeng Jie Jeffrey Zhong","10223330", true);
+            // add the object to the list
             studentList.add(NewStudent13);
+            // new students object
             students NewStudent14 = new students("Jia Xin Ally Koh","10222783", true);
+            // add the object to the list
             studentList.add(NewStudent14);
+            // new students object
             students NewStudent15 =  new students("Zi Yi Jayne Tan", "10227481", true);
+            // add the object to the list
             studentList.add(NewStudent15);
+            // new students object
             students NewStudent16 = new students("Sim Xiang Ying", "10227827", true);
+            // add the object to the list
             studentList.add(NewStudent16);
+            // new students object
             students NewStudent17 = new students("Chiam Wei","10223002",true);
+            // add the object to the list
             studentList.add(NewStudent17);
+            // new students object
             students NewStudent18 = new students("Izz Fikri", "10227939",true);
+            // add the object to the list
             studentList.add(NewStudent18);
+            // new students object
             students NewStudent19 = new students("Yi Ting Koay", "10221765", true);
+            // add the object to the list
             studentList.add(NewStudent19);
+            // new students object
             students NewStudent20 = new students("Yeo Yuan Ting", "10223054", true);
+            // add the object to the list
             studentList.add(NewStudent20);
+            // new students object
             students NewStudent21 = new students("Tan Raiden", "10223522", true);
+            // add the object to the list
             studentList.add(NewStudent21);
+            // new students object
             students NewStudent22 = new students("Nathan Quek","10223513",true);
+            // add the object to the list
             studentList.add(NewStudent22);
+            // new students object
             students NewStudent23 =  new students("Xie Ziqi", "10222609", true);
+            // add the object to the list
             studentList.add(NewStudent23);
+            // new students object
             students NewStudent24 = new students("Loong Chor Yi", "10205467", true);
+            // add the object to the list
             studentList.add(NewStudent24);
+            // new students object
             students NewStudent25 = new students("Natalie Koh", "10227870", true);
+            // add the object to the list
             studentList.add(NewStudent25);
             // update the student to database.
             for(int b = 0; b < studentList.size(); b++) {
                 db.addNewStudent(studentList.get(b));
             }
         }
-
 
         int i = 1;
         // check nameList

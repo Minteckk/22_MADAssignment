@@ -44,7 +44,7 @@ public class LecturerLogin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String lecUsername = getLecUsername.getText().toString();
-                // goes to Lecturer Main page after the login page is clicked.
+                // goes to Lecturer Main page after the login button is clicked.
                 String lecPassword = getLecPassWord.getText().toString();
                 if (lecUsername.length() == 0) {
                     getLecUsername.requestFocus();
@@ -57,7 +57,7 @@ public class LecturerLogin extends AppCompatActivity {
                     getLecPassWord.setError("Your password must be more than 6 characters");
                 } else {
                     Toast.makeText(LecturerLogin.this, "Login successful!", Toast.LENGTH_SHORT).show();
-                    // goes to Lecturer Main page after the login page is clicked.
+                    // goes to Lecturer Main page after the login button is clicked.
                     Intent mainIntent = new Intent(LecturerLogin.this, LecturerMain.class);
                     mainIntent.putExtra("Username", lecUsername);
                     startActivity(mainIntent);

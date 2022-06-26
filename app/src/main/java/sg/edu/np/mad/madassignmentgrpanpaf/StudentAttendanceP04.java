@@ -77,28 +77,39 @@ public class StudentAttendanceP04 extends Fragment {
         // set adapter
         recyclerView.setAdapter(aAdapter);
 
+        // find the id of the reset attendance button and set OnClickListener for it.
         Button resetAttendance = view.findViewById(R.id.resetAttendance4);
         resetAttendance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // build alert dialog
                 AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                // set Title
                 builder.setTitle("Reset Attendance?");
+                // set Cancelable to false
                 builder.setCancelable(false);
+                // set Message
                 builder.setMessage("Reset all your students attendance?");
+                // OnClickListener when Yes button is pressed.
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        // set attendance status to false when the button is pressed.
                         students s = new students();
                         s.setAttendanceStatus(false);
-                        Toast.makeText(getContext(),"Attendance has resetted",Toast.LENGTH_SHORT).show();
+                        // Toast Message to display Attendance has been resetted
+                        Toast.makeText(getContext(),"Attendance has been resetted",Toast.LENGTH_SHORT).show();
                     }
                 });
+                // OnClickListener when No button is pressed.
                 builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        // cancel the alert dialog
                         dialogInterface.cancel();
                     }
                 });
+                // create the alert dialog and show
                 AlertDialog alert = builder.create();
                 alert.show();
             }
@@ -170,6 +181,7 @@ public class StudentAttendanceP04 extends Fragment {
 
     public ArrayList<students> initialiseData()
     {
+        // initialize
         ArrayList<String> nameList = new ArrayList<String>();
         ArrayList<String> idList = new ArrayList<String>();
 
@@ -182,60 +194,107 @@ public class StudentAttendanceP04 extends Fragment {
         //creating 25 items for recyclerview
         if(studentList.size()==0)
         {
+            // create new students object
             students NewStudent = new students("Low Jing Xi", "10223779", true);
+            // add the object to the list
             studentList.add(NewStudent);
+            // create new students object
             students NewStudent2 = new students("Eliezer Goh", "10222766", true);
+            // add the object to the list
             studentList.add(NewStudent2);
+            // create new students object
             students NewStudent3 = new students("Rishika Bimal Attodi", "10222955", true);
+            // add the object to the list
             studentList.add(NewStudent3);
+            // create new students object
             students NewStudent4 = new students("Tay Guo Jun", "10227533",true);
+            // add the object to the list
             studentList.add(NewStudent4);
+            // create new students object
             students NewStudent5 = new students ("Zheng Yi Ho", "10221825", true);
+            // add the object to the list
             studentList.add(NewStudent5);
+            // create new students object
             students NewStudent6 =  new students("Lee Hwee Min","10223008",true);
+            // add the object to the list
             studentList.add(NewStudent6);
+            // create new students object
             students NewStudent7 = new students("Yong Zi Ren","10219574",true);
+            // add the object to the list
             studentList.add(NewStudent7);
+            // create new students object
             students NewStudent8 = new students("Julius Keong","10222755",true);
+            // add the object to the list
             studentList.add(NewStudent8);
+            // create new students object
             students NewStudent9 = new students("Jyoshika", "10222388", true);
+            // add the object to the list
             studentList.add(NewStudent9);
+            // create new students object
             students NewStudent10 = new students("Lim Xin En", "10221987", true);
+            // add the object to the list
             studentList.add(NewStudent10);
+            // create new students object
             students NewStudent11 = new students("Tay Xin Ying", "10208642", true);
+            // add the object to the list
             studentList.add(NewStudent11);
+            // create new students object
             students NewStudent12 = new students("Andy Sim", "10204032",true);
+            // add the object to the list
             studentList.add(NewStudent12);
+            // create new students object
             students NewStudent13 = new students("Tan Jun Xian","10223003", true);
+            // add the object to the list
             studentList.add(NewStudent13);
+            // create new students object
             students NewStudent14 = new students("Kyler Lee","10222782", true);
+            // add the object to the list
             studentList.add(NewStudent14);
+            // create new students object
             students NewStudent15 =  new students("Ho Yee Mei", "10222428", true);
+            // add the object to the list
             studentList.add(NewStudent15);
+            // create new students object
             students NewStudent16 = new students("Lim Hong Ying", "10223298", true);
+            // add the object to the list
             studentList.add(NewStudent16);
+            // create new students object
             students NewStudent17 = new students("Cheng Zhi Hong","10205253",true);
+            // add the object to the list
             studentList.add(NewStudent17);
+            // create new students object
             students NewStudent18 = new students("Ho Qi Ren", "10205561",true);
+            // add the object to the list
             studentList.add(NewStudent18);
+            // create new students object
             students NewStudent19 = new students("Willam Siah", "10222938", true);
+            // add the object to the list
             studentList.add(NewStudent19);
+            // create new students object
             students NewStudent20 = new students("Joseph Wong", "10204123", true);
+            // add the object to the list
             studentList.add(NewStudent20);
+            // create new students object
             students NewStudent21 = new students("Shantal", "10222337", true);
+            // add the object to the list
             studentList.add(NewStudent21);
+            // create new students object
             students NewStudent22 = new students("Lim Long Teck","10221824",true);
+            // add the object to the list
             studentList.add(NewStudent22);
+            // create new students object
             students NewStudent23 =  new students("Tan Kok Kai", "10222863", true);
+            // add the object to the list
             studentList.add(NewStudent23);
+            // create new students object
             students NewStudent24 = new students("Kelven Lim", "10221788", true);
+            // add the object to the list
             studentList.add(NewStudent24);
             // update the student to database.
             for(int b = 0; b < studentList.size(); b++) {
                 db.addNewStudent(studentList.get(b));
             }
         }
-
 
         int i = 1;
 

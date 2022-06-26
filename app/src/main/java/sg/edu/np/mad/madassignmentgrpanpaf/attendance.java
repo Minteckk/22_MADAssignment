@@ -24,13 +24,7 @@ ArrayList<attendance>feedbackList;
     }
 
     public String getFeedback() {
-        //if (feedback.isEmpty() == true) {
-           // String i = "No feedback given.";
-            //return i;
-        //}
-        //else {
             return this.feedback;
-        //}
     }
 
     public ArrayList<attendance> setFeedback(String feedback, String studentId) {
