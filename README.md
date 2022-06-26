@@ -14,14 +14,14 @@
     Attendance taking always takes a long time and it wastes tons of paper each day! Be able to take attendance and receieve feedback easily on NPAF! Created for both students and lecturers! 
     
     Key features for students:
-    Take attendance after submitting the passcode given by their lecturer and their stuentid
+    Take attendance after submitting the passcode given by their lecturer and their studentid
     View feedbacks given by lecturers each day
     
     Key features for lecturers:
     Upload students to database
     View student's attendance seperated into their various classes
     Provide feedback to students based on their daily performance
-    Generate passcode for students for students to clock in their attendance
+    Generate passcode for students to clock in their attendance
     Reset students attendance for students to clock in their attendance the next day.
     
     
@@ -86,9 +86,6 @@
   </li>
   <li>
 complete provide feedback feature
-  </li>
-<li>
-  complete layout page for student profile
   </li>
 <li>
   complete classViewHolder.java
