@@ -55,7 +55,7 @@ public class ProvideFeedback extends AppCompatActivity {
         // find the id for submit feedback button
         Button submitBtn = findViewById(R.id.SubmitFeedback);
 
-        feedbackList = initializeFeedback();
+        //feedbackList = initializeFeedback();
 
         // set Onclick listener for back image view
         ImageView iv = findViewById(R.id.provide_feedback_back);
@@ -84,16 +84,17 @@ public class ProvideFeedback extends AppCompatActivity {
                     // toast message to inform user that feedback has been given successfully.
                     Toast.makeText(ProvideFeedback.this, "Feedback given successfully!", Toast.LENGTH_SHORT).show();
                     //feedbackList =
+                    feedbackList = initializeFeedback(feedbackList);
                 }
             }
         });
     }
 
-    public ArrayList<attendance> initializeFeedback() {
+    public ArrayList<attendance> initializeFeedback(ArrayList<attendance> feedbackList) {
         AccountDBHandler db = new AccountDBHandler(this,null,null,2);
-        ArrayList<attendance> feedbackList = db.getFeedback();
+        feedbackList = db.getFeedback();
         if(feedbackList.size() == 0) {
-            int id = Integer.parseInt(String.valueOf(StudentID));
+            String id = String.valueOf(StudentID);
             String Studentfeedback = feedbackInput.getText().toString();
             Calendar calendar = Calendar.getInstance();
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");

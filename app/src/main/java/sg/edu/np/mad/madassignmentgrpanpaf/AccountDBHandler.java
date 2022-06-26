@@ -46,9 +46,9 @@ public class AccountDBHandler extends SQLiteOpenHelper {
     public static final String COLUMN_DATE = "date";
     public static final String COLUMN_FEEDBACK = "feedback";
 
-    public AccountDBHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version)
+    public AccountDBHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int DATABASE_VERSION)
     {
-        super(context, DATABASE_NAME, factory, version);
+        super(context, DATABASE_NAME, factory, DATABASE_VERSION);
     }
 
     @Override
@@ -456,7 +456,7 @@ public class AccountDBHandler extends SQLiteOpenHelper {
 
         if(cursor.moveToFirst()) {
             feedback = new attendance();
-            feedback.setStudentId(cursor.getInt(0));
+            feedback.setStudentId(cursor.getString(0));
             feedback.setDate(cursor.getString(1));
             feedback.setFeedback(cursor.getString(2));
             cursor.close();

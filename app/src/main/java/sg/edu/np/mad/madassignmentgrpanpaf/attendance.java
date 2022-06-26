@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class attendance {
-int studentId;
+String studentId;
 String date;
 String feedback;
 
 
-    public attendance(int studentId, String date, String feedback) {
+    public attendance(String studentId, String date, String feedback) {
         this.studentId = studentId;
         this.date = date;
         this.feedback = feedback;
@@ -19,11 +19,11 @@ String feedback;
     public attendance() {
     }
 
-    public int getStudentId() {
+    public String getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(int studentId) {
+    public void setStudentId(String studentId) {
         this.studentId = studentId;
     }
 
