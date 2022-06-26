@@ -11,7 +11,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class ProvideFeedback extends AppCompatActivity {
     // global variable for submit button
@@ -19,6 +22,7 @@ public class ProvideFeedback extends AppCompatActivity {
     // variable for feedback multi-line text
     private EditText feedbackInput;
     String feedback;
+    String StudentID;
     ArrayList<attendance>feedbackList;
 
     @Override
@@ -31,7 +35,7 @@ public class ProvideFeedback extends AppCompatActivity {
 
         // receiving the intent
         String name = i.getStringExtra("name");
-        String StudentID = i.getStringExtra("studentID");
+        StudentID = i.getStringExtra("studentID");
 
         // find the textview for studentName
         TextView studentName = findViewById(R.id.feedbackStudentName);
@@ -51,7 +55,7 @@ public class ProvideFeedback extends AppCompatActivity {
         // find the id for submit feedback button
         Button submitBtn = findViewById(R.id.SubmitFeedback);
 
-
+        feedbackList = initializeFeedback();
 
         // set Onclick listener for back image view
         ImageView iv = findViewById(R.id.provide_feedback_back);
@@ -79,15 +83,28 @@ public class ProvideFeedback extends AppCompatActivity {
                 else {
                     // toast message to inform user that feedback has been given successfully.
                     Toast.makeText(ProvideFeedback.this, "Feedback given successfully!", Toast.LENGTH_SHORT).show();
+                    //feedbackList =
                 }
             }
         });
-        AccountDBHandler db = new AccountDBHandler(this,null,null,1);
-        attendance feedback = new attendance();
-        String id = String.valueOf(StudentID);
-        String Studentfeedback = feedbackInput.getText().toString();
-        attendance Newfeedback = new attendance(id,Studentfeedback);
-        ArrayList<attendance> feedbackList = feedback.setFeedback(id, Studentfeedback);
+    }
 
+    public ArrayList<attendance> initializeFeedback() {
+        AccountDBHandler db = new AccountDBHandler(this,null,null,2);
+        ArrayList<attendance> feedbackList = db.getFeedback();
+        if(feedbackList.size() == 0) {
+            int id = Integer.parseInt(String.valueOf(StudentID));
+            String Studentfeedback = feedbackInput.getText().toString();
+            Calendar calendar = Calendar.getInstance();
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+            String feedbackDate = simpleDateFormat.format(calendar.getTime()).toString();
+            attendance Newfeedback = new attendance(id,feedbackDate,Studentfeedback);
+            feedbackList.add(Newfeedback);
+        }
+        // update the student to database.
+        for (int b = 0; b < feedbackList.size(); b++) {
+            db.addFeedback(feedbackList.get(b));
+        }
+        return feedbackList;
     }
 }

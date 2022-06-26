@@ -13,6 +13,7 @@ import java.util.List;
 
 public class AccountDBHandler extends SQLiteOpenHelper {
     Student student;
+    attendance feedback;
     private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "accountDB.db";
 
@@ -440,6 +441,41 @@ public class AccountDBHandler extends SQLiteOpenHelper {
         }
         cursor.close();
         return schoolList;
+    }
+
+    // method to retrieve feedback from database
+    public ArrayList<attendance> getFeedback()
+    {
+        // initialize the arraylist
+        ArrayList<attendance> feedbackList = new ArrayList<>();
+        // sql statements to select from attendance table
+        String query = "SELECT * FROM " + TABLE_ATTENDANCE;
+        // get writable database
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+
+        if(cursor.moveToFirst()) {
+            feedback = new attendance();
+            feedback.setStudentId(cursor.getInt(0));
+            feedback.setDate(cursor.getString(1));
+            feedback.setFeedback(cursor.getString(2));
+            cursor.close();
+        }
+        else {
+            feedback = null;
+        }
+        db.close();
+        return feedbackList;
+    }
+
+    public void addFeedback(attendance feedback) {
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_STUDENTID, feedback.getStudentId());
+        values.put(COLUMN_DATE, feedback.getDate());
+        values.put(COLUMN_FEEDBACK, feedback.getFeedback());
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.insert(TABLE_ATTENDANCE, null, values);
+        db.close();
     }
 
 
