@@ -172,6 +172,14 @@ complete AccountDBHandler
  <p> Storyboard: https://xd.adobe.com/view/2242ba5e-4a4b-4eb4-a96e-c24a5e94054f-7711/</p>
  <p>    Storyboard showcase view: https://xd.adobe.com/view/2242ba5e-4a4b-4eb4-a96e-c24a5e94054f-7711/?fullscreen
 </p>
+<p> Credits: </p>
+<p><a href="https://www.flaticon.com/free-icons/student" title="student icons">Student icons created by Freepik - Flaticon</a></p>
+<p><a href="https://www.flaticon.com/free-icons/teacher" title="teacher icons">Teacher icons created by max.icons - Flaticon</a></p>
+<p><a href="https://www.flaticon.com/free-icons/attendance" title="attendance icons">Attendance icons created by Flat Icons - Flaticon</a></p>
+<p><a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Smashicons - Flaticon</a></p>
+<p><a href="https://www.flaticon.com/free-icons/people" title="people icons">People icons created by Freepik - Flaticon</a></p>
+<p><a href="https://www.flaticon.com/free-icons/password" title="password icons">Password icons created by Smashicons - Flaticon</a></p>
+
 
 
 
