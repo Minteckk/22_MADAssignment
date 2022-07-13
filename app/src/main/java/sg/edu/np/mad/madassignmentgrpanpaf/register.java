@@ -63,15 +63,15 @@ public class register extends AppCompatActivity {
             }
         });
         // find the textView for loginNow
-        TextView loginNow = findViewById(R.id.loginNow);
+        //TextView loginNow = findViewById(R.id.loginNow);
         // set the OnClickListener
-        loginNow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        //loginNow.setOnClickListener(new View.OnClickListener() {
+           // @Override
+            //public void onClick(View view) {
                 // back to studentLogin page
-                Intent backtoLogin = new Intent(register.this, StudentLogin.class);
-                startActivity(backtoLogin);
-            }
-        });
+                //Intent backtoLogin = new Intent(register.this, StudentLogin.class);
+                //startActivity(backtoLogin);
+            //}
+        //});
     }
 }

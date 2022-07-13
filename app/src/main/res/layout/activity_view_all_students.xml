@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/homepage_background2">
 
    <ScrollView
        android:layout_width="match_parent"
@@ -13,65 +13,70 @@
            android:layout_width="match_parent"
            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/P01"
-        android:layout_width="56dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="8dp"
-        android:text="P01"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toStartOf="@+id/P02"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_all_students_back"
-        tools:ignore="TextContrastCheck" />
+           <Button
+               android:id="@+id/P01"
+               android:layout_width="56dp"
+               android:layout_height="48dp"
+               android:layout_marginEnd="8dp"
+               android:text="P01"
+               android:textSize="10sp"
+               app:cornerRadius="32dp"
+               app:layout_constraintEnd_toStartOf="@+id/P02"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/view_all_students_back"
+               tools:ignore="TextContrastCheck" />
 
-    <Button
-        android:id="@+id/P02"
-        android:layout_width="56dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="P02"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toStartOf="@+id/P03"
-        app:layout_constraintStart_toEndOf="@+id/P01"
-        app:layout_constraintTop_toBottomOf="@+id/view_all_students_back" />
+           <Button
+               android:id="@+id/P02"
+               android:layout_width="56dp"
+               android:layout_height="48dp"
+               android:layout_marginStart="8dp"
+               android:layout_marginEnd="8dp"
+               android:text="P02"
+               android:textSize="10sp"
+               app:cornerRadius="32dp"
+               app:layout_constraintEnd_toStartOf="@+id/P03"
+               app:layout_constraintStart_toEndOf="@+id/P01"
+               app:layout_constraintTop_toBottomOf="@+id/view_all_students_back" />
 
-    <Button
-        android:id="@+id/P03"
-        android:layout_width="56dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="P03"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toStartOf="@+id/P04"
-        app:layout_constraintStart_toEndOf="@+id/P02"
-        app:layout_constraintTop_toBottomOf="@+id/view_all_students_back" />
+           <Button
+               android:id="@+id/P03"
+               android:layout_width="56dp"
+               android:layout_height="48dp"
+               android:layout_marginStart="8dp"
+               android:layout_marginEnd="8dp"
+               android:text="P03"
+               android:textSize="10sp"
+               app:cornerRadius="32dp"
+               app:layout_constraintEnd_toStartOf="@+id/P04"
+               app:layout_constraintStart_toEndOf="@+id/P02"
+               app:layout_constraintTop_toBottomOf="@+id/view_all_students_back" />
 
-    <Button
-        android:id="@+id/P04"
-        android:layout_width="56dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="P04"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toStartOf="@+id/P05"
-        app:layout_constraintStart_toEndOf="@+id/P03"
-        app:layout_constraintTop_toBottomOf="@+id/view_all_students_back" />
+           <Button
+               android:id="@+id/P04"
+               android:layout_width="56dp"
+               android:layout_height="48dp"
+               android:layout_marginStart="8dp"
+               android:layout_marginEnd="8dp"
+               android:text="P04"
+               android:textSize="10sp"
+               app:cornerRadius="32dp"
+               app:layout_constraintEnd_toStartOf="@+id/P05"
+               app:layout_constraintStart_toEndOf="@+id/P03"
+               app:layout_constraintTop_toBottomOf="@+id/view_all_students_back" />
 
-    <Button
-        android:id="@+id/P05"
-        android:layout_width="56dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="P05"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/P04"
-        app:layout_constraintTop_toBottomOf="@+id/view_all_students_back" />
+           <Button
+               android:id="@+id/P05"
+               android:layout_width="56dp"
+               android:layout_height="48dp"
+               android:layout_marginStart="8dp"
+               android:layout_marginEnd="8dp"
+               android:text="P05"
+               android:textSize="10sp"
+               app:cornerRadius="32dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toEndOf="@+id/P04"
+               app:layout_constraintTop_toBottomOf="@+id/view_all_students_back" />
 
            <FrameLayout
                android:id="@+id/Frame"

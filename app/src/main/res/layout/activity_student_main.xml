@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/homepage_background2"
     tools:context=".StudentMain">
 
     <ScrollView
@@ -39,6 +39,7 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="8dp"
                 android:text="Logout"
+                app:cornerRadius="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.971"
                 app:layout_constraintStart_toStartOf="parent"
