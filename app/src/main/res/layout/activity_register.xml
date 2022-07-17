@@ -25,6 +25,7 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="8dp"
                 android:text="Register an account with us"
+                android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -41,6 +42,7 @@
                 android:hint="enter student name"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView23" />
@@ -54,6 +56,7 @@
                 android:hint="enter Student ID"
                 android:inputType="number"
                 android:minHeight="48dp"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/reg_StudentName" />
@@ -67,6 +70,7 @@
                 android:hint="password"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/reg_studentID" />
@@ -81,6 +85,29 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/regStudentPassword" />
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Already have an account?"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/registerBtn" />
+
+            <TextView
+                android:id="@+id/loginNow"
+                android:layout_width="104dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:text="Login Now"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView39"
+                app:layout_constraintTop_toBottomOf="@+id/registerBtn" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

@@ -48,6 +48,7 @@ public class viewAllStudentAdapter extends RecyclerView.Adapter<ClassViewHolder>
         String studentID = data.get(position).StudentID;
         // set the studentID
         holder.sID.setText(studentID);
+
         // set OnclickListener for imageView studentProfile
         holder.profile.setOnClickListener(new View.OnClickListener() {
             @Override

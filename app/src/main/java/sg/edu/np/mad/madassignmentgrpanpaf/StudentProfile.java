@@ -3,6 +3,7 @@ package sg.edu.np.mad.madassignmentgrpanpaf;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,6 +31,10 @@ public class StudentProfile extends AppCompatActivity {
         id.setText(String.valueOf(StudentID));
         // find the id for the feedback button
         Button feedbackBtn = findViewById(R.id.ProvideFeedback);
+
+        SharedPreferences prefs = 	getSharedPreferences("UsernameSP", MODE_PRIVATE);
+        String value = prefs.getString("Username", "user");
+
         // set Onclick listener for back image view
         ImageView iv = findViewById(R.id.student_profile_back);
         iv.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +42,7 @@ public class StudentProfile extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(StudentProfile.this, ViewAllStudents.class);
                 startActivity(i);
+                i.putExtra("Username", value);
             }
         });
         // set OnClick listener for the feedback button

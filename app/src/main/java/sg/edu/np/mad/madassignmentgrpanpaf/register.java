@@ -3,6 +3,7 @@ package sg.edu.np.mad.madassignmentgrpanpaf;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,7 @@ public class register extends AppCompatActivity {
         EditText sName = findViewById(R.id.reg_StudentName);
         EditText sID = findViewById(R.id.reg_studentID);
         EditText password = findViewById(R.id.regStudentPassword);
+
         // set OnClickListener for the register button
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +32,10 @@ public class register extends AppCompatActivity {
                String studentName = sName.getText().toString();
                String studentID = sID.getText().toString();
                String studentPassword = password.getText().toString();
+
+                //SharedPreferences.Editor editor = getSharedPreferences("studentName",MODE_PRIVATE).edit();
+                //editor.putString("KEY",studentName);
+                //editor.apply();
 
                // if name is empty, set error
                if(studentName.isEmpty()) {
@@ -58,20 +64,27 @@ public class register extends AppCompatActivity {
                }
                // else, show toast message - registration successful
                else {
+                   //Intent i = new Intent(register.this, StudentMain.class);
+                   //i.putExtra("StudentName", studentName);
+                   //startActivity(i);
                    Toast.makeText(register.this, "Registration successful", Toast.LENGTH_SHORT).show();
                }
             }
         });
         // find the textView for loginNow
-        //TextView loginNow = findViewById(R.id.loginNow);
+        TextView loginNow = findViewById(R.id.loginNow);
         // set the OnClickListener
-        //loginNow.setOnClickListener(new View.OnClickListener() {
-           // @Override
-            //public void onClick(View view) {
+        loginNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //String studentName = sName.getText().toString();
+                //String studentID = sID.getText().toString();
                 // back to studentLogin page
-                //Intent backtoLogin = new Intent(register.this, StudentLogin.class);
-                //startActivity(backtoLogin);
-            //}
-        //});
+                Intent backtoLogin = new Intent(register.this, StudentLogin.class);
+                //backtoLogin.putExtra("StudentName",studentName);
+                //backtoLogin.putExtra("StudentID", studentID);
+                startActivity(backtoLogin);
+            };
+    });
     }
 }

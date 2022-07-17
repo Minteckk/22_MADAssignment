@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MADAssignment">
         <activity
+            android:name=".mcConfirmation"
+            android:exported="false" />
+        <activity
             android:name=".SubmitMCandAbsentReason"
             android:exported="false" />
         <activity

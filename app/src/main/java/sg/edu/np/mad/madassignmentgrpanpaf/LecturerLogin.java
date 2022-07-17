@@ -50,7 +50,7 @@ public class LecturerLogin extends AppCompatActivity {
                     getLecUsername.requestFocus();
                     getLecUsername.setError("Please enter your username");
                 }
-                if (lecPassword.length() == 0) {
+                else if (lecPassword.length() == 0) {
                     getLecPassWord.requestFocus();
                     getLecPassWord.setError("Please enter your password");
                 } else if (lecPassword.length() < 6) {

@@ -17,6 +17,12 @@ public class StudentTakeAttendance extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_take_attendance);
 
+        Intent i = new Intent();
+        String studentId = i.getStringExtra("StudentID");
+
+        SharedPreferences prefs = 	getSharedPreferences("studentID", MODE_PRIVATE);
+        String value = prefs.getString("StudentID", "Student");
+
         // set Onclick listener for back image view
         ImageView iv = findViewById(R.id.student_take_attendance_back);
         // set OnClickListener
@@ -25,6 +31,7 @@ public class StudentTakeAttendance extends AppCompatActivity {
             public void onClick(View view) {
                 // back to Student Main Page
                 Intent i = new Intent(StudentTakeAttendance.this, StudentMain.class);
+                i.putExtra("StudentID",value);
                 // start activity
                 startActivity(i);
             }
