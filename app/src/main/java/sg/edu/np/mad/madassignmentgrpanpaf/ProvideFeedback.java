@@ -85,13 +85,18 @@ public class ProvideFeedback extends AppCompatActivity {
                     Toast.makeText(ProvideFeedback.this, "Feedback given successfully!", Toast.LENGTH_SHORT).show();
                     //feedbackList =
                     feedbackList = initializeFeedback(feedbackList);
+                    Intent i = new Intent(ProvideFeedback.this,FeedbackConfirmation.class);
+                    i.putExtra("Feedback",feedback);
+                    i.putExtra("name", name);
+                    i.putExtra("studentID", StudentID);
+                    startActivity(i);
                 }
             }
         });
     }
 
     public ArrayList<attendance> initializeFeedback(ArrayList<attendance> feedbackList) {
-        AccountDBHandler db = new AccountDBHandler(this,null,null,2);
+        P01Handler db = new P01Handler(this);
         feedbackList = db.getFeedback();
         if(feedbackList.size() == 0) {
             String id = String.valueOf(StudentID);
