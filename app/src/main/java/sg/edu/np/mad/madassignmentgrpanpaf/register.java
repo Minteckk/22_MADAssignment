@@ -64,10 +64,9 @@ public class register extends AppCompatActivity {
                }
                // else, show toast message - registration successful
                else {
-                   //Intent i = new Intent(register.this, StudentMain.class);
-                   //i.putExtra("StudentName", studentName);
-                   //startActivity(i);
                    Toast.makeText(register.this, "Registration successful", Toast.LENGTH_SHORT).show();
+                   Intent i = new Intent(register.this, StudentLogin.class);
+                   startActivity(i);
                }
             }
         });
