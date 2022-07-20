@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class P01Handler extends SQLiteOpenHelper {
     attendance feedback;
-    private static final int DATABASE_VERSION = 20;
+    private static final int DATABASE_VERSION = 21;
     private static final String DATABASE_NAME = "students.db";
     // create a table called Students
     public static final String TABLE_STUDENTS = "Students";
@@ -173,6 +173,18 @@ public class P01Handler extends SQLiteOpenHelper {
         return false;
     }
 
+    public void updateAttendance(String studentId,String status){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+            String UPDATE_ATTENDANCE = "UPDATE " + TABLE_STUDENTS
+                    + " SET " + COLUMN_ATTENDANCE_STATUS  + " = " + "\"" + status + "\""
+                    + " WHERE " + COLUMN_STUDENT_ID + " = " + studentId;
+            db.execSQL(UPDATE_ATTENDANCE);
+
+        db.close();
+    }
+
+
     public void giveFeedback(int studentId, String ddMMyyyy, String feedback){
         SQLiteDatabase db = this.getWritableDatabase();
         if (checkAttendance(studentId, ddMMyyyy)){
@@ -211,6 +223,32 @@ public class P01Handler extends SQLiteOpenHelper {
         return feedbackList;
     }
 
+    // method to retrieve feedback from database
+    public ArrayList<attendance> FindFeedbackByStudentID(String studentId)
+    {
+        // initialize the arraylist
+        ArrayList<attendance> feedbackList = new ArrayList<>();
+        SQLiteDatabase db = this.getWritableDatabase();
+        // sql statements to select from attendance table
+        String query = "SELECT * FROM " + TABLE_ATTENDANCE + " WHERE "
+                + COLUMN_STUDENT_ID
+                + " = \"" + studentId + "\"";
+        // get writable database
+
+        Cursor cursor = db.rawQuery(query, null);
+
+        if(cursor.moveToFirst()) {
+            feedback = new attendance();
+            feedback.setStudentId(cursor.getString(0));
+            feedback.setDate(cursor.getString(1));
+            feedback.setFeedback(cursor.getString(2));
+            feedbackList.add(feedback);
+        }
+        cursor.close();
+        db.close();
+        return feedbackList;
+    }
+
     public void addFeedback(attendance feedback) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -221,5 +259,4 @@ public class P01Handler extends SQLiteOpenHelper {
         db.insert(TABLE_ATTENDANCE, null, values);
         db.close();
     }
-
 }
