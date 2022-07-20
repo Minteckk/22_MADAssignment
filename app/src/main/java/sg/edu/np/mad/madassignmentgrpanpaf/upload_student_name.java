@@ -70,15 +70,39 @@ public class upload_student_name extends AppCompatActivity {
                 SharedPreferences.Editor editor = getSharedPreferences("StudentClass", MODE_PRIVATE).edit();
                 editor.putString("KEY", studentClass);
                 editor.apply();
-
                 studentDB.addNewStudent(student);
-                // toast message to let users to know that student is uploaded.
-                Toast.makeText(upload_student_name.this, "Student Uploaded!", Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(upload_student_name.this,uploadStudentConfirmation.class);
-                i.putExtra("name",name);
-                i.putExtra("studentid",studentID);
-                i.putExtra("class",studentClass);
-                startActivity(i);
+
+                if(name.isEmpty()) {
+                    nameInput.requestFocus();
+                    nameInput.setError("Please enter your student name, name cannot empty");
+                }
+                else if(studentID.isEmpty())
+                {
+                    idInput.requestFocus();
+                    idInput.setError("Student ID not be empty, please enter student id");
+                }
+                else if(!studentID.startsWith("1")) {
+                    idInput.requestFocus();
+                    idInput.setError("Student ID starts with 1, please enter a valid student id");
+                }
+                else if(studentID.length()<8) {
+                    idInput.requestFocus();
+                    idInput.setError("Student ID is less than 8 digits");
+                }
+                else if(studentClass.isEmpty()) {
+                    classInput.requestFocus();
+                    classInput.setError("Please enter a class");
+                }
+
+                else{
+                    // toast message to let users to know that student is uploaded.
+                    Toast.makeText(upload_student_name.this, "Student Uploaded!", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(upload_student_name.this, uploadStudentConfirmation.class);
+                    i.putExtra("name", name);
+                    i.putExtra("studentid", studentID);
+                    i.putExtra("class", studentClass);
+                    startActivity(i);
+                }
             }
 
        });
