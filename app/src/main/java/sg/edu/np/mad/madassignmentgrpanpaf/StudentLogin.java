@@ -42,11 +42,15 @@ public class StudentLogin extends AppCompatActivity {
                 // if studentID is less than 8, set error message as "Student ID is 8 digits"
                 else if(studentID.length() < 8)
                 {
-                    getStudentPassword.requestFocus();
+                    getStudentID.requestFocus();
                     getStudentID.setError("Student ID is 8 digits");
                 } else if(!studentID.startsWith("1")) {
                     getStudentID.requestFocus();
                     getStudentID.setError("Invalid student ID");
+                }
+                else if(studentID.length() > 8) {
+                    getStudentID.requestFocus();
+                    getStudentID.setError("Student ID is 8 digits");
                 }
                 // if studentPassword is empty, set error message as "Please enter your password!"
                 else if(studentPassword.length() == 0) {

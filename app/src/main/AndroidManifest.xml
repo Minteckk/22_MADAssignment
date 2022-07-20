@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MADAssignment">
         <activity
+            android:name=".AttendanceConfirmation"
+            android:exported="false" />
+        <activity
             android:name=".FeedbackConfirmation"
             android:exported="false" />
         <activity

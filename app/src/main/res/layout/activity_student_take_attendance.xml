@@ -58,20 +58,6 @@
                 app:cornerRadius="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/student_aid" />
-
-            <EditText
-                android:id="@+id/student_aid"
-                android:layout_width="218dp"
-                android:layout_height="70dp"
-                android:layout_marginStart="96dp"
-                android:layout_marginEnd="97dp"
-                android:ems="10"
-                android:hint="Your student Id"
-                android:inputType="textPersonName"
-                android:textAlignment="center"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/student_acode" />
 
             <ImageView

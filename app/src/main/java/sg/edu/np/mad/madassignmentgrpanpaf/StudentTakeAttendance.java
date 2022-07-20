@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class StudentTakeAttendance extends AppCompatActivity {
-
+    String value2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +21,7 @@ public class StudentTakeAttendance extends AppCompatActivity {
         String studentId = i.getStringExtra("StudentID");
 
         SharedPreferences prefs = 	getSharedPreferences("studentID", MODE_PRIVATE);
-        String value = prefs.getString("StudentID", "Student");
+        value2 = prefs.getString("StudentID", "Student");
 
         // set Onclick listener for back image view
         ImageView iv = findViewById(R.id.student_take_attendance_back);
@@ -31,7 +31,7 @@ public class StudentTakeAttendance extends AppCompatActivity {
             public void onClick(View view) {
                 // back to Student Main Page
                 Intent i = new Intent(StudentTakeAttendance.this, StudentMain.class);
-                i.putExtra("StudentID",value);
+                i.putExtra("StudentID",value2);
                 // start activity
                 startActivity(i);
             }
@@ -58,10 +58,14 @@ public class StudentTakeAttendance extends AppCompatActivity {
         // attendance
         else if (s_passcode.equals(value)) {
             boolean i = true;
-            students s = new students();
-            s.AttendanceStatus = true;
-            db.addNewStudent(s);
+            //students s = new students();
+            String Attendance_status = "Present";
+            db.updateAttendance(value2, Attendance_status);
             Toast.makeText(getApplicationContext(),"Attendance updated!",Toast.LENGTH_SHORT).show();
+            Intent attendanceConfirm = new Intent(StudentTakeAttendance.this, AttendanceConfirmation.class);
+            attendanceConfirm.putExtra("StudentID",value2);
+            attendanceConfirm.putExtra("status",Attendance_status);
+            startActivity(attendanceConfirm);
         } else {
             Toast.makeText(getApplicationContext(),"Invalid passcode entered",Toast.LENGTH_SHORT).show();
         }
