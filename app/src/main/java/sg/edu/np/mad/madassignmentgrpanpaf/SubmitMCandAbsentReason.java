@@ -1,11 +1,17 @@
 package sg.edu.np.mad.madassignmentgrpanpaf;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -17,20 +23,28 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.RequiresApi;
+
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
 import android.app.DatePickerDialog;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class SubmitMCandAbsentReason extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 String[] reasons = {"MC-Medical Certificate","Hospitalisation", "Compassionate Leave", "Medical Appointment at Hospital",
         "NS Related", "Participating in School/nation event", "Others"};
 String[] missedLesson = {"Lesson", "Class Test", "Common Test", "Exams", "Other Assements/Presentation", "Poly/CCA Event"};
     Calendar myCalendar= Calendar.getInstance();
+    int SELECT_DOCUMENT = 200;
+    Bitmap selectedDocumentBitmap;
     EditText editText;
     EditText editText2;
     EditText editText3;
+    FloatingActionButton upload;
+    ImageView previewMC;
     DatePickerDialog datePicker;
     int positionOfSelectedDataFromSpinner;
     String selectedItem="";
@@ -70,6 +84,8 @@ String[] missedLesson = {"Lesson", "Class Test", "Common Test", "Exams", "Other 
                 startActivity(i);
             }
         });
+
+        previewMC = findViewById(R.id.previewMC);
 
         Button submitbtn = findViewById(R.id.submit);
         submitbtn.setOnClickListener(new View.OnClickListener() {
@@ -216,7 +232,47 @@ String[] missedLesson = {"Lesson", "Class Test", "Common Test", "Exams", "Other 
                 datePicker.show();
             }
         });
+
+        upload = findViewById(R.id.addDoc);
+        upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                uploadMC();
+
+            }
+        });
     }
+
+    public void uploadMC() {
+        // new intent
+        Intent i = new Intent();
+        // set the intent as image
+        i.setType("image/*");
+        // get content from the user to access their image gallery
+        i.setAction(Intent.ACTION_GET_CONTENT);
+
+        submitMCDocument.launch(i);
+    }
+
+    ActivityResultLauncher<Intent> submitMCDocument = registerForActivityResult(new ActivityResultContracts.
+                    StartActivityForResult(), result -> {
+                    if (result.getResultCode() == Activity.RESULT_OK) {
+                        Intent getData =  result.getData();
+                        if(getData != null && getData.getData() != null) {
+                            Uri selectedImageUri = getData.getData();
+                            Bitmap B = selectedDocumentBitmap;
+                            try {
+                                selectedDocumentBitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(),selectedImageUri);
+                            }
+                            catch (IOException E)
+                            {
+                                E.printStackTrace();
+                            }
+                            previewMC.setImageBitmap(selectedDocumentBitmap);
+                        }
+                    }
+            });
+
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
