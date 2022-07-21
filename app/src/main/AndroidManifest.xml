@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MADAssignment">
         <activity
+            android:name=".AbsenceViewHolder"
+            android:exported="false" />
+        <activity
+            android:name=".StudentAbsenceRecord"
+            android:exported="false" />
+        <activity
             android:name=".FeedbackViewHolder"
             android:exported="false" />
         <activity

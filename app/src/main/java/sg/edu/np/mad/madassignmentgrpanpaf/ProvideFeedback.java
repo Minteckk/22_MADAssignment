@@ -36,6 +36,7 @@ public class ProvideFeedback extends AppCompatActivity {
         // receiving the intent
         String name = i.getStringExtra("name");
         StudentID = i.getStringExtra("studentID");
+        String lecUsername = i.getStringExtra("Username");
 
         // find the textview for studentName
         TextView studentName = findViewById(R.id.feedbackStudentName);
@@ -65,6 +66,7 @@ public class ProvideFeedback extends AppCompatActivity {
                 Intent i = new Intent(ProvideFeedback.this, StudentProfile.class);
                 i.putExtra("name", name);
                 i.putExtra("studentID", StudentID);
+                i.putExtra("Username",lecUsername);
                 startActivity(i);
             }
         });

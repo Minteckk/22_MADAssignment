@@ -20,6 +20,7 @@ public class StudentProfile extends AppCompatActivity {
         Intent i = getIntent();
         // receiving the intent
         String name = i.getStringExtra("name");
+        String lecUsername = i.getStringExtra("Username");
         String StudentID = i.getStringExtra("studentID");
         // find the textview
         TextView n = findViewById(R.id.textView18);
@@ -33,7 +34,7 @@ public class StudentProfile extends AppCompatActivity {
         Button feedbackBtn = findViewById(R.id.ProvideFeedback);
 
         SharedPreferences prefs = 	getSharedPreferences("UsernameSP", MODE_PRIVATE);
-        String value = prefs.getString("Username", "user");
+        String value = prefs.getString("Username", "Lecturer");
 
         // set Onclick listener for back image view
         ImageView iv = findViewById(R.id.student_profile_back);
@@ -41,8 +42,9 @@ public class StudentProfile extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(StudentProfile.this, ViewAllStudents.class);
-                startActivity(i);
                 i.putExtra("Username", value);
+                startActivity(i);
+
             }
         });
         // set OnClick listener for the feedback button
@@ -54,6 +56,7 @@ public class StudentProfile extends AppCompatActivity {
                 // send the intent to ProvideFeedback class
                 feedbackIntent.putExtra("name", name);
                 feedbackIntent.putExtra("studentID", StudentID);
+                feedbackIntent.putExtra("Username",value);
                 // start the activity
                 startActivity(feedbackIntent);
             }

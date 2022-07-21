@@ -1,9 +1,12 @@
 package sg.edu.np.mad.madassignmentgrpanpaf;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +22,7 @@ public class viewAllStudentAdapter extends RecyclerView.Adapter<ClassViewHolder>
     ArrayList<students> data;
     // get context
     Context context;
+
 
     public viewAllStudentAdapter(ArrayList<students> input, Context context) {
         this.data = input;
@@ -67,10 +71,13 @@ public class viewAllStudentAdapter extends RecyclerView.Adapter<ClassViewHolder>
                     // onClick Listener
                     public void onClick(DialogInterface dialogInterface, int i) {
                         // create an intent to go to student profile after clicking on the individual student profile.
+                        SharedPreferences prefs = 	context.getSharedPreferences("UsernameSP", MODE_PRIVATE);
+                        String value = prefs.getString("Username", "Lecturer");
                         Intent profileIntent = new Intent(context, StudentProfile.class);
                         // send the intent details to other activity.
                         profileIntent.putExtra("name", name);
                         profileIntent.putExtra("studentID", studentID);
+                        profileIntent.putExtra("Username",value);
                         // start the activity
                         context.startActivity(profileIntent);
                     }
