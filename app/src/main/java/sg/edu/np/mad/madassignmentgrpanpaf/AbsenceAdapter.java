@@ -47,7 +47,7 @@ public class AbsenceAdapter extends RecyclerView.Adapter<AbsenceViewHolder> {
         String AbsenceFrom = data.get(position).AbsenceFrom;
         holder.AbsenceFrom.setText(AbsenceFrom);
 
-    }
+    }//
 
     @Override
     public int getItemCount() {
