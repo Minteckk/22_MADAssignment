@@ -29,7 +29,7 @@ public class LecturerMain extends AppCompatActivity {
         editor.apply();
 
         SharedPreferences prefs = 	getSharedPreferences("UsernameSP", MODE_PRIVATE);
-        String value = prefs.getString("Username", "user");
+        String value = prefs.getString("Username", "Lecturer");
 
 
 
@@ -90,7 +90,7 @@ public class LecturerMain extends AppCompatActivity {
         });
 
         // find the id of the generate passcode image
-        ImageView generatePasscode = findViewById(R.id.Passcodeimg);
+        ImageView generatePasscode = findViewById(R.id.qrcodeimg);
         generatePasscode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -98,6 +98,16 @@ public class LecturerMain extends AppCompatActivity {
                 Intent generateIntent = new Intent(LecturerMain.this, generatePassCode.class);
                 generateIntent.putExtra("Username",value);
                 startActivity(generateIntent);
+            }
+        });
+
+        ImageView absenceRecord = findViewById(R.id.absentimg);
+        absenceRecord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent absent = new Intent(LecturerMain.this, StudentAbsenceRecord.class);
+                absent.putExtra("Username",value);
+                startActivity(absent);
             }
         });
     }

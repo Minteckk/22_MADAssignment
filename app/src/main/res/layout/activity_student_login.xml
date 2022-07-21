@@ -10,8 +10,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-29dp">
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-27dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="66dp"
+                android:layout_marginTop="32dp"
                 android:text="Student Login"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -46,7 +46,7 @@
                 android:ems="10"
                 android:hint="Student ID"
                 android:inputType="textShortMessage|number|text"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -59,7 +59,7 @@
                 android:ems="10"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/student_studentid" />
@@ -83,37 +83,38 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="64dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
                 android:text="NPAF"
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.115"
                 app:layout_constraintStart_toEndOf="@+id/student_login_back"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView22"
-                android:layout_width="134dp"
-                android:layout_height="27dp"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="44dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="128dp"
                 android:text="New User?"
-                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/register"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button" />
 
-            <Button
+            <TextView
                 android:id="@+id/register"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="36dp"
-                android:layout_marginEnd="8dp"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
                 android:text="Register Now"
-                app:cornerRadius="32dp"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.855"
                 app:layout_constraintStart_toEndOf="@+id/textView22"
                 app:layout_constraintTop_toBottomOf="@+id/button" />
         </androidx.constraintlayout.widget.ConstraintLayout>

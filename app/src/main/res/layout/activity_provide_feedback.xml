@@ -25,6 +25,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:text="Name"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView7" />
@@ -37,6 +38,7 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="8dp"
                 android:text="ID"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/feedbackStudentName" />
@@ -48,6 +50,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="32dp"
                 android:text="please provide your feedback :"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/feedbackStudentID" />
@@ -63,6 +66,7 @@
                 android:gravity="start|top"
                 android:hint="feedback on your student's performance"
                 android:inputType="textMultiLine"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView15" />
@@ -90,17 +94,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/backbutton" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="0dp"
-        android:layout_height="106dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="64dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/provide_feedback_back"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/user" />
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="0dp"
+                android:layout_height="106dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="92dp"
+                android:layout_marginEnd="64dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/provide_feedback_back"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/user" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

@@ -25,7 +25,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="80dp"
                 android:text="Lecturer Features"
-                android:textColor="#090808"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +63,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="Welcome, "
+                android:text="Welcome "
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -75,6 +76,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="8dp"
                 android:text="TextView"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/textView21"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -185,7 +187,7 @@
                 app:cardPreventCornerOverlap="true"
                 app:cardUseCompatPadding="true"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.428"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/feature2">
 
@@ -210,6 +212,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
                 android:layout_width="0dp"
                 android:layout_height="170dp"
                 android:layout_marginStart="8dp"
@@ -223,17 +226,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/feature3">
 
-                <ImageView
-                    android:id="@+id/Passcodeimg"
-                    android:layout_width="match_parent"
-                    android:layout_height="75dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="18dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="18dp"
-                    app:srcCompat="@drawable/padlock" />
-
                 <TextView
                     android:id="@+id/pcAttendance"
                     android:layout_width="wrap_content"
@@ -241,11 +233,58 @@
                     android:layout_gravity="bottom|center_horizontal"
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Generate passcode for attendance"
+                    android:text="Generate QR Code for attendance"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/qrcodeimg"
+                    android:layout_width="match_parent"
+                    android:layout_height="81dp"
+                    app:srcCompat="@drawable/qr_code" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/studentAbsentPage"
+                android:layout_width="0dp"
+                android:layout_height="170dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="12dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView4">
+
+                <ImageView
+                    android:id="@+id/absentimg"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="18dp"
+                    app:srcCompat="@drawable/absentism" />
+
+                <TextView
+                    android:id="@+id/textView70"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="View Students Absent Record"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

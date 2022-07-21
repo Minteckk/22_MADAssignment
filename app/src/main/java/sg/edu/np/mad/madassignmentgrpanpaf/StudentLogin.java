@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class StudentLogin extends AppCompatActivity {
@@ -22,6 +23,9 @@ public class StudentLogin extends AppCompatActivity {
 
         // find the id of student login button
         Button student_login = findViewById(R.id.button);
+        //Intent i = getIntent();
+        //String studentName  = i.getStringExtra("StudentName");
+        //String studID = i.getStringExtra("StudentID");
         // set OnClickListener
         student_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,11 +42,18 @@ public class StudentLogin extends AppCompatActivity {
                 // if studentID is less than 8, set error message as "Student ID is 8 digits"
                 else if(studentID.length() < 8)
                 {
-                    getStudentPassword.requestFocus();
+                    getStudentID.requestFocus();
+                    getStudentID.setError("Student ID is 8 digits");
+                } else if(!studentID.startsWith("1")) {
+                    getStudentID.requestFocus();
+                    getStudentID.setError("Invalid student ID");
+                }
+                else if(studentID.length() > 8) {
+                    getStudentID.requestFocus();
                     getStudentID.setError("Student ID is 8 digits");
                 }
                 // if studentPassword is empty, set error message as "Please enter your password!"
-                if(studentPassword.length() == 0) {
+                else if(studentPassword.length() == 0) {
                     getStudentPassword.requestFocus();
                     getStudentPassword.setError("Please enter your password");
                 }
@@ -56,6 +67,8 @@ public class StudentLogin extends AppCompatActivity {
                     Intent intent = new Intent(StudentLogin.this, StudentMain.class);
                     // toast message for login successful
                     Toast.makeText(StudentLogin.this, "Login successful!", Toast.LENGTH_SHORT).show();
+                    //intent.putExtra("StudentName",studentName);
+                    intent.putExtra("StudentID",studentID);
                     // start activity
                     startActivity(intent);
                 }
@@ -74,7 +87,7 @@ public class StudentLogin extends AppCompatActivity {
             }
         });
         // set Onclick listener for register button
-        Button register = findViewById(R.id.register);
+        TextView register = findViewById(R.id.register);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

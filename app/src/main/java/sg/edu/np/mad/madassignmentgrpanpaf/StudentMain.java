@@ -3,6 +3,7 @@ package sg.edu.np.mad.madassignmentgrpanpaf;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,23 @@ public class StudentMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_main);
 
+        Intent i = getIntent();
+        TextView getStudentID = findViewById(R.id.GetsID);
+        //SharedPreferences prefs = getSharedPreferences("studentName",MODE_PRIVATE);
+
+        String studentId = i.getStringExtra("StudentID");
+        //String studentName  = i.getStringExtra("StudentName");
+        //String value = prefs.getString("KEY",studentName);
+        //getStudentID.setText(value);
+        getStudentID.setText("S"+studentId);
+
+
+        SharedPreferences.Editor editor = 	getSharedPreferences("studentID", MODE_PRIVATE).edit();
+        editor.putString("StudentID", studentId);
+        editor.apply();
+
+        SharedPreferences prefs = 	getSharedPreferences("studentID", MODE_PRIVATE);
+        String value = prefs.getString("StudentID", "");
 
         // set the onClick listener for the logout button
         Button btn = findViewById(R.id.button_logout2);
@@ -37,6 +55,7 @@ public class StudentMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(StudentMain.this, StudentTakeAttendance.class);
+                i.putExtra("StudentID",value);
                 startActivity(i);
             }
         });
@@ -47,7 +66,18 @@ public class StudentMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(StudentMain.this, StudentViewFeedback.class);
+                i.putExtra("StudentID",value);
                 startActivity(i);
+            }
+        });
+
+        ImageView submitView = findViewById(R.id.student_submitMC);
+        submitView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent submit = new Intent(StudentMain.this, SubmitMCandAbsentReason.class);
+                i.putExtra("StudentID",value);
+                startActivity(submit);
             }
         });
 
@@ -57,6 +87,7 @@ public class StudentMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(StudentMain.this, StudentTakeAttendance.class);
+                i.putExtra("StudentID",value);
                 startActivity(i);
             }
         });
@@ -67,6 +98,7 @@ public class StudentMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(StudentMain.this, StudentViewFeedback.class);
+                i.putExtra("StudentID",value);
                 startActivity(i);
             }
         });

@@ -46,6 +46,7 @@
                 android:ems="10"
                 android:hint="username"
                 android:inputType="textPersonName"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" /><![CDATA[
@@ -74,6 +75,7 @@
                 android:ems="10"
                 android:hint="password"
                 android:inputType="textPassword"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lecUsername" />
@@ -115,28 +117,26 @@
 
             <TextView
                 android:id="@+id/textView17"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="72dp"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:text="New user?"
-                android:textColor="#E8DEDE"
+                android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/lecLogin" />
+                app:layout_constraintTop_toBottomOf="@+id/lecLogin" />
 
             <TextView
                 android:id="@+id/LecRegNow"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="8dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="8dp"
                 android:text=" Register Now"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.956"
                 app:layout_constraintStart_toEndOf="@+id/textView17"
                 app:layout_constraintTop_toBottomOf="@+id/lecLogin" />
 

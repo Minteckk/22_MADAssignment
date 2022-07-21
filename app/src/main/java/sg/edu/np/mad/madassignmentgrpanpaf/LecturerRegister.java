@@ -57,6 +57,8 @@ public class LecturerRegister extends AppCompatActivity {
                 else {
                     // show the toast message that lecturer registered successfully
                     Toast.makeText(LecturerRegister.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(LecturerRegister.this,LecturerLogin.class);
+                    startActivity(i);
                 }
             }
         });

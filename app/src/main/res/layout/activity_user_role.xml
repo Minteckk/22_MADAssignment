@@ -25,6 +25,7 @@
                 android:layout_marginTop="60dp"
                 android:layout_marginEnd="8dp"
                 android:text="What is your role?"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -71,6 +72,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="5dp"
                     android:text="Student"
+                    android:textColor="#000000"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
@@ -79,8 +81,9 @@
                 android:layout_width="0dp"
                 android:layout_height="139dp"
                 android:layout_marginStart="64dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginEnd="64dp"
+                app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -105,6 +108,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="5dp"
                     android:text="Teacher"
+                    android:textColor="#00AEFF"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
