@@ -87,6 +87,7 @@ String[] missedLesson = {"Lesson", "Class Test", "Common Test", "Exams", "Other 
 
         previewMC = findViewById(R.id.previewMC);
 
+        AbsenceDBHandler absenceDB = new AbsenceDBHandler(this);
         Button submitbtn = findViewById(R.id.submit);
         submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,6 +97,8 @@ String[] missedLesson = {"Lesson", "Class Test", "Common Test", "Exams", "Other 
                 String DateOfIssue = editText3.getText().toString();
                 String ClinicNo = clinicNo.getText().toString();
                 String ClinicName = clinicName.getText().toString();
+                absent absentees = new absent(startDate,endDate,DateOfIssue,ClinicNo,ClinicName,value,selectedItem,selectedAbsenceType);
+                absenceDB.addNewAbsentRecord(absentees);
                 if(startDate.isEmpty()) {
                     editText.requestFocus();
                     editText.setError("Please select a start date");
