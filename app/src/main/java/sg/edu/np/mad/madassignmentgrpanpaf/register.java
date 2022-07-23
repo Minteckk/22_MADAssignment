@@ -33,9 +33,6 @@ public class register extends AppCompatActivity {
                String studentID = sID.getText().toString();
                String studentPassword = password.getText().toString();
 
-                //SharedPreferences.Editor editor = getSharedPreferences("studentName",MODE_PRIVATE).edit();
-                //editor.putString("KEY",studentName);
-                //editor.apply();
 
                // if name is empty, set error
                if(studentName.isEmpty()) {
@@ -76,12 +73,8 @@ public class register extends AppCompatActivity {
         loginNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //String studentName = sName.getText().toString();
-                //String studentID = sID.getText().toString();
                 // back to studentLogin page
                 Intent backtoLogin = new Intent(register.this, StudentLogin.class);
-                //backtoLogin.putExtra("StudentName",studentName);
-                //backtoLogin.putExtra("StudentID", studentID);
                 startActivity(backtoLogin);
             };
     });

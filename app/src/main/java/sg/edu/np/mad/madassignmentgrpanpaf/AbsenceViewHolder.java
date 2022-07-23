@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class AbsenceViewHolder extends RecyclerView.ViewHolder {
+    // Text variables
     TextView startDate;
     TextView endDate;
     TextView DateOfIssue;
@@ -20,6 +21,7 @@ public class AbsenceViewHolder extends RecyclerView.ViewHolder {
 
     public AbsenceViewHolder(@NonNull View itemView) {
         super(itemView);
+        // find the id of the input fields.
         startDate = itemView.findViewById(R.id.abs_start);
         endDate = itemView.findViewById(R.id.abs_end);
         DateOfIssue = itemView.findViewById(R.id.abs_doi);

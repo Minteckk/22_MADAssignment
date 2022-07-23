@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 
 public class StudentAbsenceRecord extends AppCompatActivity {
+    // global variable for absent arrayList
     ArrayList<absent> absenceList;
 
     @Override
@@ -21,26 +22,34 @@ public class StudentAbsenceRecord extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_absence_record);
 
+        // get Intent
         Intent i = getIntent();
         String lecUsername = i.getStringExtra("Username");
 
+        // call the initialiseData method
         absenceList = initialiseData();
+        // find the id of the recyclerView
         RecyclerView recyclerView = findViewById(R.id.rv2);
+        // initialize Adapter
         AbsenceAdapter zAdapter = new AbsenceAdapter(absenceList);
-
+        // initialize linearLayout
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
 
+        // set the layout manager and adapter
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(zAdapter);
 
+        // SharedPreferences
         SharedPreferences prefs = 	getSharedPreferences("UsernameSP", MODE_PRIVATE);
         String value = prefs.getString("Username", "user");
 
+        // onClickListener for backToMain button
         ImageView backToMain = findViewById(R.id.backToPrevious);
         backToMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // back to Lecturer Main Page
                 Intent i = new Intent(StudentAbsenceRecord.this,LecturerMain.class);
                 i.putExtra("Username",value);
                 startActivity(i);
@@ -49,16 +58,8 @@ public class StudentAbsenceRecord extends AppCompatActivity {
     }
 
     public ArrayList<absent> initialiseData() {
-        // initialize list
-        //ArrayList<String> nameList = new ArrayList<String>();
-        //ArrayList<Integer> idList = new ArrayList<Integer>();
-        //Random random = new Random();
         // initialize db file and get the Activity
         AbsenceDBHandler db = new AbsenceDBHandler(this);
-        // set the studentList to get students from the db file
-        //SharedPreferences prefs = 	getSharedPreferences("studentID", MODE_PRIVATE);
-        //String value = prefs.getString("StudentID", studentId);
-        //ArrayList<attendance> feedbackList = db.FindFeedbackByStudentID(value);
         ArrayList<absent> absenceList = db.getAbsentees();
 
         // return studentList

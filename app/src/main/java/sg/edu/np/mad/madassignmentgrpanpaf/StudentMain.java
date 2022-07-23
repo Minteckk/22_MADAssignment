@@ -19,12 +19,8 @@ public class StudentMain extends AppCompatActivity {
 
         Intent i = getIntent();
         TextView getStudentID = findViewById(R.id.GetsID);
-        //SharedPreferences prefs = getSharedPreferences("studentName",MODE_PRIVATE);
 
         String studentId = i.getStringExtra("StudentID");
-        //String studentName  = i.getStringExtra("StudentName");
-        //String value = prefs.getString("KEY",studentName);
-        //getStudentID.setText(value);
         getStudentID.setText("S"+studentId);
 
 

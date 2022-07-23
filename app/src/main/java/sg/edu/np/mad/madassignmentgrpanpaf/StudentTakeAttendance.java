@@ -17,9 +17,12 @@ public class StudentTakeAttendance extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_take_attendance);
 
+        // get intent
         Intent i = new Intent();
+        // get studentId from previous page
         String studentId = i.getStringExtra("StudentID");
 
+        // SharedPreferences
         SharedPreferences prefs = 	getSharedPreferences("studentID", MODE_PRIVATE);
         value2 = prefs.getString("StudentID", "Student");
 

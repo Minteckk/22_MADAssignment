@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class AbsenceAdapter extends RecyclerView.Adapter<AbsenceViewHolder> {
+    // arrayList for absent object
     ArrayList<absent> data;
 
     public AbsenceAdapter(ArrayList<absent> input) {
@@ -20,7 +21,7 @@ public class AbsenceAdapter extends RecyclerView.Adapter<AbsenceViewHolder> {
     @Override
     public AbsenceViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View item = null;
-        // inflate layout for class view holder
+        // inflate layout for absence view holder
         if(viewType == 0) {
             item = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_absence_view_holder, parent, false);
         }
@@ -30,6 +31,8 @@ public class AbsenceAdapter extends RecyclerView.Adapter<AbsenceViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull AbsenceViewHolder holder, int position) {
+        // get positions for the studentID, startDate, endDate, DateOfIssue, ClinicNo,
+        // ClinicNumber, AbsenceReason,AbsenceFrom
         String studentId = data.get(position).StudentID;
         holder.StudentID.setText(studentId);
         String startDate = data.get(position).startDate;

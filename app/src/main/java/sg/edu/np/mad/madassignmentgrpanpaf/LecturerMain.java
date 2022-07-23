@@ -19,18 +19,22 @@ public class LecturerMain extends AppCompatActivity {
         setContentView(R.layout.activity_lecturer_main);
 
         TextView username = findViewById(R.id.lec_username);
+        // get Intent
         Intent i = getIntent();
+        // get Lecturer Name from Lecturer Login
         String lecUsername = i.getStringExtra("Username");
+        // set the textView to lecturer user name
         username.setText(lecUsername);
+
         String loginName = i.getStringExtra("username");
 
+        // Shared Preferences
         SharedPreferences.Editor editor = 	getSharedPreferences("UsernameSP", MODE_PRIVATE).edit();
         editor.putString("Username", lecUsername);
         editor.apply();
 
         SharedPreferences prefs = 	getSharedPreferences("UsernameSP", MODE_PRIVATE);
         String value = prefs.getString("Username", "Lecturer");
-
 
 
         // find the id of the upload student to database img
@@ -89,22 +93,24 @@ public class LecturerMain extends AppCompatActivity {
 
         });
 
-        // find the id of the generate passcode image
+        // find the id of the generate QR Code image
         ImageView generatePasscode = findViewById(R.id.qrcodeimg);
         generatePasscode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // goes to generate passcode page
+                // goes to generate QR page
                 Intent generateIntent = new Intent(LecturerMain.this, generatePassCode.class);
                 generateIntent.putExtra("Username",value);
                 startActivity(generateIntent);
             }
         });
 
+        // find the id of the absence Records image
         ImageView absenceRecord = findViewById(R.id.absentimg);
         absenceRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // goes to Student Absence Record page
                 Intent absent = new Intent(LecturerMain.this, StudentAbsenceRecord.class);
                 absent.putExtra("Username",value);
                 startActivity(absent);

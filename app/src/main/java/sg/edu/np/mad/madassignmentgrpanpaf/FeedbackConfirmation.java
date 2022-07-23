@@ -28,17 +28,20 @@ public class FeedbackConfirmation extends AppCompatActivity {
         TextView givenfeedback = findViewById(R.id.infb);
         givenfeedback.setText(feedback);
 
+        // find the id for the back to main button
         Button backToMain = findViewById(R.id.backToMain3);
 
+        // SharedPreferences to store the username
         SharedPreferences prefs = getSharedPreferences("UsernameSP", MODE_PRIVATE);
         String value = prefs.getString("Username", "Lecturer");
 
         backToMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // go back to Lecturer main page
                 Intent i = new Intent(FeedbackConfirmation.this,LecturerMain.class);
+                // sent the username back to main page
                 i.putExtra("Username",value);
-                //i.putExtra("studentID",StudentID);
                 startActivity(i);
             }
         });

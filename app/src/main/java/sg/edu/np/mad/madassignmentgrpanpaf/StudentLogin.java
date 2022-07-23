@@ -23,9 +23,6 @@ public class StudentLogin extends AppCompatActivity {
 
         // find the id of student login button
         Button student_login = findViewById(R.id.button);
-        //Intent i = getIntent();
-        //String studentName  = i.getStringExtra("StudentName");
-        //String studID = i.getStringExtra("StudentID");
         // set OnClickListener
         student_login.setOnClickListener(new View.OnClickListener() {
             @Override
