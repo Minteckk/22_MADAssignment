@@ -16,6 +16,8 @@
         android:layout_marginEnd="8dp"
         android:text="The uploaded student can be viewed at the respective classes allocated in view students and give feedback feature"
         android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView62" />
@@ -25,13 +27,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="8dp"
         android:text="Your student have been uploaded Successfully"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
     <TextView
         android:id="@+id/textView59"
@@ -42,6 +44,7 @@
         android:layout_marginEnd="8dp"
         android:text="Details of the student uploaded:"
         android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirm_uploaded" />
@@ -124,4 +127,16 @@
         android:textColor="@color/white"
         app:layout_constraintStart_toEndOf="@+id/textView62"
         app:layout_constraintTop_toBottomOf="@+id/upload_sID" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/accept" />
 </androidx.constraintlayout.widget.ConstraintLayout>
