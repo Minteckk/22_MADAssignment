@@ -14,22 +14,24 @@ public class LecturerLogin extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //setView
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lecturer_login);
+
         // find the id for login button
         Button login_lec = findViewById(R.id.lecLogin);
+
         // set Onclick listener for back image view
         ImageView iv = findViewById(R.id.lecturer_login_back);
         iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(LecturerLogin.this, UserRole.class);
-                startActivity(i);
+                //return to Role select page
+                finish();
             }
         });
 
-        EditText getLecUsername = findViewById(R.id.lecUsername);
-        EditText getLecPassWord = findViewById(R.id.lecPW);
+        //brings the user to the Register view
         TextView LecRegNow = findViewById(R.id.LecRegNow);
         LecRegNow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,13 +41,20 @@ public class LecturerLogin extends AppCompatActivity {
             }
         });
 
+        //get the elements for username and password
+        EditText getLecUsername = findViewById(R.id.lecUsername);
+        EditText getLecPassWord = findViewById(R.id.lecPW);
+
         // set Onclick listener for login button
+        // goes to Lecturer Main page after the login button is clicked.
         login_lec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //get the inputted data from the login
                 String lecUsername = getLecUsername.getText().toString();
-                // goes to Lecturer Main page after the login button is clicked.
                 String lecPassword = getLecPassWord.getText().toString();
+
+                //if form data empty, display error msg
                 if (lecUsername.length() == 0) {
                     getLecUsername.requestFocus();
                     getLecUsername.setError("Please enter your username");

@@ -33,10 +33,7 @@ public class StudentTakeAttendance extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // back to Student Main Page
-                Intent i = new Intent(StudentTakeAttendance.this, StudentMain.class);
-                i.putExtra("StudentID",value2);
-                // start activity
-                startActivity(i);
+                finish();
             }
         });
 

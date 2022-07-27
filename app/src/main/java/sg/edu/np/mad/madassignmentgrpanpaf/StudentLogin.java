@@ -77,10 +77,7 @@ public class StudentLogin extends AppCompatActivity {
         iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // go back to UserRole page.
-                Intent i = new Intent(StudentLogin.this, UserRole.class);
-                // start activity
-                startActivity(i);
+                finish();
             }
         });
         // set Onclick listener for register button

@@ -44,9 +44,7 @@ public class UserRole extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // go back to main page
-                Intent i = new Intent(UserRole.this, MainActivity.class);
-                // start activity
-                startActivity(i);
+                finish();
             }
         });
     }
