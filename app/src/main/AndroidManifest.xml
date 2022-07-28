@@ -84,6 +84,9 @@
             android:name=".LecturerLogin"
             android:exported="false" />
         <activity
+            android:name=".PersonaliseLecturer"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

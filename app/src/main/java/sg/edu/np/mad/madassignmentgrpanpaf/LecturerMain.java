@@ -116,5 +116,17 @@ public class LecturerMain extends AppCompatActivity {
                 startActivity(absent);
             }
         });
+
+        // find the id of the personalize image
+        ImageView personaliseimg = findViewById(R.id.personaliseImg);
+        personaliseimg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // goes to Student Absence Record page
+                Intent personalise = new Intent(LecturerMain.this, PersonaliseLecturer.class);
+                personalise.putExtra("Username",value);
+                startActivity(personalise);
+            }
+        });
     }
 }
