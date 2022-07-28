@@ -23,10 +23,22 @@ public class MainActivity extends AppCompatActivity {
         getStarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // go to the user role page for user to select if they are a student or teacher.
-                Intent roleIntent = new Intent(MainActivity.this,UserRole.class);
+                // go to the register page for user to register their account.
+                Intent registerIntent = new Intent(MainActivity.this,RegistrationType.class);
                 // start the activity
-                startActivity(roleIntent);
+                startActivity(registerIntent);
+            }
+        });
+        // find the id of the Login button
+        Button Login = findViewById(R.id.LoginRole);
+        // set the onClickListener for the Login button
+        Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // go to the user role page for user to select if they are a student or teacher.
+                Intent UserRole = new Intent(MainActivity.this,UserRole.class);
+                // start the activity
+                startActivity(UserRole);
             }
         });
     }

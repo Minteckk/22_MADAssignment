@@ -3,7 +3,6 @@ package sg.edu.np.mad.madassignmentgrpanpaf;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +19,7 @@ public class register extends AppCompatActivity {
         // find the id of register button
         Button registerBtn = findViewById(R.id.registerBtn);
         // find the id of the student Name, ID and password
-        EditText sName = findViewById(R.id.reg_StudentName);
+        EditText sName = findViewById(R.id.reg_Name);
         EditText sID = findViewById(R.id.reg_studentID);
         EditText password = findViewById(R.id.regStudentPassword);
 

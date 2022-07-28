@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/homepage_background2"
+    android:background="@drawable/background"
     tools:context=".LecturerRegister">
 
     <ScrollView
@@ -26,7 +26,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="Login  Now"
                 android:textAllCaps="false"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold|italic"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -41,7 +41,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:text="Already have an account?"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toStartOf="@+id/loginNow2"
                 app:layout_constraintStart_toStartOf="parent"
@@ -85,7 +85,7 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="8dp"
                 android:text="Register an account with us"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"

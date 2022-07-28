@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/homepage_background2"
+    android:background="@drawable/background"
     >
     <ScrollView
         android:layout_width="match_parent"
@@ -20,6 +20,7 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="4dp"
                 android:text="P02"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -34,19 +35,20 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/resetAttendance2"
-        android:layout_width="206dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:text="Reset Attendance"
-        android:textSize="12sp"
-        app:cornerRadius="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/viewAllStudents"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/resetAttendance2"
+                android:layout_width="206dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:backgroundTint="#2196F3"
+                android:text="Reset Attendance"
+                android:textSize="12sp"
+                app:cornerRadius="32dp"
+                app:layout_constraintEnd_toEndOf="@+id/viewAllStudents"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
