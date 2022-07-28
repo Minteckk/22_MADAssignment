@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/homepage_background2">
+    android:background="@drawable/background">
 
    <ScrollView
        android:layout_width="match_parent"
@@ -18,6 +18,7 @@
                android:layout_width="56dp"
                android:layout_height="48dp"
                android:layout_marginEnd="8dp"
+               android:backgroundTint="#2196F3"
                android:text="P01"
                android:textSize="10sp"
                app:cornerRadius="32dp"
@@ -32,6 +33,7 @@
                android:layout_height="48dp"
                android:layout_marginStart="8dp"
                android:layout_marginEnd="8dp"
+               android:backgroundTint="#2196F3"
                android:text="P02"
                android:textSize="10sp"
                app:cornerRadius="32dp"
@@ -45,6 +47,7 @@
                android:layout_height="48dp"
                android:layout_marginStart="8dp"
                android:layout_marginEnd="8dp"
+               android:backgroundTint="#2196F3"
                android:text="P03"
                android:textSize="10sp"
                app:cornerRadius="32dp"
@@ -58,6 +61,7 @@
                android:layout_height="48dp"
                android:layout_marginStart="8dp"
                android:layout_marginEnd="8dp"
+               android:backgroundTint="#2196F3"
                android:text="P04"
                android:textSize="10sp"
                app:cornerRadius="32dp"
@@ -71,6 +75,7 @@
                android:layout_height="48dp"
                android:layout_marginStart="8dp"
                android:layout_marginEnd="8dp"
+               android:backgroundTint="#2196F3"
                android:text="P05"
                android:textSize="10sp"
                app:cornerRadius="32dp"
@@ -102,8 +107,8 @@
                android:layout_height="wrap_content"
                android:layout_marginStart="7dp"
                android:layout_marginTop="10dp"
-               android:text="Welcome"
-               android:textColor="@color/white"
+               android:text="Hello"
+               android:textColor="@color/black"
                app:layout_constraintStart_toEndOf="@+id/view_all_students_back"
                app:layout_constraintTop_toTopOf="parent" />
 
@@ -114,7 +119,7 @@
                android:layout_marginStart="8dp"
                android:layout_marginTop="10dp"
                android:text="TextView"
-               android:textColor="@color/white"
+               android:textColor="@color/black"
                app:layout_constraintStart_toEndOf="@+id/textView29"
                app:layout_constraintTop_toTopOf="parent" />
        </androidx.constraintlayout.widget.ConstraintLayout>

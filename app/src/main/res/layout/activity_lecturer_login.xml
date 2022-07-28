@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/homepage_background2"
+    android:background="@drawable/background"
     tools:context=".LecturerLogin">
 
     <ScrollView
@@ -81,6 +81,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_marginTop="24dp"
+                android:backgroundTint="#2196F3"
                 android:text="Login"
                 app:cornerRadius="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -102,7 +103,7 @@
                 android:layout_marginStart="64dp"
                 android:layout_marginTop="28dp"
                 android:text="NPAF"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -117,7 +118,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
                 android:text="New user?"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lecLogin" />
 
@@ -128,7 +129,7 @@
                 android:layout_marginStart="64dp"
                 android:layout_marginTop="16dp"
                 android:text=" Register Now"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"

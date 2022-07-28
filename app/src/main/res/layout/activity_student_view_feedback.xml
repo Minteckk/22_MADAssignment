@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/homepage_background2"
+    android:background="@drawable/background"
     tools:context=".StudentViewFeedback">
 
     <ScrollView
@@ -23,16 +23,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/backbutton" />
 
-    <TextView
-        android:id="@+id/student_view_feedback_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="4dp"
-        android:text="Feedback given: "
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/student_view_feedback_back" />
+            <TextView
+                android:id="@+id/student_view_feedback_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="4dp"
+                android:text="Feedback given: "
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/student_view_feedback_back" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
