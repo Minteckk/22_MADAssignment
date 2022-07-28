@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/homepage_background2"
-    tools:context=".PersonaliseLecturer">
+    tools:context=".PersonaliseStudent">
 
     <ScrollView
         android:layout_width="match_parent"
