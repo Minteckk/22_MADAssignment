@@ -10,8 +10,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-25dp"
-        tools:layout_editor_absoluteY="16dp">
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="61dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -75,17 +75,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lecUsername" />
 
-            <Button
-                android:id="@+id/lecLogin"
-
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginTop="24dp"
-                android:text="Login"
-                app:cornerRadius="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lecPW" />
 
             <ImageView
                 android:id="@+id/lecturer_login_back"
@@ -110,30 +99,44 @@
                 app:layout_constraintStart_toEndOf="@+id/lecturer_login_back"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView17"
-                android:layout_width="120dp"
-                android:layout_height="35dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
-                android:text="New user?"
-                android:textColor="@color/white"
+            <Button
+                android:id="@+id/lecLogin"
+
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:text="Login"
+                app:cornerRadius="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lecLogin" />
+                app:layout_constraintTop_toBottomOf="@+id/lect_enable_biometric" />
+
 
             <TextView
                 android:id="@+id/LecRegNow"
                 android:layout_width="wrap_content"
                 android:layout_height="23dp"
-                android:layout_marginStart="64dp"
-                android:layout_marginTop="16dp"
-                android:text=" Register Now"
+                android:layout_marginTop="36dp"
+                android:text="New User?  Register Now"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView17"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lecLogin" />
+
+            <CheckBox
+                android:id="@+id/lect_enable_biometric"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Biometric Authentication"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lecPW" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

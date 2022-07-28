@@ -2,15 +2,20 @@ package sg.edu.np.mad.madassignmentgrpanpaf;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class LecturerLogin extends AppCompatActivity {
+
+    CheckBox enableBiometric;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +46,42 @@ public class LecturerLogin extends AppCompatActivity {
             }
         });
 
-        //get the elements for username and password
-        EditText getLecUsername = findViewById(R.id.lecUsername);
-        EditText getLecPassWord = findViewById(R.id.lecPW);
+
+
+        //start of new feature
+
+
+        SharedPreferences preferences = getSharedPreferences("login", MODE_PRIVATE);
+        String authentication = preferences.getString("login","");
+        if(authentication.equals("true")){
+
+            Toast.makeText(LecturerLogin.this, "Login successful!", Toast.LENGTH_SHORT).show();
+            Intent mainIntent = new Intent(LecturerLogin.this, LecturerMain.class);
+            mainIntent.putExtra("Username", preferences.getString("username",""));
+            startActivity(mainIntent);
+        }else{
+            Toast.makeText(this, "Biometric login was disabled.", Toast.LENGTH_SHORT).show();
+        }
+        enableBiometric = findViewById(R.id.lect_enable_biometric);
+
+        enableBiometric.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(compoundButton.isChecked()){
+                    SharedPreferences preferences = getSharedPreferences("authentication",MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("login", "true");
+                    editor.apply();
+                }else{
+                    SharedPreferences preferences = getSharedPreferences("authentication",MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("login","false");
+                    editor.apply();
+                }
+            }
+        });
+
+        //end of new feature
 
         // set Onclick listener for login button
         // goes to Lecturer Main page after the login button is clicked.
@@ -51,6 +89,10 @@ public class LecturerLogin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //get the inputted data from the login
+                //get the elements for username and password
+                EditText getLecUsername = findViewById(R.id.lecUsername);
+                EditText getLecPassWord = findViewById(R.id.lecPW);
+
                 String lecUsername = getLecUsername.getText().toString();
                 String lecPassword = getLecPassWord.getText().toString();
 
@@ -69,6 +111,12 @@ public class LecturerLogin extends AppCompatActivity {
                     // goes to Lecturer Main page after the login button is clicked.
                     Intent mainIntent = new Intent(LecturerLogin.this, LecturerMain.class);
                     mainIntent.putExtra("Username", lecUsername);
+                    SharedPreferences preferences = getSharedPreferences("authentication",MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("login", "true");
+                    editor.putString("username", lecUsername);
+                    editor.putString("password", lecPassword);
+                    editor.apply();
                     startActivity(mainIntent);
                 }
             }

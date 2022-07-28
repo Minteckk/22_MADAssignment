@@ -73,9 +73,16 @@ public class LecturerMain extends AppCompatActivity {
                 Intent i = new Intent(LecturerMain.this, MainActivity.class);
                 // Close all activities
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                // Add a new flag to start new activity
+                SharedPreferences preferences = getSharedPreferences("authentication",MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("login","false");
+                editor.apply();
+
+                finish();
+
+                /*// Add a new flag to start new activity
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(i);
+                startActivity(i);*/
             }
         });
 
