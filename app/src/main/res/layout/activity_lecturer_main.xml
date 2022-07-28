@@ -296,7 +296,7 @@
                 android:layout_height="170dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="12dp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="@color/teal_200"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
                 app:cardMaxElevation="12dp"
@@ -316,6 +316,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="18dp"
                     app:srcCompat="@drawable/personalise" />
+
                 <TextView
                     android:id="@+id/textView28"
                     android:layout_width="wrap_content"
@@ -326,8 +327,7 @@
                     android:text="Personalization"
                     android:textColor="#000000"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
 
