@@ -56,7 +56,7 @@ public class generatePassCode extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // intent to go back to the lecturer's main page.
-                Intent i = new Intent(generatePassCode.this, LecturerMain.class);
+                Intent i = new Intent(generatePassCode.this, MainLecturer.class);
                 i.putExtra("Username", lecUsername);
                 // start the intent activity
                 startActivity(i);

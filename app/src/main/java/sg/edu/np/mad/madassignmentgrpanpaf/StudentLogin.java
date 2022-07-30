@@ -61,7 +61,7 @@ public class StudentLogin extends AppCompatActivity {
                 }
                 else {
                     // go to student main page after successful login
-                    Intent intent = new Intent(StudentLogin.this, StudentMain.class);
+                    Intent intent = new Intent(StudentLogin.this, MainStudent.class);
                     // toast message for login successful
                     Toast.makeText(StudentLogin.this, "Login successful!", Toast.LENGTH_SHORT).show();
                     //intent.putExtra("StudentName",studentName);

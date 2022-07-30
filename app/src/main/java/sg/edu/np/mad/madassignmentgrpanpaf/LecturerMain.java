@@ -34,7 +34,7 @@ public class LecturerMain extends AppCompatActivity {
         editor.apply();
 
         SharedPreferences prefs = 	getSharedPreferences("UsernameSP", MODE_PRIVATE);
-        String value = prefs.getString("Username", "Lecturer");
+        String value = prefs.getString("Username", "");
 
 
         // find the id of the upload student to database img

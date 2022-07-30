@@ -1,16 +1,19 @@
-package sg.edu.np.mad.madassignmentgrpanpaf.ui.slideshow;
+package sg.edu.np.mad.madassignmentgrpanpaf.ui.homepage_lecturer;
+
+import android.content.Intent;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SlideshowViewModel extends ViewModel {
+public class HomeViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public SlideshowViewModel() {
+    public HomeViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+
+        //mText.setValue("Hello");
     }
 
     public LiveData<String> getText() {

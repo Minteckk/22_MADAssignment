@@ -1,10 +1,12 @@
 package sg.edu.np.mad.madassignmentgrpanpaf;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -15,18 +17,18 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
-import sg.edu.np.mad.madassignmentgrpanpaf.databinding.ActivityMainStudentBinding;
+import sg.edu.np.mad.madassignmentgrpanpaf.databinding.ActivityMainLecturerBinding;
 
 public class MainLecturer extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private ActivityMainStudentBinding binding;
+    private ActivityMainLecturerBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainStudentBinding.inflate(getLayoutInflater());
+        binding = ActivityMainLecturerBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMainStudent.toolbar);
@@ -69,6 +71,16 @@ public class MainLecturer extends AppCompatActivity {
                 startActivity(gotoAbsent);
             }
         });
+
+        TextView username = findViewById(R.id.text_home);
+        Intent i = getIntent();
+        // get Lecturer Name from Lecturer Login
+        String lecUsername = i.getStringExtra("Username");
+        // set the textView to lecturer user name
+        // Shared Preferences
+        SharedPreferences prefs = 	getSharedPreferences("UsernameSP", MODE_PRIVATE);
+        String value = prefs.getString("Username","");
+        username.setText("Welcome " + value);
     }
 
     @Override

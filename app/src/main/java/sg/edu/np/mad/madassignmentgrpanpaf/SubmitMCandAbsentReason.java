@@ -86,7 +86,7 @@ String[] missedLesson = {"Lesson", "Class Test", "Common Test", "Exams", "Other 
             @Override
             public void onClick(View view) {
                 // intent to go back to the lecturer's main page.
-                Intent i = new Intent(SubmitMCandAbsentReason.this, MainLecturer.class);
+                Intent i = new Intent(SubmitMCandAbsentReason.this, MainStudent.class);
                 i.putExtra("StudentID",value);
                 // start the intent activity
                 startActivity(i);

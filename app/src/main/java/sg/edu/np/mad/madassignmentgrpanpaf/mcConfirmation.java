@@ -86,7 +86,7 @@ public class mcConfirmation extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // back to student main page
-                Intent i = new Intent(mcConfirmation.this, StudentMain.class);
+                Intent i = new Intent(mcConfirmation.this, MainStudent.class);
                 i.putExtra("StudentID",value);
                 startActivity(i);
             }

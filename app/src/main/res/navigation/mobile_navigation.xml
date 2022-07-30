@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="sg.edu.np.mad.madassignmentgrpanpaf.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+    <activity
+        android:id="@+id/studentTakeAttendance"
+        android:name="sg.edu.np.mad.madassignmentgrpanpaf.StudentTakeAttendance"
+        android:label="activity_student_take_attendance"
+        tools:layout="@layout/activity_student_take_attendance" />
+    <activity
+        android:id="@+id/studentViewFeedback"
+        android:name="sg.edu.np.mad.madassignmentgrpanpaf.StudentViewFeedback"
+        android:label="activity_student_view_feedback"
+        tools:layout="@layout/activity_student_view_feedback" />
+    <activity
+        android:id="@+id/submitMCandAbsentReason"
+        android:name="sg.edu.np.mad.madassignmentgrpanpaf.SubmitMCandAbsentReason"
+        android:label="activity_submit_mcand_absent_reason"
+        tools:layout="@layout/activity_submit_mcand_absent_reason" />
+    <activity
+        android:id="@+id/personaliseStudent"
+        android:name="sg.edu.np.mad.madassignmentgrpanpaf.PersonaliseStudent"
+        android:label="activity_personalise_student"
+        tools:layout="@layout/activity_personalise_student" />
+
+</navigation>

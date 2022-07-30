@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/home"
-        android:name="sg.edu.np.mad.madassignmentgrpanpaf.ui.home.HomeFragment"
+        android:name="sg.edu.np.mad.madassignmentgrpanpaf.ui.homepage_lecturer.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_lecturerhome" />
 
     <activity
         android:id="@+id/upload_student_name"

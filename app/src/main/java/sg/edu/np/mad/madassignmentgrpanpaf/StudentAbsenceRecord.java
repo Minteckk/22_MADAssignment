@@ -42,7 +42,7 @@ public class StudentAbsenceRecord extends AppCompatActivity {
 
         // SharedPreferences
         SharedPreferences prefs = 	getSharedPreferences("UsernameSP", MODE_PRIVATE);
-        String value = prefs.getString("Username", "user");
+        String value = prefs.getString("Username", "");
 
         // onClickListener for backToMain button
         ImageView backToMain = findViewById(R.id.backToPrevious);

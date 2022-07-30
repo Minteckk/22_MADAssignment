@@ -33,10 +33,13 @@
         <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/test3/app/src/main/res/layout/fragment_student_class.xml" value="0.1" />
         <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/test3/app/src/main/res/layout/fragment_student_p02.xml" value="0.1" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2275" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.2275" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.2275" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2235" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable/ic_menu_camera.xml" value="0.1005" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.1005" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.1005" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.2275" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable/side_nav_bar.xml" value="0.2275" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable/submitMC_background.xml" value="0.124" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable/submitMC_nav_background.xml" value="0.2275" />
@@ -53,7 +56,7 @@
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_logout_alert.xml" value="0.23007246376811594" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_main.xml" value="0.2883625128733265" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_main_lecturer.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_main_student.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_main_student.xml" value="0.264" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_mc_confirmation.xml" value="0.23007246376811594" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_personalise_lecturer.xml" value="0.23007246376811594" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_personalise_student.xml" value="0.23007246376811594" />
@@ -84,8 +87,11 @@
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/content_student_main_page.xml" value="0.23007246376811594" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/content_student_main_page2.xml" value="0.23007246376811594" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/content_testing.xml" value="0.23007246376811594" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/fragment_dashboard.xml" value="0.23007246376811594" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/fragment_gallery.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/fragment_home.xml" value="0.23007246376811594" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/fragment_lecturerhome.xml" value="0.23007246376811594" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/fragment_notifications.xml" value="0.23007246376811594" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/fragment_slideshow.xml" value="0.23007246376811594" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/fragment_student_class.xml" value="0.264" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/fragment_student_p02.xml" value="0.22282608695652173" />
@@ -102,6 +108,7 @@
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/menu/activity_main_drawer.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/menu/activity_student_main_page2_drawer.xml" value="0.536" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/menu/activity_student_main_page_drawer.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/menu/main_lecturer.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/menu/main_student.xml" value="0.25416666666666665" />

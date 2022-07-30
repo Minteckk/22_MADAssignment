@@ -1,4 +1,4 @@
-package sg.edu.np.mad.madassignmentgrpanpaf.ui.gallery;
+package sg.edu.np.mad.madassignmentgrpanpaf.ui.homepage_lecturer;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,20 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import sg.edu.np.mad.madassignmentgrpanpaf.databinding.FragmentGalleryBinding;
+import sg.edu.np.mad.madassignmentgrpanpaf.databinding.FragmentLecturerhomeBinding;
 
-public class GalleryFragment extends Fragment {
+public class HomeFragment extends Fragment {
 
-    private FragmentGalleryBinding binding;
+    private FragmentLecturerhomeBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        GalleryViewModel galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
+        HomeViewModel homeViewModel =
+                new ViewModelProvider(this).get(HomeViewModel.class);
 
-        binding = FragmentGalleryBinding.inflate(inflater, container, false);
+        binding = FragmentLecturerhomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textGallery;
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
