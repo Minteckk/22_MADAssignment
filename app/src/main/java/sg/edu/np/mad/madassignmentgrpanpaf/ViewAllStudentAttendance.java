@@ -37,7 +37,7 @@ public class ViewAllStudentAttendance extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // start the intent to go to Lecturer Main Page
-                Intent i = new Intent(ViewAllStudentAttendance.this, LecturerMain.class);
+                Intent i = new Intent(ViewAllStudentAttendance.this, MainLecturer.class);
                 // send the username back to Lecturer Main Page
                 i.putExtra("Username",lecUsername);
                 // start the activity.

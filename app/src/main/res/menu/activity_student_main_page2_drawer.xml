@@ -6,24 +6,30 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/home"
-            android:icon="@drawable/student_attendance"
+            android:icon="@drawable/ic_home"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/studentTakeAttendance"
-            android:icon="@drawable/student_attendance"
-            android:title="Take Attendance" />
+            android:id="@+id/upload_student_name"
+            android:icon="@drawable/ic_addstudent"
+            android:title="Upload Student to Database" />
         <item
-            android:id="@+id/studentViewFeedback"
-            android:icon="@drawable/student_feedback"
-            android:title="View Feedback" />
+            android:id="@+id/viewAllStudentAttendance2"
+            android:icon="@drawable/ic_viewstudentattendance"
+            android:title="View Student Attendance" />
         <item
-            android:id="@+id/submitMCandAbsentReason"
-            android:icon="@drawable/submit"
-            android:title="Submit MC and Reason" />
+            android:id="@+id/viewAllStudents2"
+            android:icon="@drawable/ic_viewstudent"
+            android:title="Give feedback to students" />
         <item
-            android:id="@+id/personaliseStudent"
+            android:id="@+id/studentAbsenceRecord"
+            android:icon="@drawable/ic_absencerecord"
+            android:title="View Students Absent Record" />
+        <item
+            android:id="@+id/personaliseLecturer"
             android:icon="@drawable/personalise"
             android:title="Personalise" />
-        <item android:title="Log Out" />
+        <item
+            android:id="@+id/lecturerLogin"
+            android:title="Log Out" />
     </group>
 </menu>

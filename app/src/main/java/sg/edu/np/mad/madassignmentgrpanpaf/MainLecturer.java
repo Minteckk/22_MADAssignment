@@ -1,7 +1,10 @@
 package sg.edu.np.mad.madassignmentgrpanpaf;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -14,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import sg.edu.np.mad.madassignmentgrpanpaf.databinding.ActivityMainStudentBinding;
 
-public class MainStudent extends AppCompatActivity {
+public class MainLecturer extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainStudentBinding binding;
@@ -33,18 +36,45 @@ public class MainStudent extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.home, R.id.studentViewFeedback, R.id.submitMCandAbsentReason)
+                R.id.home, R.id.viewAllStudentAttendance2, R.id.viewAllStudents2)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main_student);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        ImageView studentView = findViewById(R.id.studentView);
+        studentView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent gotoViewAttendance = new Intent(MainLecturer.this,ViewAllStudentAttendance.class);
+                startActivity(gotoViewAttendance);
+            }
+        });
+
+        ImageView studentFeedback = findViewById(R.id.viewStudent);
+        studentFeedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent gotoFeedback = new Intent(MainLecturer.this,ViewAllStudents.class);
+                startActivity(gotoFeedback);
+            }
+        });
+
+        ImageView studentAbsent = findViewById(R.id.absentimg);
+        studentAbsent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent gotoAbsent = new Intent(MainLecturer.this, StudentAbsenceRecord.class);
+                startActivity(gotoAbsent);
+            }
+        });
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main_student, menu);
+        getMenuInflater().inflate(R.menu.main_lecturer, menu);
         return true;
     }
 

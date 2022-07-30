@@ -50,7 +50,7 @@ public class upload_student_name extends AppCompatActivity {
         iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(upload_student_name.this, LecturerMain.class);
+                Intent i = new Intent(upload_student_name.this, MainLecturer.class);
                 i.putExtra("Username", lecUsername);
                 startActivity(i);
             }

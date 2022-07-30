@@ -50,7 +50,7 @@ public class StudentAbsenceRecord extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // back to Lecturer Main Page
-                Intent i = new Intent(StudentAbsenceRecord.this,LecturerMain.class);
+                Intent i = new Intent(StudentAbsenceRecord.this,MainLecturer.class);
                 i.putExtra("Username",value);
                 startActivity(i);
             }

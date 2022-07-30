@@ -67,7 +67,7 @@ public class LecturerLogin extends AppCompatActivity {
                 } else {
                     Toast.makeText(LecturerLogin.this, "Login successful!", Toast.LENGTH_SHORT).show();
                     // goes to Lecturer Main page after the login button is clicked.
-                    Intent mainIntent = new Intent(LecturerLogin.this, LecturerMain.class);
+                    Intent mainIntent = new Intent(LecturerLogin.this, MainLecturer.class);
                     mainIntent.putExtra("Username", lecUsername);
                     startActivity(mainIntent);
                 }

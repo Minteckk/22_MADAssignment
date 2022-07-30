@@ -61,7 +61,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="8dp"
-                    app:srcCompat="@drawable/student_1_" />
+                    app:srcCompat="@drawable/studentrole" />
 
                 <TextView
                     android:id="@+id/textView32"

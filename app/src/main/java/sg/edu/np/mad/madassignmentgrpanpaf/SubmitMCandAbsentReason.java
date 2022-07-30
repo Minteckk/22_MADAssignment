@@ -21,7 +21,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import androidx.annotation.RequiresApi;
 
 import java.io.IOException;
@@ -86,7 +86,7 @@ String[] missedLesson = {"Lesson", "Class Test", "Common Test", "Exams", "Other 
             @Override
             public void onClick(View view) {
                 // intent to go back to the lecturer's main page.
-                Intent i = new Intent(SubmitMCandAbsentReason.this, MainStudent.class);
+                Intent i = new Intent(SubmitMCandAbsentReason.this, MainLecturer.class);
                 i.putExtra("StudentID",value);
                 // start the intent activity
                 startActivity(i);

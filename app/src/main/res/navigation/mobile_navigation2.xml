@@ -12,23 +12,31 @@
         tools:layout="@layout/fragment_home" />
 
     <activity
-        android:id="@+id/personaliseStudent"
-        android:name="sg.edu.np.mad.madassignmentgrpanpaf.PersonaliseStudent"
-        android:label="activity_personalise_student"
-        tools:layout="@layout/activity_personalise_student" />
+        android:id="@+id/upload_student_name"
+        android:name="sg.edu.np.mad.madassignmentgrpanpaf.upload_student_name"
+        android:label="activity_upload_student_name"
+        tools:layout="@layout/activity_upload_student_name" />
     <activity
-        android:id="@+id/submitMCandAbsentReason"
-        android:name="sg.edu.np.mad.madassignmentgrpanpaf.SubmitMCandAbsentReason"
-        android:label="activity_submit_mcand_absent_reason"
-        tools:layout="@layout/activity_submit_mcand_absent_reason" />
+        android:id="@+id/viewAllStudentAttendance2"
+        android:name="sg.edu.np.mad.madassignmentgrpanpaf.ViewAllStudentAttendance"
+        android:label="ViewAllStudentAttendance" />
     <activity
-        android:id="@+id/studentViewFeedback"
-        android:name="sg.edu.np.mad.madassignmentgrpanpaf.StudentViewFeedback"
-        android:label="activity_student_view_feedback"
-        tools:layout="@layout/activity_student_view_feedback" />
+        android:id="@+id/viewAllStudents2"
+        android:name="sg.edu.np.mad.madassignmentgrpanpaf.ViewAllStudents"
+        android:label="ViewAllStudents" />
     <activity
-        android:id="@+id/studentTakeAttendance"
-        android:name="sg.edu.np.mad.madassignmentgrpanpaf.StudentTakeAttendance"
-        android:label="activity_student_take_attendance"
-        tools:layout="@layout/activity_student_take_attendance" />
+        android:id="@+id/studentAbsenceRecord"
+        android:name="sg.edu.np.mad.madassignmentgrpanpaf.StudentAbsenceRecord"
+        android:label="activity_student_absence_record"
+        tools:layout="@layout/activity_student_absence_record" />
+    <activity
+        android:id="@+id/personaliseLecturer"
+        android:name="sg.edu.np.mad.madassignmentgrpanpaf.PersonaliseLecturer"
+        android:label="activity_personalise_lecturer"
+        tools:layout="@layout/activity_personalise_lecturer" />
+    <activity
+        android:id="@+id/lecturerLogin"
+        android:name="sg.edu.np.mad.madassignmentgrpanpaf.LecturerLogin"
+        android:label="activity_lecturer_login"
+        tools:layout="@layout/activity_lecturer_login" />
 </navigation>

@@ -40,7 +40,7 @@ public class ViewAllStudents extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // get intent
-                Intent i = new Intent(ViewAllStudents.this, LecturerMain.class);
+                Intent i = new Intent(ViewAllStudents.this, MainLecturer.class);
                 // intent to send username to other activity.
                 i.putExtra("Username", lecUsername);
                 // start activity
