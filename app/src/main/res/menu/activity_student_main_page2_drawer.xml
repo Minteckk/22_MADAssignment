@@ -29,7 +29,7 @@
             android:icon="@drawable/personalise"
             android:title="Personalise" />
         <item
-            android:id="@+id/lecturerLogin"
+            android:id="@+id/mainActivity"
             android:title="Log Out" />
     </group>
 </menu>

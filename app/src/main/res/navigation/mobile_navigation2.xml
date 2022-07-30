@@ -35,8 +35,8 @@
         android:label="activity_personalise_lecturer"
         tools:layout="@layout/activity_personalise_lecturer" />
     <activity
-        android:id="@+id/lecturerLogin"
-        android:name="sg.edu.np.mad.madassignmentgrpanpaf.LecturerLogin"
-        android:label="activity_lecturer_login"
-        tools:layout="@layout/activity_lecturer_login" />
+        android:id="@+id/mainActivity"
+        android:name="sg.edu.np.mad.madassignmentgrpanpaf.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
 </navigation>
