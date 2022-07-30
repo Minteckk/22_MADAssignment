@@ -11,6 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MADAssignment">
         <activity
+            android:name=".MainStudent"
+            android:exported="false"
+            android:label="@string/title_activity_main_student"
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
+        <activity
             android:name=".RegistrationType"
             android:exported="false" />
         <activity

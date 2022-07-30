@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/student_attendance"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/studentTakeAttendance"
+            android:icon="@drawable/student_attendance"
+            android:title="Take Attendance" />
+        <item
+            android:id="@+id/studentViewFeedback"
+            android:icon="@drawable/student_feedback"
+            android:title="View Feedback" />
+        <item
+            android:id="@+id/submitMCandAbsentReason"
+            android:icon="@drawable/submit"
+            android:title="Submit MC and Reason" />
+        <item
+            android:id="@+id/personaliseStudent"
+            android:icon="@drawable/personalise"
+            android:title="Personalise" />
+        <item android:title="Log Out" />
+    </group>
+</menu>

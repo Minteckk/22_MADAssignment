@@ -50,7 +50,7 @@ public class StudentMain extends AppCompatActivity {
         iv2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(StudentMain.this, StudentTakeAttendance.class);
+                Intent i = new Intent(StudentMain.this, MainStudent.class);
                 i.putExtra("StudentID",value);
                 startActivity(i);
             }

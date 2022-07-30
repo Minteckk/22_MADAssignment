@@ -51,7 +51,7 @@ public class StudentViewFeedback extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // back to Student Main Page
-                Intent i = new Intent(StudentViewFeedback.this, StudentMain.class);
+                Intent i = new Intent(StudentViewFeedback.this, MainStudent.class);
                 i.putExtra("StudentID",value);
                 // start activity
                 startActivity(i);
