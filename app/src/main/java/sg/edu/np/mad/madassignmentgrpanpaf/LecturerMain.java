@@ -78,11 +78,9 @@ public class LecturerMain extends AppCompatActivity {
                 editor.putString("login","false");
                 editor.apply();
 
-                finish();
-
-                /*// Add a new flag to start new activity
+                // Add a new flag to start new activity
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(i);*/
+                startActivity(i);
             }
         });
 

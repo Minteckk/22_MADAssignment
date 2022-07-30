@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MADAssignment">
         <activity
+            android:name=".BiometricAuth"
+            android:exported="false" />
+        <activity
             android:name=".MainStudent"
             android:exported="false"
             android:label="@string/title_activity_main_student"

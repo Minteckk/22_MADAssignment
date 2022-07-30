@@ -1,15 +1,24 @@
 package sg.edu.np.mad.madassignmentgrpanpaf;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.biometric.BiometricManager;
+import androidx.biometric.BiometricPrompt;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.concurrent.Executor;
 
 public class StudentLogin extends AppCompatActivity {
 
@@ -23,6 +32,91 @@ public class StudentLogin extends AppCompatActivity {
 
         // find the id of student login button
         Button student_login = findViewById(R.id.button);
+
+        //start of new feature
+        CheckBox enableBiometric;
+
+        SharedPreferences preferences = getSharedPreferences("authentication", MODE_PRIVATE);
+        String authentication = preferences.getString("login","");
+        String role = preferences.getString("role","");
+        if(authentication.equals("true") && role.equals("student")){
+
+            BiometricPrompt biometricPrompt;
+            BiometricPrompt.PromptInfo promptInfo;
+
+            BiometricManager biometricManager = BiometricManager.from(this);
+            switch (biometricManager.canAuthenticate()){
+                case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:
+                    Toast.makeText(getApplicationContext(),"Device does not have biometric hardware",Toast.LENGTH_SHORT).show();
+                    break;
+
+                case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:
+                    Toast.makeText(getApplicationContext(),"Biometric hardware is not available",Toast.LENGTH_SHORT).show();
+
+                case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
+                    Toast.makeText(getApplicationContext(),"No biometric saved",Toast.LENGTH_SHORT).show();
+
+            }
+
+            Executor executor = ContextCompat.getMainExecutor(this);
+
+            biometricPrompt = new BiometricPrompt(this, executor, new BiometricPrompt.AuthenticationCallback() {
+                @Override
+                public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
+                    super.onAuthenticationError(errorCode, errString);
+                }
+
+                @Override
+                public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
+                    super.onAuthenticationSucceeded(result);
+                    //Login Success
+                    Toast.makeText(StudentLogin.this, "Login successful!", Toast.LENGTH_SHORT).show();
+                    Intent mainIntent = new Intent(StudentLogin.this, StudentMain.class);
+                    mainIntent.putExtra("Username", preferences.getString("username",""));
+                    startActivity(mainIntent);
+                }
+
+                @Override
+                public void onAuthenticationFailed() {
+                    super.onAuthenticationFailed();
+                }
+            });
+
+            promptInfo = new BiometricPrompt.PromptInfo.Builder().setTitle("NPAF")
+                    .setDescription("Use Biometrics to login").setDeviceCredentialAllowed(true).build();
+
+            biometricPrompt.authenticate(promptInfo);
+
+
+        }else{
+            Toast.makeText(this, "Please login", Toast.LENGTH_SHORT).show();
+        }
+        enableBiometric = findViewById(R.id.std_enable_biometric);
+
+        enableBiometric.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(compoundButton.isChecked()){
+                    SharedPreferences preferences =
+                            getSharedPreferences("authentication",MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("login", "1");
+                    Toast.makeText(StudentLogin.this, "checked", Toast.LENGTH_SHORT).show();
+                    boolean flag = editor.commit();
+                    if (flag){
+                        Toast.makeText(StudentLogin.this, "commited", Toast.LENGTH_SHORT).show();
+                    }
+                }else{
+                    SharedPreferences preferences = getSharedPreferences("authentication",MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("login","false");
+                    Toast.makeText(StudentLogin.this, "unchecked", Toast.LENGTH_SHORT).show();
+                    editor.commit();
+                }
+            }
+        });
+        //end of new feature
+
         // set OnClickListener
         student_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,8 +158,20 @@ public class StudentLogin extends AppCompatActivity {
                     Intent intent = new Intent(StudentLogin.this, MainStudent.class);
                     // toast message for login successful
                     Toast.makeText(StudentLogin.this, "Login successful!", Toast.LENGTH_SHORT).show();
-                    //intent.putExtra("StudentName",studentName);
+                    // start of new feature
                     intent.putExtra("StudentID",studentID);
+                    SharedPreferences preferences = getSharedPreferences("authentication",MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    String authentication = preferences.getString("login","");
+                    if (authentication.equals("1")) {
+                        editor.putString("login", "true");
+                    }
+                    //declare role of user
+                    editor.putString("role", "student");
+                    editor.putString("username", studentID);
+                    editor.putString("password", studentPassword);
+                    editor.apply();
+                    // end of new feature
                     // start activity
                     startActivity(intent);
                 }
