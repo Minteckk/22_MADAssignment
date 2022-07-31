@@ -77,6 +77,8 @@
   ViewStudentAbsenceRecord
   </li>
   <li>MC Confirmation</li>
+  <li>Bottom Navigation menu layout</li>
+  <li>Navigation Drawer header and menu layout
   </p>
  <li>
    add background to app 
@@ -101,8 +103,10 @@
   </li>
   <li>MC Confirmation</li>
   <li>
-  View Student Absent Record and AbsenceAdapter 
+  View Student Absent Record feature and AbsenceAdapter 
   </li>
+  <li>Bottom Navigation for student</li>
+  <li>Navigation Drawer for lecturer</li>
   <li>
 complete provide feedback feature
   </li>
@@ -191,13 +195,20 @@ complete AccountDBHandler
 <p> Credits: </p>
 <p><a href="https://www.flaticon.com/free-icons/student" title="student icons">Student icons created by Freepik - Flaticon</a></p>
 <p><a href="https://www.flaticon.com/free-icons/teacher" title="teacher icons">Teacher icons created by max.icons - Flaticon</a></p>
-<p><a href="https://www.flaticon.com/free-icons/attendance" title="attendance icons">Attendance icons created by Flat Icons - Flaticon</a></p>
-<p><a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Smashicons - Flaticon</a></p>
+<p><a href="https://www.flaticon.com/free-icons/attendance" title="attendance icons">Attendance icons created by Edi Prast - Flaticon</a></p>
+<p><a href="https://www.flaticon.com/free-icons/student" title="student icons">Student icons created by Freepik - Flaticon</a></p>
+<p><a href="https://www.flaticon.com/free-icons/add-user" title="add user icons">Add user icons created by Freepik - Flaticon</a></p>
+<p><a href="https://www.flaticon.com/free-icons/education" title="education icons">Education icons created by itim2101 - Flaticon</a>
+<p><a href="https://www.flaticon.com/free-icons/students" title="students icons">Students icons created by Freepik - Flaticon</a></p>
+<p><a href="https://www.flaticon.com/free-icons/student" title="student icons">Student icons created by Freepik - Flaticon</a></p>
+<p><a href="https://www.flaticon.com/free-icons/students" title="students icons">Students icons created by Freepik - Flaticon</a></p>
 <p><a href="https://www.flaticon.com/free-icons/people" title="people icons">People icons created by Freepik - Flaticon</a></p>
 <p><a href="https://www.flaticon.com/free-icons/submit" title="submit icons">Submit icons created by Freepik - Flaticon</a></p>
 <p><a href="https://www.flaticon.com/free-icons/tick" title="tick icons">Tick icons created by kliwir art - Flaticon</a></p>
 <p><a href="https://www.flaticon.com/free-icons/absent" title="absent icons">Absent icons created by Freepik - Flaticon</a></p>
 <p><a href="https://www.flaticon.com/free-icons/qr-code" title="qr-code icons">Qr-code icons created by Eucalyp - Flaticon</a></p>
+
+
 
 
 
