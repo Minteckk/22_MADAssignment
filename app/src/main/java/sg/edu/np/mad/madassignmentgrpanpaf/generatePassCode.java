@@ -24,6 +24,9 @@ public class generatePassCode extends AppCompatActivity {
         String lecUsername = i.getStringExtra("Username");
         lecname.setText(lecUsername);
 
+        SharedPreferences prefs = getSharedPreferences("UsernameSP", MODE_PRIVATE);
+        String value = prefs.getString("Username", "Lecturer");
+
         // find the id for the back button
         ImageView generate_back = findViewById(R.id.gen_back);
 
@@ -56,8 +59,8 @@ public class generatePassCode extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // intent to go back to the lecturer's main page.
-                Intent i = new Intent(generatePassCode.this, LecturerMain.class);
-                i.putExtra("Username", lecUsername);
+                Intent i = new Intent(generatePassCode.this, MainLecturer.class);
+                i.putExtra("Username", value);
                 // start the intent activity
                 startActivity(i);
             }

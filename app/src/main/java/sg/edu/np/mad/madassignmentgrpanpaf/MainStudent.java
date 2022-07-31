@@ -1,22 +1,25 @@
 package sg.edu.np.mad.madassignmentgrpanpaf;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
 
 import sg.edu.np.mad.madassignmentgrpanpaf.databinding.ActivityMainStudentBinding;
 
 public class MainStudent extends AppCompatActivity {
 
-    private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainStudentBinding binding;
 
     @Override
@@ -26,32 +29,65 @@ public class MainStudent extends AppCompatActivity {
         binding = ActivityMainStudentBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        setSupportActionBar(binding.appBarMainStudent.toolbar);
-
-        DrawerLayout drawer = binding.drawerLayout;
-        NavigationView navigationView = binding.navView;
+        BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.home, R.id.studentViewFeedback, R.id.submitMCandAbsentReason)
-                .setOpenableLayout(drawer)
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.navigation_home, R.id.studentViewFeedback, R.id.submitMCandAbsentReason)
                 .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main_student);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main_student);
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        NavigationUI.setupWithNavController(binding.navView, navController);
+
+
+        ImageView studentAttendance = findViewById(R.id.student_aimage);
+        studentAttendance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainStudent.this,StudentTakeAttendance.class);
+                startActivity(i);
+            }
+        });
+        ImageView submitMC = findViewById(R.id.student_submitMC);
+        submitMC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent MCintent = new Intent(MainStudent.this,SubmitMCandAbsentReason.class);
+                startActivity(MCintent);
+            }
+        });
+        ImageView readfeedback = findViewById(R.id.student_fimage);
+        readfeedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent feedbackIntent = new Intent(MainStudent.this,StudentViewFeedback.class);
+                startActivity(feedbackIntent);
+            }
+        });
+
+        Button logout =  findViewById(R.id.button_logout3);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                Intent i = new Intent(MainStudent.this,MainActivity.class);
+                startActivity(i);
+            }
+        });
+
+        TextView studentID = findViewById(R.id.text_home);
+        Intent i = getIntent();
+
+        String studentId = i.getStringExtra("StudentID");
+        studentID.setText("Hello S"+studentId);
+
+
+        SharedPreferences.Editor editor = 	getSharedPreferences("studentID", MODE_PRIVATE).edit();
+        editor.putString("StudentID", studentId);
+        editor.apply();
+
+        SharedPreferences prefs = 	getSharedPreferences("studentID", MODE_PRIVATE);
+        String value = prefs.getString("StudentID", "");
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main_student, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main_student);
-        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-                || super.onSupportNavigateUp();
-    }
 }

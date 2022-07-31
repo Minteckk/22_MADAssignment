@@ -8,11 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Spinner;
+
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.Locale;
 
 public class mcConfirmation extends AppCompatActivity {
 
@@ -88,7 +86,7 @@ public class mcConfirmation extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // back to student main page
-                Intent i = new Intent(mcConfirmation.this,MainStudent.class);
+                Intent i = new Intent(mcConfirmation.this, MainStudent.class);
                 i.putExtra("StudentID",value);
                 startActivity(i);
             }
