@@ -27,8 +27,8 @@
         tools:layout="@layout/activity_submit_mcand_absent_reason" />
     <activity
         android:id="@+id/personaliseStudent"
-        android:name="sg.edu.np.mad.madassignmentgrpanpaf.PersonaliseStudent"
+        android:name="sg.edu.np.mad.madassignmentgrpanpaf.Personalise"
         android:label="activity_personalise_student"
-        tools:layout="@layout/activity_personalise_student" />
+        tools:layout="@layout/activity_personalise" />
 
 </navigation>

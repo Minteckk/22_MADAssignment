@@ -105,7 +105,7 @@ public class StudentMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // goes to Student Absence Record page
-                Intent personalise = new Intent(StudentMain.this, PersonaliseLecturer.class);
+                Intent personalise = new Intent(StudentMain.this, Personalise.class);
                 personalise.putExtra("Username",value);
                 startActivity(personalise);
             }

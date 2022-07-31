@@ -31,9 +31,9 @@
         tools:layout="@layout/activity_student_absence_record" />
     <activity
         android:id="@+id/personaliseLecturer"
-        android:name="sg.edu.np.mad.madassignmentgrpanpaf.PersonaliseLecturer"
+        android:name="sg.edu.np.mad.madassignmentgrpanpaf.Personalise"
         android:label="activity_personalise_lecturer"
-        tools:layout="@layout/activity_personalise_lecturer" />
+        tools:layout="@layout/activity_personalise" />
     <activity
         android:id="@+id/mainActivity"
         android:name="sg.edu.np.mad.madassignmentgrpanpaf.MainActivity"

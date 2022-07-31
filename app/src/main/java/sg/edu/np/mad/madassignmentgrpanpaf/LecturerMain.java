@@ -123,7 +123,7 @@ public class LecturerMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // goes to Student Absence Record page
-                Intent personalise = new Intent(LecturerMain.this, PersonaliseLecturer.class);
+                Intent personalise = new Intent(LecturerMain.this, Personalise.class);
                 personalise.putExtra("Username",value);
                 startActivity(personalise);
             }

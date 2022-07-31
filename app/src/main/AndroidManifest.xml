@@ -125,11 +125,7 @@
             android:exported="false"
             android:theme="@style/Theme.MADAssignment.NoActionBar"/>
         <activity
-            android:name=".PersonaliseLecturer"
-            android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
-        <activity
-            android:name=".PersonaliseStudent"
+            android:name=".Personalise"
             android:exported="false"
             android:theme="@style/Theme.MADAssignment.NoActionBar"/>
         <activity
