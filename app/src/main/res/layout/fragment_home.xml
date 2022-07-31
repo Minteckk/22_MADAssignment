@@ -170,7 +170,6 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="24dp"
         android:text="Explore other features available by clicking on the feature icon"
-        android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"

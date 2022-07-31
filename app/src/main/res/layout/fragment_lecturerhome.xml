@@ -166,7 +166,6 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:text="Explore Other Features in navigation drawer"
-        android:textColor="#FF0303"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

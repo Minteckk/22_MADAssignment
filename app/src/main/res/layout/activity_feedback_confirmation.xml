@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     tools:context=".FeedbackConfirmation">
-
 
     <ScrollView
         android:layout_width="match_parent"
@@ -36,7 +34,6 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="8dp"
                 android:text="Your feedback for"
-                android:textColor="@color/black"
                 app:layout_constraintEnd_toStartOf="@+id/fbName"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView4" />
@@ -49,7 +46,6 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="8dp"
                 android:text="is given successfully"
-                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/fbName"
                 app:layout_constraintTop_toBottomOf="@+id/imageView4" />
@@ -62,7 +58,6 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
-                android:textColor="@color/black"
                 app:layout_constraintEnd_toStartOf="@+id/textView63"
                 app:layout_constraintStart_toEndOf="@+id/textView58"
                 app:layout_constraintTop_toBottomOf="@+id/imageView4" />
@@ -74,7 +69,6 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
                 android:text="Details on Feedback given:"
-                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView58" />
 
@@ -85,7 +79,6 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
                 android:text="TextView"
-                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView65" />
 

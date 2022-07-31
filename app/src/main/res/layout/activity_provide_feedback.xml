@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/background"
     android:layout_height="match_parent"
     tools:context=".ProvideFeedback">
 
@@ -25,7 +24,6 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:text="Name"
-                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView7" />
@@ -38,7 +36,6 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="8dp"
                 android:text="ID"
-                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/feedbackStudentName" />
@@ -50,7 +47,6 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="32dp"
                 android:text="please provide your feedback :"
-                android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/feedbackStudentID" />

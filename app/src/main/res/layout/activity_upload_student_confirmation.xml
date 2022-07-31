@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     tools:context=".uploadStudentConfirmation">
 
     <ScrollView
@@ -22,7 +21,6 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="8dp"
                 android:text="The uploaded student can be viewed at the respective classes allocated in view students and give feedback feature"
-                android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold|italic"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +35,6 @@
                 android:layout_marginTop="28dp"
                 android:layout_marginEnd="8dp"
                 android:text="Your student have been uploaded Successfully"
-                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView6" />
@@ -50,7 +47,6 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:text="Details of the student uploaded:"
-                android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +59,6 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:text="Student Name"
-                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView59" />
 
@@ -74,7 +69,6 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="32dp"
                 android:text="Student ID"
-                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView60" />
 
@@ -85,7 +79,6 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="32dp"
                 android:text="Student Class"
-                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView61" />
 
@@ -110,7 +103,6 @@
                 android:layout_marginStart="84dp"
                 android:layout_marginTop="19dp"
                 android:text="TextView"
-                android:textColor="@color/black"
                 app:layout_constraintStart_toEndOf="@+id/textView60"
                 app:layout_constraintTop_toBottomOf="@+id/textView59" />
 
@@ -121,7 +113,6 @@
                 android:layout_marginStart="108dp"
                 android:layout_marginTop="28dp"
                 android:text="TextView"
-                android:textColor="@color/black"
                 app:layout_constraintStart_toEndOf="@+id/textView61"
                 app:layout_constraintTop_toBottomOf="@+id/upload_sName" />
 
@@ -132,7 +123,6 @@
                 android:layout_marginStart="89dp"
                 android:layout_marginTop="32dp"
                 android:text="TextView"
-                android:textColor="@color/black"
                 app:layout_constraintStart_toEndOf="@+id/textView62"
                 app:layout_constraintTop_toBottomOf="@+id/upload_sID" />
 
