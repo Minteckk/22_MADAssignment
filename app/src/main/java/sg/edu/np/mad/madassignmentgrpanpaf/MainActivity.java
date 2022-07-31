@@ -41,5 +41,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(UserRole);
             }
         });
+
+        Button location = findViewById(R.id.viewlocation);
+        location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent locationnow = new Intent(MainActivity.this,student_location.class);
+                // start the activity
+                startActivity(locationnow);
+            }
+        });
     }
 }

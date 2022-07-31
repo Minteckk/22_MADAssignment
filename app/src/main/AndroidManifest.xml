@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="sg.edu.np.mad.madassignmentgrpanpaf">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/google_pixel_6_pro___13_removebg1111"
@@ -10,11 +14,18 @@
         android:roundIcon="@drawable/google_pixel_6_pro___13_removebg1111"
         android:supportsRtl="true"
         android:theme="@style/Theme.MADAssignment">
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyC6DBt6yb5_JFoNqj2zP0FMrrxsR8S-Haw"/>
+
+        <activity
+            android:name=".student_location"
+            android:exported="false" />
         <activity
             android:name=".MainStudent"
             android:exported="false"
-            android:label="@string/title_activity_main_student"
-            />
+            android:label="@string/title_activity_main_student" />
         <activity
             android:name=".MainLecturer"
             android:exported="false"
@@ -23,111 +34,110 @@
         <activity
             android:name=".RegistrationType"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".AbsenceViewHolder"
             android:exported="false"
-            tools:ignore="Instantiatable"
             android:theme="@style/Theme.MADAssignment.NoActionBar"
-            />
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".StudentAbsenceRecord"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".FeedbackViewHolder"
             android:exported="false"
-            tools:ignore="Instantiatable"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".AttendanceConfirmation"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".FeedbackConfirmation"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".uploadStudentConfirmation"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".mcConfirmation"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".SubmitMCandAbsentReason"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".UserRole"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".StudentViewFeedback"
             android:exported="true"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".LecturerRegister"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".register"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".generatePassCode"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".StudentProfile"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".ProvideFeedback"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".StudentTakeAttendance"
             android:exported="true"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".StudentMain"
             android:exported="true"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".ClassViewHolder"
             android:exported="false"
-            tools:ignore="Instantiatable"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".ViewAllStudents"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".ViewAllStudentAttendance"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".LecturerMain"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".upload_student_name"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".StudentLogin"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".LecturerLogin"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".Personalise"
             android:exported="false"
-            android:theme="@style/Theme.MADAssignment.NoActionBar"/>
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
