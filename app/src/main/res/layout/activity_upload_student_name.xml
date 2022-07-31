@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     tools:context=".upload_student_name">
 
     <ScrollView
@@ -25,7 +24,6 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
                 android:text="Upload Student to database"
-                android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.535"
@@ -115,7 +113,6 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="32dp"
                 android:text="Hello"
-                android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toStartOf="@+id/loginusername"
                 app:layout_constraintStart_toEndOf="@+id/upload_student_name_back"
@@ -128,7 +125,6 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:text="TextView"
-                android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/Welcome"
                 app:layout_constraintTop_toTopOf="parent" />

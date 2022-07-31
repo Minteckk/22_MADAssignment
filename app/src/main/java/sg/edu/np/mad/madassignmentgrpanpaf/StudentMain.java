@@ -50,7 +50,7 @@ public class StudentMain extends AppCompatActivity {
         iv2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(StudentMain.this, MainStudent.class);
+                Intent i = new Intent(StudentMain.this, MainLecturer.class);
                 i.putExtra("StudentID",value);
                 startActivity(i);
             }
@@ -105,7 +105,7 @@ public class StudentMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // goes to Student Absence Record page
-                Intent personalise = new Intent(StudentMain.this, PersonaliseLecturer.class);
+                Intent personalise = new Intent(StudentMain.this, Personalise.class);
                 personalise.putExtra("Username",value);
                 startActivity(personalise);
             }

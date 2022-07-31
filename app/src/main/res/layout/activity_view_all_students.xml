@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:layout_height="match_parent">
 
    <ScrollView
        android:layout_width="match_parent"
@@ -108,7 +107,6 @@
                android:layout_marginStart="7dp"
                android:layout_marginTop="10dp"
                android:text="Hello"
-               android:textColor="@color/black"
                app:layout_constraintStart_toEndOf="@+id/view_all_students_back"
                app:layout_constraintTop_toTopOf="parent" />
 
@@ -119,7 +117,6 @@
                android:layout_marginStart="8dp"
                android:layout_marginTop="10dp"
                android:text="TextView"
-               android:textColor="@color/black"
                app:layout_constraintStart_toEndOf="@+id/textView29"
                app:layout_constraintTop_toTopOf="parent" />
        </androidx.constraintlayout.widget.ConstraintLayout>

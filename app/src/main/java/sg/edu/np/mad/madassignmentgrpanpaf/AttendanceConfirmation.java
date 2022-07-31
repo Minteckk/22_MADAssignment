@@ -40,7 +40,7 @@ public class AttendanceConfirmation extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // go back to student main page
-                Intent i = new Intent(AttendanceConfirmation.this, StudentMain.class);
+                Intent i = new Intent(AttendanceConfirmation.this, MainStudent.class);
                 // intent the studentID back to student main page
                 i.putExtra("StudentID",value);
                 startActivity(i);

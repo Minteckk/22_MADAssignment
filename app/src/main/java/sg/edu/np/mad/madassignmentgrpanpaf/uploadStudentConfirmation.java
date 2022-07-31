@@ -41,7 +41,7 @@ public class uploadStudentConfirmation extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // back to Lecturer Main page
-                Intent i = new Intent(uploadStudentConfirmation.this,LecturerMain.class);
+                Intent i = new Intent(uploadStudentConfirmation.this,MainLecturer.class);
                 i.putExtra("Username",value);
                 startActivity(i);
             }
