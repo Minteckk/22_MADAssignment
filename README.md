@@ -200,7 +200,7 @@ Lecturer:
 </p>
 <p>
 Student:
-<img src="app/src/main/res/drawable/StudentPage.jpg">
+<img src="app/src/main/res/drawable/studentpage.jpg">
 </p>
 <p> Credits: </p>
 <p><a href="https://www.flaticon.com/free-icons/student" title="student icons">Student icons created by Freepik - Flaticon</a></p>
