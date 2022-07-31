@@ -1,6 +1,7 @@
 package sg.edu.np.mad.madassignmentgrpanpaf;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,6 +31,9 @@ public class ViewAllStudentAttendance extends AppCompatActivity {
         // set the text to username
         lecname.setText(lecUsername);
 
+        SharedPreferences prefs = 	getSharedPreferences("UsernameSP", MODE_PRIVATE);
+        String value = prefs.getString("Username", "");
+
         // find the id for the back button
         ImageView iv = findViewById(R.id.view_all_students_back);
         // set OnClickListener
@@ -39,7 +43,7 @@ public class ViewAllStudentAttendance extends AppCompatActivity {
                 // start the intent to go to Lecturer Main Page
                 Intent i = new Intent(ViewAllStudentAttendance.this, MainLecturer.class);
                 // send the username back to Lecturer Main Page
-                i.putExtra("Username",lecUsername);
+                i.putExtra("Username",value);
                 // start the activity.
                 startActivity(i);
             }

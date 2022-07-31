@@ -76,9 +76,18 @@ public class MainStudent extends AppCompatActivity {
         });
 
         TextView studentID = findViewById(R.id.text_home);
+        Intent i = getIntent();
+
+        String studentId = i.getStringExtra("StudentID");
+        studentID.setText("Hello S"+studentId);
+
+
+        SharedPreferences.Editor editor = 	getSharedPreferences("studentID", MODE_PRIVATE).edit();
+        editor.putString("StudentID", studentId);
+        editor.apply();
+
         SharedPreferences prefs = 	getSharedPreferences("studentID", MODE_PRIVATE);
         String value = prefs.getString("StudentID", "");
-        studentID.setText("Hello S" + value);
     }
 
 }

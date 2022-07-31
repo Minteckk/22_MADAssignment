@@ -42,7 +42,7 @@ public class ViewAllStudents extends AppCompatActivity {
                 // get intent
                 Intent i = new Intent(ViewAllStudents.this, MainLecturer.class);
                 // intent to send username to other activity.
-                i.putExtra("Username", lecUsername);
+                i.putExtra("Username", value);
                 // start activity
                 startActivity(i);
             }

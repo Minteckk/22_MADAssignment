@@ -77,10 +77,17 @@ public class MainLecturer extends AppCompatActivity {
         // get Lecturer Name from Lecturer Login
         String lecUsername = i.getStringExtra("Username");
         // set the textView to lecturer user name
+        username.setText("Hello " + lecUsername);
+
+        String loginName = i.getStringExtra("username");
+
         // Shared Preferences
+        SharedPreferences.Editor editor = 	getSharedPreferences("UsernameSP", MODE_PRIVATE).edit();
+        editor.putString("Username", lecUsername);
+        editor.apply();
+
         SharedPreferences prefs = 	getSharedPreferences("UsernameSP", MODE_PRIVATE);
-        String value = prefs.getString("Username","");
-        username.setText("Welcome " + value);
+        String value = prefs.getString("Username", "");
     }
 
     @Override

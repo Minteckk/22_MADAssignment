@@ -36,6 +36,9 @@ public class upload_student_name extends AppCompatActivity {
         Intent i = getIntent();
         String lecUsername = i.getStringExtra("Username");
         lecname.setText(lecUsername);
+        // SharedPreferences
+        SharedPreferences prefs = 	getSharedPreferences("UsernameSP", MODE_PRIVATE);
+        String value = prefs.getString("Username", "");
 
         // find the id of the name input and student id input field.
         nameInput = findViewById(R.id.studentName);
@@ -51,7 +54,7 @@ public class upload_student_name extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(upload_student_name.this, MainLecturer.class);
-                i.putExtra("Username", lecUsername);
+                i.putExtra("Username", value);
                 startActivity(i);
             }
         });

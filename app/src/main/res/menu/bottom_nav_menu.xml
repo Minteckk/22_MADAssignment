@@ -12,7 +12,7 @@
         android:title="Take Attendance" />
     <item
         android:id="@+id/studentViewFeedback"
-        android:icon="@drawable/ic_studentfeedback"
+        android:icon="@drawable/ic_studentreadfeedback"
         android:title="Read Feedback" />
 
     <item
