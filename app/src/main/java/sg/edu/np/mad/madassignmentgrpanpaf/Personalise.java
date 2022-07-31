@@ -19,19 +19,6 @@ public class Personalise extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personalise);
 
-        // get Intent
-        Intent i = getIntent();
-        // get Lecturer Name from Lecturer Login
-        String lecUsername = i.getStringExtra("Username");
-
-        // Shared Preferences
-        SharedPreferences.Editor editor = 	getSharedPreferences("UsernameSP", MODE_PRIVATE).edit();
-        editor.putString("Username", lecUsername);
-        editor.apply();
-
-        SharedPreferences prefs = 	getSharedPreferences("UsernameSP", MODE_PRIVATE);
-        String value = prefs.getString("Username", "Lecturer");
-
         // set Onclick listener for back image view
         ImageView iv = findViewById(R.id.gen_back);
         // onClick listener for back button
@@ -45,15 +32,28 @@ public class Personalise extends AppCompatActivity {
         //set Onclick listener for dark mode button
         Switch darkMode = findViewById(R.id.switch1);
 
+        if (AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES)
+        {
+            darkMode.setChecked(true);
+            darkMode.setText("Set Light Mode");
+        }
+        else if (AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_NO)
+        {
+            darkMode.setChecked(false);
+            darkMode.setText("Set Dark Mode");
+        }
+
         darkMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (darkMode.isChecked() == true)
                 {
+                    //turn on dark mode
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                     darkMode.setText("Set Light Mode");
                 }
                 else if (darkMode.isChecked()==false)
                 {
+                    //turn on light mode
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                 }
             }
