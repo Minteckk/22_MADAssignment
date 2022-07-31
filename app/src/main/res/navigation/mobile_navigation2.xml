@@ -39,4 +39,9 @@
         android:name="sg.edu.np.mad.madassignmentgrpanpaf.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/generatePassCode"
+        android:name="sg.edu.np.mad.madassignmentgrpanpaf.generatePassCode"
+        android:label="activity_generate_pass_code"
+        tools:layout="@layout/activity_generate_pass_code" />
 </navigation>

@@ -25,8 +25,12 @@
             android:icon="@drawable/ic_absencerecord"
             android:title="View Students Absent Record" />
         <item
+            android:id="@+id/generatePassCode"
+            android:icon="@drawable/padlock"
+            android:title="Generate Passcode" />
+        <item
             android:id="@+id/personaliseLecturer"
-            android:icon="@drawable/personalise"
+            android:icon="@drawable/ic_personalisesetting"
             android:title="Personalise" />
         <item
             android:id="@+id/mainActivity"

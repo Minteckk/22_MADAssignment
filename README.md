@@ -217,7 +217,7 @@ Student:
 <p><a href="https://www.flaticon.com/free-icons/tick" title="tick icons">Tick icons created by kliwir art - Flaticon</a></p>
 <p><a href="https://www.flaticon.com/free-icons/absent" title="absent icons">Absent icons created by Freepik - Flaticon</a></p>
 <p><a href="https://www.flaticon.com/free-icons/qr-code" title="qr-code icons">Qr-code icons created by Eucalyp - Flaticon</a></p>
-
+<p><a href="https://www.flaticon.com/free-icons/password" title="password icons">Password icons created by Smashicons - Flaticon</a></p>
 
 
 

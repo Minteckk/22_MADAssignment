@@ -39,7 +39,7 @@ public class FeedbackConfirmation extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // go back to Lecturer main page
-                Intent i = new Intent(FeedbackConfirmation.this,MainStudent.class);
+                Intent i = new Intent(FeedbackConfirmation.this,MainLecturer.class);
                 // sent the username back to main page
                 i.putExtra("Username",value);
                 startActivity(i);
