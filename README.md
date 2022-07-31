@@ -1,4 +1,6 @@
 # NPAF - Ngee Ann Poly Attendace Taking and Feedback
+<p><img src="app/src/main/res/drawable/google_pixel_6_pro___13_removebg1111.png"></p>
+<p>Download App on: https://play.google.com/store/apps/details?id=sg.edu.np.mad.madassignmentgrpanpaf</p>
 
 <p>Team Member Name and Student ID </p>
 <p> Ho Min Teck S10228079 </p>
@@ -78,7 +80,7 @@
   </li>
   <li>MC Confirmation</li>
   <li>Bottom Navigation menu layout</li>
-  <li>Navigation Drawer header and menu layout
+  <li>Navigation Drawer header and menu layout</li>
   </p>
  <li>
    add background to app 
@@ -191,6 +193,14 @@ complete AccountDBHandler
  <p> Relevant Appendices </p>
  <p> Storyboard: https://xd.adobe.com/view/2242ba5e-4a4b-4eb4-a96e-c24a5e94054f-7711/</p>
  <p>    Storyboard showcase view: https://xd.adobe.com/view/2242ba5e-4a4b-4eb4-a96e-c24a5e94054f-7711/?fullscreen
+</p>
+<p>
+Lecturer:
+<img src="app/src/main/res/drawable/lecturerpage.jpg">
+</p>
+<p>
+Student:
+<img src="app/src/main/res/drawable/StudentPage.jpg">
 </p>
 <p> Credits: </p>
 <p><a href="https://www.flaticon.com/free-icons/student" title="student icons">Student icons created by Freepik - Flaticon</a></p>
