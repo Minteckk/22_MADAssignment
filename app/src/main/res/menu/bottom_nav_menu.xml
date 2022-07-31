@@ -8,7 +8,7 @@
 
     <item
         android:id="@+id/studentTakeAttendance"
-        android:icon="@drawable/ic_studentqrcode"
+        android:icon="@drawable/ic_studenttakeattendance"
         android:title="Take Attendance" />
     <item
         android:id="@+id/studentViewFeedback"
@@ -21,7 +21,7 @@
         android:title="Submit MC " />
     <item
         android:id="@+id/personaliseStudent"
-        android:icon="@drawable/ic_personalize"
+        android:icon="@drawable/ic_personalisesetting"
         android:title="Personalise" />
 
 </menu>
