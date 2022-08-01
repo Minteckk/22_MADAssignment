@@ -74,10 +74,11 @@ public class LecturerMain extends AppCompatActivity {
                 // Close all activities
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 SharedPreferences preferences = getSharedPreferences("authentication",MODE_PRIVATE);
-                SharedPreferences.Editor editor = preferences.edit();
-                editor.putString("login","false");
-                editor.apply();
-
+                if (preferences.getString("role", "").equals("lecturer")) {
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("login", "false");
+                    editor.apply();
+                }
                 // Add a new flag to start new activity
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);

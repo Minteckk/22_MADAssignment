@@ -114,4 +114,13 @@ public class MainLecturer extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    public void disableBiometrics(View v){
+        SharedPreferences preferences = getSharedPreferences("authentication",MODE_PRIVATE);
+        if (preferences.getString("role", "").equals("lecturer")) {
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putString("login", "false");
+            editor.apply();
+        }
+    }
 }

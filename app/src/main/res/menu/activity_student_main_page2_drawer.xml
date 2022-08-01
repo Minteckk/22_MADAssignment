@@ -34,6 +34,7 @@
             android:title="Personalise" />
         <item
             android:id="@+id/mainActivity"
+            android:onClick="disableBiometrics"
             android:title="Log Out" />
     </group>
 </menu>

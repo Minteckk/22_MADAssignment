@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Sem 2.1/MAD/22_MADAssignment/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1785" />
+        <entry key="..\:/Sem 2.1/MAD/22_MADAssignment/app/src/main/res/layout/activity_class_view_holder.xml" value="0.14130434782608695" />
+        <entry key="..\:/Sem 2.1/MAD/22_MADAssignment/app/src/main/res/layout/activity_view_student_attendance.xml" value="0.14130434782608695" />
+        <entry key="..\:/Sem 2.1/MAD/22_MADAssignment/app/src/main/res/layout/app_bar_main_lecturer.xml" value="0.14130434782608695" />
+        <entry key="..\:/Sem 2.1/MAD/22_MADAssignment/app/src/main/res/layout/content_main_lecturer.xml" value="0.14130434782608695" />
+        <entry key="..\:/Sem 2.1/MAD/22_MADAssignment/app/src/main/res/layout/fragment_lecturerhome.xml" value="0.14130434782608695" />
+        <entry key="..\:/Sem 2.1/MAD/22_MADAssignment/app/src/main/res/layout/nav_header_main_student.xml" value="0.14130434782608695" />
+        <entry key="..\:/Sem 2.1/MAD/22_MADAssignment/app/src/main/res/menu/activity_student_main_page2_drawer.xml" value="0.17552083333333332" />
+        <entry key="..\:/Sem 2.1/MAD/22_MADAssignment/app/src/main/res/menu/bottom_nav_menu.xml" value="0.17552083333333332" />
+        <entry key="..\:/Sem 2.1/MAD/22_MADAssignment/app/src/main/res/menu/main_lecturer.xml" value="0.17552083333333332" />
         <entry key="..\:/Sem 2.1/MAD/MAD Assignment 1/app/src/main/res/layout/activity_lecturer_login.xml" value="0.1" />
         <entry key="..\:/Sem 2.1/MAD/MAD Assignment 1/app/src/main/res/layout/activity_lecturer_main.xml" value="0.1" />
         <entry key="..\:/Sem 2.1/MAD/MAD Assignment 1/app/src/main/res/layout/activity_lecturer_register.xml" value="0.1" />

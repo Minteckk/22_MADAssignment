@@ -69,6 +69,12 @@ public class MainStudent extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SharedPreferences preferences = getSharedPreferences("authentication",MODE_PRIVATE);
+                if (preferences.getString("role", "").equals("student")) {
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("login", "false");
+                    editor.apply();
+                }
                 finish();
                 Intent i = new Intent(MainStudent.this,MainActivity.class);
                 startActivity(i);
@@ -97,6 +103,7 @@ public class MainStudent extends AppCompatActivity {
 
         SharedPreferences prefs = 	getSharedPreferences("studentID", MODE_PRIVATE);
         String value = prefs.getString("StudentID", "");
+
     }
 
 }
