@@ -71,7 +71,7 @@ public class StudentLogin extends AppCompatActivity {
                     super.onAuthenticationSucceeded(result);
                     //Login Success
                     Toast.makeText(StudentLogin.this, "Login successful!", Toast.LENGTH_SHORT).show();
-                    Intent mainIntent = new Intent(StudentLogin.this, StudentMain.class);
+                    Intent mainIntent = new Intent(StudentLogin.this, MainStudent.class);
                     mainIntent.putExtra("Username", preferences.getString("username",""));
                     startActivity(mainIntent);
                 }
