@@ -75,8 +75,12 @@ public class MainStudent extends AppCompatActivity {
                     editor.putString("login", "false");
                     editor.apply();
                 }
-                finish();
+
                 Intent i = new Intent(MainStudent.this,MainActivity.class);
+                // Close all activities
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                // Add a new flag to start new activity
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);
             }
         });
