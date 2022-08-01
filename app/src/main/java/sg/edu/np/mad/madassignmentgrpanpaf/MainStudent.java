@@ -86,7 +86,7 @@ public class MainStudent extends AppCompatActivity {
         });
 
         Button s_location =  findViewById(R.id.s_location);
-        logout.setOnClickListener(new View.OnClickListener() {
+        s_location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent lo_s = new Intent(MainStudent.this,student_location.class);

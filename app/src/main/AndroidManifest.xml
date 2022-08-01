@@ -21,7 +21,8 @@
 
         <activity
             android:name=".student_location"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MADAssignment.NoActionBar" />
         <activity
             android:name=".BiometricAuth"
             android:exported="false" />
