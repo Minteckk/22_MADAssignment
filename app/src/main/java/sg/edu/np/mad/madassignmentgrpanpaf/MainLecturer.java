@@ -99,6 +99,27 @@ public class MainLecturer extends AppCompatActivity {
 
         SharedPreferences prefs = 	getSharedPreferences("UsernameSP", MODE_PRIVATE);
         String value = prefs.getString("Username", "");
+
+        Button logout =  findViewById(R.id.logout_btn);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences preferences = getSharedPreferences("authentication",MODE_PRIVATE);
+                if (preferences.getString("role", "").equals("lecturer")) {
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("login", "false");
+                    editor.apply();
+                }
+
+                Intent i = new Intent(MainLecturer.this,MainActivity.class);
+                // Close all activities
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                // Add a new flag to start new activity
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(i);
+            }
+        });
+
     }
 
     @Override
@@ -115,12 +136,4 @@ public class MainLecturer extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    public void disableBiometrics(View v){
-        SharedPreferences preferences = getSharedPreferences("authentication",MODE_PRIVATE);
-        if (preferences.getString("role", "").equals("lecturer")) {
-            SharedPreferences.Editor editor = preferences.edit();
-            editor.putString("login", "false");
-            editor.apply();
-        }
-    }
 }
