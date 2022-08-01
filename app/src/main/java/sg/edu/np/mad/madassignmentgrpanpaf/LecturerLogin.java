@@ -121,16 +121,13 @@ public class LecturerLogin extends AppCompatActivity {
                             getSharedPreferences("authentication",MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putString("login", "1");
-                    Toast.makeText(LecturerLogin.this, "checked", Toast.LENGTH_SHORT).show();
-                    boolean flag = editor.commit();
-                    if (flag){
-                        Toast.makeText(LecturerLogin.this, "commited", Toast.LENGTH_SHORT).show();
-                    }
+                    Toast.makeText(LecturerLogin.this, "Biometrics login enabled", Toast.LENGTH_SHORT).show();
+                    editor.commit();
                 }else{
                     SharedPreferences preferences = getSharedPreferences("authentication",MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putString("login","false");
-                    Toast.makeText(LecturerLogin.this, "unchecked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LecturerLogin.this, "Biometrics login disabled", Toast.LENGTH_SHORT).show();
                     editor.commit();
                 }
             }
