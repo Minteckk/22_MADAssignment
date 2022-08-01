@@ -75,6 +75,15 @@ public class MainStudent extends AppCompatActivity {
             }
         });
 
+        Button s_location =  findViewById(R.id.s_location);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent lo_s = new Intent(MainStudent.this,student_location.class);
+                startActivity(lo_s);
+            }
+        });
+
         TextView studentID = findViewById(R.id.text_home);
         Intent i = getIntent();
 

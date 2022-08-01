@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -62,6 +63,16 @@ public class MainLecturer extends AppCompatActivity {
                 startActivity(gotoFeedback);
             }
         });
+
+        Button location = findViewById(R.id.location);
+        location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nownow = new Intent(MainLecturer.this,student_location.class);
+                startActivity(nownow);
+            }
+        });
+
 
         ImageView studentAbsent = findViewById(R.id.absentimg);
         studentAbsent.setOnClickListener(new View.OnClickListener() {
