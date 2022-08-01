@@ -17,7 +17,7 @@
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyC2rYJfCYfe8ZYgoic27N8LMXXujv3oV6E"/>
+            android:value=""/>
 
         <activity
             android:name=".student_location"

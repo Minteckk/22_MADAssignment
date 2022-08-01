@@ -7,6 +7,16 @@
         <entry key="..\:/Sem 2.1/MAD/MAD Assignment 1/app/src/main/res/layout/activity_lecturer_main.xml" value="0.1" />
         <entry key="..\:/Sem 2.1/MAD/MAD Assignment 1/app/src/main/res/layout/activity_lecturer_register.xml" value="0.1" />
         <entry key="..\:/Sem 2.1/MAD/MAD Assignment 1/app/src/main/res/layout/activity_student_login.xml" value="0.22" />
+        <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/aaaaa/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/aaaaa/app/src/main/res/layout/activity_main_lecturer.xml" value="0.16" />
+        <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/aaaaa/app/src/main/res/layout/activity_student_location.xml" value="0.2246376811594203" />
+        <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/aaaaa/app/src/main/res/layout/activity_student_login.xml" value="0.1" />
+        <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/aaaaa/app/src/main/res/layout/activity_student_main.xml" value="0.10326086956521739" />
+        <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/aaaaa/app/src/main/res/layout/activity_student_profile.xml" value="0.2" />
+        <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/aaaaa/app/src/main/res/layout/app_bar_main_lecturer.xml" value="0.152" />
+        <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/aaaaa/app/src/main/res/layout/content_main_lecturer.xml" value="0.1" />
+        <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/aaaaa/app/src/main/res/layout/fragment_home.xml" value="0.16" />
+        <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/aaaaa/app/src/main/res/layout/fragment_lecturerhome.xml" value="0.2" />
         <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/test1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/test1/app/src/main/res/layout/activity_lecturer_login.xml" value="0.14130434782608695" />
         <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/test1/app/src/main/res/layout/activity_lecturer_main.xml" value="0.14130434782608695" />
@@ -32,103 +42,81 @@
         <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/test3/app/src/main/res/layout/activity_view_student_attendance.xml" value="0.1" />
         <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/test3/app/src/main/res/layout/fragment_student_class.xml" value="0.1" />
         <entry key="..\:/Users/lujun/Desktop/Year 2/MAD/test3/app/src/main/res/layout/fragment_student_p02.xml" value="0.1" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2275" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2235" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable/ic_menu_camera.xml" value="0.1005" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.1005" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.1005" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable/side_nav_bar.xml" value="0.2275" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable/submitMC_background.xml" value="0.124" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable/submitMC_nav_background.xml" value="0.2275" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/drawable/submitmcleave_background.xml" value="0.1955" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_absence_view_holder.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_attendance_confirmation.xml" value="0.23007246376811594" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_class_view_holder.xml" value="0.22282608695652173" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_feedback_confirmation.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_feedback_view_holder.xml" value="0.23007246376811594" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_generate_pass_code.xml" value="0.4" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_lecturer_login.xml" value="0.25052083333333336" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_lecturer_main.xml" value="0.2883625128733265" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_lecturer_main.xml" value="0.2" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_lecturer_register.xml" value="0.22327898550724637" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_main.xml" value="0.2883625128733265" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_main_student.xml" value="0.12360688956433637" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_mc_confirmation.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_personalise_lecturer.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_personalise_student.xml" value="0.23007246376811594" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_provide_feedback.xml" value="0.22327898550724637" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_register.xml" value="0.22327898550724637" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_registration_type.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_student_absence_record.xml" value="0.23007246376811594" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_student_attendance.xml" value="0.2223731884057971" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_student_login.xml" value="0.25" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_student_main.xml" value="0.2883625128733265" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_student_main_page.xml" value="0.23007246376811594" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_student_profile.xml" value="0.22327898550724637" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_student_take_attendance.xml" value="0.22327898550724637" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_student_view_feedback.xml" value="0.22327898550724637" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_submit_mcand_absent_reason.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_testing.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_upload_student_confirmation.xml" value="0.23007246376811594" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_upload_student_name.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_user_role.xml" value="0.2883625128733265" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_view_all_students.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/activity_view_student_attendance.xml" value="0.2223731884057971" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/app_bar_main_student.xml" value="0.12360688956433637" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/app_bar_student_main_page.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/app_bar_testing.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/content_main_student.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/content_student_main_page.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/content_student_main_page2.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/content_testing.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/fragment_gallery.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/fragment_home.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/fragment_slideshow.xml" value="0.23007246376811594" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/fragment_student_class.xml" value="0.264" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/fragment_student_p02.xml" value="0.22282608695652173" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/fragment_student_p03.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/fragment_student_p04.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/fragment_student_p05.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/nav_bar_main.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/nav_header_main.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/nav_header_main_student.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/nav_header_student_main_page.xml" value="0.23007246376811594" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/nav_header_testing.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/layout/view_students.xml" value="0.22282608695652173" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/menu/activity_main_drawer.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/menu/activity_student_main_page2_drawer.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/menu/activity_student_main_page_drawer.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/menu/main_student.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/menu/student_main_page.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/menu/testing.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2275" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/mipmap-anydpi-v26/submitMC.xml" value="0.2275" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/mipmap-anydpi-v26/submitMC_nav.xml" value="0.2275" />
-        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/mipmap-anydpi-v26/submitMC_nav_round.xml" value="0.124" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/menu/activity_student_main_page2_drawer.xml" value="0.536" />
+        <entry key="..\:/Users/minte/AndroidStudioProjects/22_MADAssignment/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/drawable/side_nav_bar.xml" value="0.1595" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_absence_view_holder.xml" value="0.17346014492753623" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_attendance_confirmation.xml" value="0.17346014492753623" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_class_view_holder.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_feedback_confirmation.xml" value="0.17346014492753623" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_feedback_view_holder.xml" value="0.1068840579710145" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_generate_pass_code.xml" value="0.1068840579710145" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_lecturer_login.xml" value="0.17346014492753623" />
-        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_lecturer_main.xml" value="0.17346014492753623" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_lecturer_main.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_lecturer_register.xml" value="0.17346014492753623" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_main.xml" value="0.17346014492753623" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_main_lecturer.xml" value="0.1068840579710145" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_main_student.xml" value="0.1068840579710145" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_mc_confirmation.xml" value="0.17346014492753623" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_personalise.xml" value="0.1585274229902329" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_personalise_lecturer.xml" value="0.264" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_personalise_student.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_provide_feedback.xml" value="0.17346014492753623" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_register.xml" value="0.17346014492753623" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_registration_type.xml" value="0.1068840579710145" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_student_absence_record.xml" value="0.17346014492753623" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_student_attendance.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_student_login.xml" value="0.17346014492753623" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_student_main.xml" value="0.17346014492753623" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_student_profile.xml" value="0.17346014492753623" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_student_take_attendance.xml" value="0.1" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_student_view_feedback.xml" value="0.1068840579710145" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_submit_mcand_absent_reason.xml" value="0.264" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_upload_student_confirmation.xml" value="0.1068840579710145" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_upload_student_name.xml" value="0.1068840579710145" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_user_role.xml" value="0.1068840579710145" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_view_all_student_attendance.xml" value="0.1" />
-        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_view_all_students.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_view_all_students.xml" value="0.264" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/activity_view_student_attendance.xml" value="0.536" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/app_bar_main_lecturer.xml" value="0.10840932117527863" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/content_main_lecturer.xml" value="0.1068840579710145" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/fragment_lecturerhome.xml" value="0.2" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/fragment_student_class.xml" value="0.18095238095238095" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/fragment_student_p02.xml" value="0.264" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/fragment_student_p03.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/fragment_student_p04.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/fragment_student_p05.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/layout/nav_header_main_student.xml" value="0.1068840579710145" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/menu/activity_student_main_page2_drawer.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/menu/bottom_nav_menu.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/menu/main_lecturer.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/user/Desktop/NgeeAnn/Sem3/MAD/ASG1/New folder/22_MADAssignment/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1595" />
       </map>
     </option>
   </component>
@@ -138,7 +126,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.23007246376811594" />
+        <option name="scale" value="0.2883625128733265" />
       </ProjectState>
     </option>
   </component>
