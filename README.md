@@ -151,6 +151,9 @@ complete provide feedback feature
   <li>
       view current location feature
   </li>
+  <li>
+      Help to improve on the design for Student and Lecturer Pages
+  </li>
   <br>
   <p>
     Complete layout pages:
