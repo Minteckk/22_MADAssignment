@@ -184,6 +184,9 @@ complete AccountDBHandler
   <li>StudentClass.java</li>
   <li>LecturerLogin.java</li>
   <li>StudentLogin.java</li>
+  <li>Updated lectureLogin.xml</li>
+  <li>Updated StudentLogin.xml</li>
+  <li>Completed Biometrics Login feature</li>
   </ul>
 
 <p>Hanisah Binte Musrin</p>
@@ -196,6 +199,8 @@ complete AccountDBHandler
   <li>complete layout page for view student attendance (view_all_student_attendance, student_attendance) </li>
   <li>complete layout page for lecturer main </li>
   <li>complete layout page for student attendance fragments</li>
+    
+  <li>Complete dark/light mode feature implementation</li>
  </ul>
   
  <p> Relevant Appendices </p>
