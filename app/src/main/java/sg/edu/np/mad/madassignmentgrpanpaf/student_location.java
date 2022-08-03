@@ -31,12 +31,14 @@ public class student_location extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_location);
 
-        //Assign variable
+        //Create the google map
         supportMapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.google_map);
 
         client = LocationServices.getFusedLocationProviderClient(this);
 
+
+        // Check for permissions
         if (ActivityCompat.checkSelfPermission(student_location.this,
                 Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             getCurrentLocation();
@@ -69,6 +71,7 @@ public class student_location extends AppCompatActivity {
                             LatLng latLng = new LatLng(location.getLatitude(),
                                     location.getLongitude());
 
+                            //Market to let the user know where he is
                             MarkerOptions options = new MarkerOptions().position(latLng)
                                     .title("I am there");
 
